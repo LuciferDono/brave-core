@@ -91,13 +91,15 @@ test('AssistantResponse should include expandable sources', async () => {
     ],
   }
   render(
-    <AssistantResponse
-      events={testEntry.events!}
-      isEntryInteractivityAllowed={false}
-      isLeoModel={true}
-      isEntryInProgress={false}
-      allowedLinks={[]}
-    />,
+    <MockContext>
+      <AssistantResponse
+        events={testEntry.events!}
+        isEntryInteractivityAllowed={false}
+        isLeoModel={true}
+        isEntryInProgress={false}
+        allowedLinks={[]}
+      />
+    </MockContext>,
   )
   // There should be the first 4 source buttons + 1 expand button
   let buttons = screen.getAllByRole('button')
@@ -114,12 +116,6 @@ test('AssistantResponse should include expandable sources', async () => {
 
 test('AssistantResponse should render memory tool events inline', async () => {
   const mockHasMemory = () => Promise.resolve({ exists: true })
-  const mockUIObserver = {
-    onMemoriesChanged: {
-      addListener: jest.fn().mockReturnValue('listener-id'),
-    },
-    removeListener: jest.fn(),
-  }
 
   const memoryToolEvent: Mojom.ConversationEntryEvent = {
     toolUseEvent: {
@@ -133,14 +129,7 @@ test('AssistantResponse should render memory tool events inline', async () => {
   const events = [memoryToolEvent, getCompletionEvent('I will remember that.')]
 
   render(
-    <MockContext
-      uiHandler={
-        {
-          hasMemory: mockHasMemory,
-        } as unknown as Mojom.UntrustedUIHandlerRemote
-      }
-      uiObserver={mockUIObserver as unknown as Mojom.UntrustedUICallbackRouter}
-    >
+    <MockContext uiHandler={{ hasMemory: mockHasMemory }}>
       <AssistantResponse
         events={events}
         isEntryInteractivityAllowed={false}
@@ -181,13 +170,7 @@ test(
     ]
 
     render(
-      <MockContext
-        uiHandler={
-          {
-            hasMemory: mockHasMemory,
-          } as unknown as Mojom.UntrustedUIHandlerRemote
-        }
-      >
+      <MockContext uiHandler={{ hasMemory: mockHasMemory }}>
         <AssistantResponse
           events={events}
           isEntryInteractivityAllowed={false}
@@ -219,13 +202,15 @@ test('AssistantResponse should not render iframe when richResults is null or emp
   ]
 
   const { container } = render(
-    <AssistantResponse
-      events={events}
-      isEntryInteractivityAllowed={false}
-      isLeoModel={true}
-      isEntryInProgress={false}
-      allowedLinks={[]}
-    />,
+    <MockContext>
+      <AssistantResponse
+        events={events}
+        isEntryInteractivityAllowed={false}
+        isLeoModel={true}
+        isEntryInProgress={false}
+        allowedLinks={[]}
+      />
+    </MockContext>,
   )
 
   // Should not render any iframes when richResults is empty
@@ -260,13 +245,15 @@ test('AssistantResponse should render iframe when richResults has data', () => {
   ]
 
   const { container } = render(
-    <AssistantResponse
-      events={events}
-      isEntryInteractivityAllowed={false}
-      isLeoModel={true}
-      isEntryInProgress={false}
-      allowedLinks={[]}
-    />,
+    <MockContext>
+      <AssistantResponse
+        events={events}
+        isEntryInteractivityAllowed={false}
+        isLeoModel={true}
+        isEntryInProgress={false}
+        allowedLinks={[]}
+      />
+    </MockContext>,
   )
 
   // Should render iframes for each richResult
