@@ -83,6 +83,10 @@ inline constexpr char kMiscMetricsMediaSessionUsageStorage[] =
     "brave.misc_metrics.media_session_usage_storage";
 inline constexpr char kMiscMetricsMediaSessionFrameStartTime[] =
     "brave.misc_metrics.media_session_frame_start_time";
+inline constexpr char kMiscMetricsNavSourceReportFrameStartTime[] =
+    "brave.misc_metrics.nav_source_report_frame_start_time";
+inline constexpr char kMiscMetricsNavSourceCounts[] =
+    "brave.misc_metrics.nav_source_counts";
 
 }  // namespace misc_metrics
 
