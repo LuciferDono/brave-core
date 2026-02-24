@@ -104,7 +104,7 @@ class AIChatConversationTaskBrowserTest : public InProcessBrowserTest {
     OpenBrowserWindowForAIChatAgentProfileForTesting(
         *profile, browser_future.GetCallback());
     Browser* agent_browser = browser_future.Take();
-    ASSERT_EQ(agent_browser, nullptr);
+    ASSERT_NE(agent_browser, nullptr);
     agent_profile_ = agent_browser->profile();
     agent_browser_window_ = agent_browser;
 
