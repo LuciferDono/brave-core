@@ -20,7 +20,7 @@ class Eip1559Transaction : public Eip2930Transaction {
     GasEstimation() = default;
     ~GasEstimation() = default;
     GasEstimation(const GasEstimation&) = default;
-    bool operator==(const GasEstimation&) const;
+    bool operator==(const GasEstimation&) const = default;
 
     static std::optional<GasEstimation> FromMojomGasEstimation1559(
         mojom::GasEstimation1559Ptr gas_estimation);
@@ -63,22 +63,6 @@ class Eip1559Transaction : public Eip2930Transaction {
     gas_estimation_ = estimation;
   }
 
-  // 0x02 || rlp([chainId, nonce, maxPriorityFeePerGas, maxFeePerGas,
-  // gasLimit, destination, value, data, access_list])
-  std::vector<uint8_t> GetMessageToSign(uint256_t chain_id) const override;
-
-  // 0x02 || rlp([chainId, nonce, maxPriorityFeePerGas, maxFeePerGas, gasLimit,
-  // destination, value, data, accessList, signatureYParity, signatureR,
-  // signatureS])
-  std::string GetSignedTransaction() const override;
-
-  // keccacak(0x02 || rlp([chainId, nonce, maxPriorityFeePerGas, maxFeePerGas,
-  // gasLimit, destination, value, data, accessList, signatureYParity,
-  // signatureR,signatureS]))
-  std::string GetTransactionHash() const override;
-
-  base::DictValue ToValue() const override;
-
  protected:
   Eip1559Transaction(
       std::optional<uint256_t> nonce,
@@ -92,16 +76,22 @@ class Eip1559Transaction : public Eip2930Transaction {
       uint256_t max_fee_per_gas,
       GasEstimation gas_estimation);
 
-  uint256_t max_priority_fee_per_gas_;
-  uint256_t max_fee_per_gas_;
+  // 0x02 || rlp([chainId, nonce, maxPriorityFeePerGas, maxFeePerGas,
+  // gasLimit, destination, value, data, access_list])
+  std::vector<uint8_t> GetMessageToSignImpl(uint256_t chain_id) const override;
+
+  // 0x02 || rlp([chainId, nonce, maxPriorityFeePerGas, maxFeePerGas,
+  // gasLimit, destination, value, data, accessList, signatureYParity,
+  // signatureR,signatureS])
+  std::vector<uint8_t> Serialize() const override;
+
+  base::DictValue ToValueImpl() const override;
+
+  uint256_t max_priority_fee_per_gas_ = 0;
+  uint256_t max_fee_per_gas_ = 0;
 
   // Gas estimation result
   GasEstimation gas_estimation_;
-
-  bool VIsRecid() const override;
-
- private:
-  std::vector<uint8_t> Serialize() const;
 };
 
 }  // namespace brave_wallet

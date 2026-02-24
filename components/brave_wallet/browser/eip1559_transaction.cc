@@ -5,7 +5,6 @@
 
 #include "brave/components/brave_wallet/browser/eip1559_transaction.h"
 
-#include <algorithm>
 #include <optional>
 #include <utility>
 
@@ -13,7 +12,6 @@
 #include "base/containers/extend.h"
 #include "base/values.h"
 #include "brave/components/brave_wallet/browser/rlp_encode.h"
-#include "brave/components/brave_wallet/common/hash_utils.h"
 #include "brave/components/brave_wallet/common/hex_utils.h"
 
 namespace brave_wallet {
@@ -81,23 +79,8 @@ Eip1559Transaction::GasEstimation::ToMojomGasEstimation1559(
   return estimation;
 }
 
-bool Eip1559Transaction::GasEstimation::operator==(
-    const Eip1559Transaction::GasEstimation& estimation) const {
-  return slow_max_priority_fee_per_gas ==
-             estimation.slow_max_priority_fee_per_gas &&
-         avg_max_priority_fee_per_gas ==
-             estimation.avg_max_priority_fee_per_gas &&
-         fast_max_priority_fee_per_gas ==
-             estimation.fast_max_priority_fee_per_gas &&
-         slow_max_fee_per_gas == estimation.slow_max_fee_per_gas &&
-         avg_max_fee_per_gas == estimation.avg_max_fee_per_gas &&
-         fast_max_fee_per_gas == estimation.fast_max_fee_per_gas &&
-         base_fee_per_gas == estimation.base_fee_per_gas;
-}
-
-Eip1559Transaction::Eip1559Transaction()
-    : max_priority_fee_per_gas_(0), max_fee_per_gas_(0) {
-  type_ = 2;
+Eip1559Transaction::Eip1559Transaction() {
+  type_ = EthTransactionType::kEip1559;
 }
 
 Eip1559Transaction::Eip1559Transaction(
@@ -121,7 +104,7 @@ Eip1559Transaction::Eip1559Transaction(
       max_priority_fee_per_gas_(max_priority_fee_per_gas),
       max_fee_per_gas_(max_fee_per_gas),
       gas_estimation_(gas_estimation) {
-  type_ = 2;
+  type_ = EthTransactionType::kEip1559;
 }
 Eip1559Transaction::Eip1559Transaction(const Eip1559Transaction&) = default;
 Eip1559Transaction::~Eip1559Transaction() = default;
@@ -269,11 +252,12 @@ std::optional<Eip1559Transaction> Eip1559Transaction::FromValue(
   tx.v_ = tx_2930->v();
   tx.r_ = tx_2930->r();
   tx.s_ = tx_2930->s();
+  tx.access_list_ = std::move(*tx_2930->access_list());
 
   return tx;
 }
 
-std::vector<uint8_t> Eip1559Transaction::GetMessageToSign(
+std::vector<uint8_t> Eip1559Transaction::GetMessageToSignImpl(
     uint256_t chain_id) const {
   DCHECK(nonce_);
 
@@ -290,27 +274,13 @@ std::vector<uint8_t> Eip1559Transaction::GetMessageToSign(
   list.Append(base::Value(AccessListToValue(access_list_)));
 
   std::vector<uint8_t> result;
-  result.push_back(type_);
+  result.push_back(static_cast<uint8_t>(type_));
   base::Extend(result, RLPEncode(list));
   return result;
 }
 
-std::string Eip1559Transaction::GetSignedTransaction() const {
-  DCHECK(IsSigned());
-  DCHECK(nonce_);
-
-  return ToHex(Serialize());
-}
-
-std::string Eip1559Transaction::GetTransactionHash() const {
-  DCHECK(IsSigned());
-  DCHECK(nonce_);
-
-  return ToHex(KeccakHash(Serialize()));
-}
-
-base::DictValue Eip1559Transaction::ToValue() const {
-  base::DictValue tx = Eip2930Transaction::ToValue();
+base::DictValue Eip1559Transaction::ToValueImpl() const {
+  base::DictValue tx = Eip2930Transaction::ToValueImpl();
 
   tx.Set("max_priority_fee_per_gas",
          Uint256ValueToHex(max_priority_fee_per_gas_));
@@ -339,10 +309,6 @@ base::DictValue Eip1559Transaction::ToValue() const {
   return tx;
 }
 
-bool Eip1559Transaction::VIsRecid() const {
-  return true;
-}
-
 std::vector<uint8_t> Eip1559Transaction::Serialize() const {
   base::ListValue list;
   list.Append(RLPUint256ToBlob(chain_id_));
@@ -359,7 +325,7 @@ std::vector<uint8_t> Eip1559Transaction::Serialize() const {
   list.Append(base::Value(s_));
 
   std::vector<uint8_t> result;
-  result.push_back(type_);
+  result.push_back(static_cast<uint8_t>(type_));
 
   base::Extend(result, RLPEncode(list));
 
