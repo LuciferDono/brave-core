@@ -9,7 +9,7 @@ import { setIconBasePath } from '@brave/leo/react/icon'
 import '$web-common/defaultTrustedTypesPolicy'
 import ConversationEntries from './components/conversation_entries'
 import { UntrustedConversationContextProvider } from './untrusted_conversation_context'
-import { untrustedFrameDragHandlingSetup } from './hooks/useUntrustedFrameDragHandling'
+import { useUntrustedFrameDragHandling } from './hooks/useUntrustedFrameDragHandling'
 // <if expr="is_ios">
 import { useIOSOneTapFix } from '../common/useIOSOneTapFix'
 // </if>
@@ -21,9 +21,6 @@ import {
 import '../common/strings'
 
 setIconBasePath('chrome-untrusted://resources/brave-icons')
-
-// Set up drag handling at module level
-untrustedFrameDragHandlingSetup()
 
 interface AppProps {
   boundConversation: BoundUntrustedConversation
@@ -40,6 +37,13 @@ function App(props: AppProps) {
     },
   })
   // </if>
+
+  const onDrag = React.useCallback(() => {
+    api.parentUIFrame.dragStart()
+  }, [api])
+
+  useUntrustedFrameDragHandling(onDrag)
+
   return (
     <UntrustedConversationContextProvider api={api}>
       <ConversationEntries />
