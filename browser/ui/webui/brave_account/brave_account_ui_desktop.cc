@@ -57,12 +57,15 @@ WEB_CONTENTS_USER_DATA_KEY_IMPL(BraveAccountDialogTracker);
 
 class BraveAccountDialogDelegate : public ui::WebDialogDelegate {
  public:
-  explicit BraveAccountDialogDelegate(content::WebContents* web_contents)
+  BraveAccountDialogDelegate(content::WebContents* web_contents,
+                             const std::string& initiating_service_name)
       : web_contents_(CHECK_DEREF(web_contents).GetWeakPtr()) {
     BraveAccountDialogTracker::CreateForWebContents(web_contents);
 
     set_delete_on_close(false);
-    set_dialog_content_url(GURL(kBraveAccountURL));
+    set_dialog_content_url(net::AppendQueryParameter(GURL(kBraveAccountURL),
+                                                     "initiating-service-name",
+                                                     initiating_service_name));
     set_show_dialog_title(false);
   }
 
@@ -80,6 +83,7 @@ class BraveAccountDialogDelegate : public ui::WebDialogDelegate {
 
 BraveAccountUIDesktop::BraveAccountUIDesktop(content::WebUI* web_ui)
     : BraveAccountUIBase(Profile::FromWebUI(web_ui),
+                         web_ui->GetWebContents()->GetVisibleURL(),
                          base::BindOnce(&webui::SetupWebUIDataSource)),
       ConstrainedWebDialogUI(web_ui) {
   auto* pref_service = CHECK_DEREF(Profile::FromWebUI(web_ui)).GetPrefs();
@@ -129,7 +133,8 @@ BraveAccountUIDesktopConfig::BraveAccountUIDesktopConfig()
   CHECK(brave_account::features::IsBraveAccountEnabled());
 }
 
-void ShowBraveAccountDialog(content::WebUI* web_ui) {
+void ShowBraveAccountDialog(content::WebUI* web_ui,
+                            const std::string& initiating_service_name) {
   auto* web_contents = CHECK_DEREF(web_ui).GetWebContents();
   CHECK(web_contents);
 
@@ -139,8 +144,9 @@ void ShowBraveAccountDialog(content::WebUI* web_ui) {
 
   auto* delegate = ShowConstrainedWebDialogWithAutoResize(
       Profile::FromWebUI(web_ui),
-      std::make_unique<BraveAccountDialogDelegate>(web_contents), web_contents,
-      kDialogMinSize, kDialogMaxSize);
+      std::make_unique<BraveAccountDialogDelegate>(web_contents,
+                                                   initiating_service_name),
+      web_contents, kDialogMinSize, kDialogMaxSize);
 
   auto* widget = views::Widget::GetWidgetForNativeWindow(
       CHECK_DEREF(delegate).GetNativeDialog());

@@ -151,17 +151,19 @@ BraveAccountService::BraveAccountService(
 }
 
 void BraveAccountService::RegisterInitialize(
+    const std::string& initiating_service_name,
     const std::string& email,
     const std::string& blinded_message,
     RegisterInitializeCallback callback) {
-  if (email.empty() || blinded_message.empty()) {
+  if (initiating_service_name.empty() || email.empty() ||
+      blinded_message.empty()) {
     return std::move(callback).Run(
         base::unexpected(mojom::RegisterError::New()));
   }
 
   auto request = MakeRequest<PasswordInit::Request>();
   request.blinded_message = blinded_message;
-  request.initiating_service_name = "accounts";
+  request.initiating_service_name = initiating_service_name;
   request.new_account_email = email;
   request.serialize_response = true;
   Client<PasswordInit>::Send(
@@ -246,16 +248,19 @@ void BraveAccountService::CancelRegistration() {
                              base::BindOnce([](VerifyDelete::Response) {}));
 }
 
-void BraveAccountService::LoginInitialize(const std::string& email,
-                                          const std::string& serialized_ke1,
-                                          LoginInitializeCallback callback) {
-  if (email.empty() || serialized_ke1.empty()) {
+void BraveAccountService::LoginInitialize(
+    const std::string& initiating_service_name,
+    const std::string& email,
+    const std::string& serialized_ke1,
+    LoginInitializeCallback callback) {
+  if (initiating_service_name.empty() || email.empty() ||
+      serialized_ke1.empty()) {
     return std::move(callback).Run(base::unexpected(mojom::LoginError::New()));
   }
 
   auto request = MakeRequest<LoginInit::Request>();
   request.email = email;
-  request.initiating_service_name = "accounts";
+  request.initiating_service_name = initiating_service_name;
   request.serialized_ke1 = serialized_ke1;
   Client<LoginInit>::Send(
       url_loader_factory_, std::move(request),

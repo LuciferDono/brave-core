@@ -41,6 +41,7 @@ class BraveAccountUIDesktopConfig
   BraveAccountUIDesktopConfig();
 };
 
-void ShowBraveAccountDialog(content::WebUI* web_ui);
+void ShowBraveAccountDialog(content::WebUI* web_ui,
+                            const std::string& initiating_service_name);
 
 #endif  // BRAVE_BROWSER_UI_WEBUI_BRAVE_ACCOUNT_BRAVE_ACCOUNT_UI_DESKTOP_H_

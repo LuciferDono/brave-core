@@ -36,7 +36,7 @@ class BraveAccountRowHandler : public mojom::RowHandler {
  private:
   // brave_account::mojom::RowHandler:
   void GetAccountState(GetAccountStateCallback callback) override;
-  void OpenDialog() override;
+  void OpenDialog(const std::string& initiating_service_name) override;
 
   mojom::AccountStatePtr GetAccountState() const;
   void OnPrefChanged();
