@@ -11,6 +11,8 @@ export async function bindUntrustedConversation() {
   const conversationHandler = new Mojom.UntrustedConversationHandlerRemote()
   const uiHandler = Mojom.UntrustedUIHandler.getRemote()
   const parentUIFrame = new Mojom.ParentUIFrameRemote()
+  // Service is bound directly to the WebUI via the interface broker
+  const service = Mojom.UntrustedService.getRemote()
 
   // Get conversation ID from URL
   const conversationId = window.location.pathname.split('/').pop() || ''
@@ -29,6 +31,7 @@ export async function bindUntrustedConversation() {
     conversationHandler,
     uiHandler,
     parentUIFrame,
+    service,
   )
 
   // Bind UntrustedUI events
@@ -44,6 +47,14 @@ export async function bindUntrustedConversation() {
       conversationUIReceiver.$.bindNewPipeAndPassRemote(),
     )
 
+  // Bind the service observer and get initial service state
+  const serviceObserverReceiver = new Mojom.UntrustedServiceObserverReceiver(
+    conversationAPI.serviceObserver,
+  )
+  const { state: serviceState } = await service.bindObserver(
+    serviceObserverReceiver.$.bindNewPipeAndPassRemote(),
+  )
+
   // Set initial state
   // Emit the event instead of directly updating so that any custom
   // handling (e.g. model filtering) happens and we don't need to duplicate
@@ -52,14 +63,11 @@ export async function bindUntrustedConversation() {
     conversationEntriesState,
   ])
 
-  // Set up document height communication with parent frame
-  const sendDocumentHeight = () => {
-    parentUIFrame.childHeightChanged(document.body.clientHeight)
-  }
+  // Set initial service state
+  conversationAPI.api.emitEvent('onStateChanged', [serviceState])
 
-  window.addEventListener('resize', sendDocumentHeight)
-  new ResizeObserver(sendDocumentHeight).observe(document.body)
-  sendDocumentHeight()
+  // Note: Height reporting to parent frame has been removed since the iframe
+  // now manages its own scrolling via ScrollableContent.
 
   return {
     api: conversationAPI.api,
@@ -67,6 +75,7 @@ export async function bindUntrustedConversation() {
       conversationAPI.close()
       conversationUIReceiver.$.close()
       uiReceiver.$.close()
+      serviceObserverReceiver.$.close()
     },
   }
 }

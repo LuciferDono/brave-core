@@ -7,7 +7,7 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import * as Mojom from '../../../common/mojom'
-import { MockContext } from '../../state/mock_context'
+import MockContext from '../../mock_untrusted_conversation_context'
 import { clearAllDataForTesting } from '$web-common/api'
 import ModelIntro from '.'
 
@@ -39,9 +39,12 @@ describe('ModelIntro', () => {
   it('should render model intro', () => {
     const { container } = render(
       <MockContext
-        conversationOverrides={{
-          currentModel,
-          isCurrentModelLeo: true,
+        initialState={{
+          conversationEntriesState: {
+            allModels: [currentModel],
+            currentModelKey: currentModel.key,
+            isLeoModel: true,
+          },
         }}
       >
         <ModelIntro />
@@ -54,7 +57,7 @@ describe('ModelIntro', () => {
     expect(modelText).toBeInTheDocument()
     expect(modelText).toHaveTextContent('Test Model')
 
-    // Test that the model into icon is rendered
+    // Test that the model intro icon is rendered
     const modelIntroIcon = container.querySelector<HTMLDivElement>('leo-icon')
     expect(modelIntroIcon).toBeInTheDocument()
     expect(modelIntroIcon).toHaveAttribute('name', 'product-brave-leo')
@@ -67,9 +70,12 @@ describe('ModelIntro', () => {
   it('should render model intro tooltip', () => {
     const { container } = render(
       <MockContext
-        conversationOverrides={{
-          currentModel,
-          isCurrentModelLeo: true,
+        initialState={{
+          conversationEntriesState: {
+            allModels: [currentModel],
+            currentModelKey: currentModel.key,
+            isLeoModel: true,
+          },
         }}
       >
         <ModelIntro />
