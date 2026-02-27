@@ -31,15 +31,18 @@ class SerpClassifier final {
   bool IsSameSearchQuery(const GURL& lhs, const GURL& rhs) const;
 
   // Returns the corresponding search engine type if `url` is a SERP. Returns
-  // `std::nullopt` if `url` is not a SERP.
+  // `std::nullopt` if `url` is not a SERP. Returns `SEARCH_ENGINE_UNKNOWN` for
+  // additional search URLs that are not part of the prepopulated engine list.
+  // You can use the host to differentiate these URLs (for example, YouTube
+  // search results pages have a host of "www.youtube.com").
   std::optional<SearchEngineType> MaybeClassify(const GURL& url);
 
  private:
   // Normalizes a URL so equivalent search results pages compare equal.
   GURL NormalizeUrl(const GURL& url) const;
 
-  // Returns a `TemplateURL` if `url` matches the search engine results page for
-  // any prepopulated engine in the allow list.
+  // Returns a `TemplateURL` if `url` matches the search results page of a
+  // prepopulated engine in the allow list.
   std::unique_ptr<TemplateURL> MaybeGetTemplateUrl(const GURL& url) const;
 };
 

@@ -5,6 +5,9 @@
 
 #include "brave/components/serp_metrics/serp_classifier.h"
 
+#include <string>
+#include <string_view>
+
 #include "base/containers/fixed_flat_set.h"
 #include "brave/components/search_engines/brave_prepopulated_engines.h"
 #include "components/search_engines/search_engine_type.h"
@@ -25,6 +28,38 @@ constexpr auto kAllowedPrepopulatedEngines =
          SEARCH_ENGINE_DUCKDUCKGO, SEARCH_ENGINE_QWANT, SEARCH_ENGINE_ECOSIA,
          SEARCH_ENGINE_BRAVE, SEARCH_ENGINE_STARTPAGE});
 
+// Additional search URLs for SERP classification that are not part of the
+// prepopulated engine list.
+constexpr auto kAdditionalSearchUrls = base::MakeFixedFlatSet<std::string_view>(
+    base::sorted_unique,
+    {
+        "https://www.youtube.com/results?search_query={searchTerms}",
+    });
+
+// Builds a minimal `TemplateURL` from a search URL template.
+std::unique_ptr<TemplateURL> BuildTemplateURLFromSearchURL(
+    std::string_view search_url) {
+  TemplateURLData template_url_data;
+  template_url_data.SetURL(std::string(search_url));
+  return std::make_unique<TemplateURL>(template_url_data);
+}
+
+// Returns `true` if `template_url` represents a normal search engine and `url`
+// matches its search results page.
+bool DoesTemplateURLMatch(const std::unique_ptr<TemplateURL>& template_url,
+                          const GURL& url) {
+  if (!template_url) {
+    return false;
+  }
+
+  if (template_url->type() != TemplateURL::NORMAL) {
+    // Ignore non-standard search engines (for example extension or omnibox).
+    return false;
+  }
+
+  return template_url->IsSearchURL(url, SearchTermsData());
+}
+
 // Returns a `TemplateURL` if `url` matches the search engine results page for
 // `prepopulated_engine`.
 std::unique_ptr<TemplateURL> MaybeGetTemplateURLForPrepopulatedEngine(
@@ -37,8 +72,7 @@ std::unique_ptr<TemplateURL> MaybeGetTemplateURLForPrepopulatedEngine(
   const auto template_url_data =
       TemplateURLDataFromPrepopulatedEngine(prepopulated_engine);
   auto template_url = std::make_unique<TemplateURL>(*template_url_data);
-
-  if (!template_url->IsSearchURL(url, SearchTermsData())) {
+  if (!DoesTemplateURLMatch(template_url, url)) {
     return nullptr;
   }
 
@@ -89,6 +123,13 @@ GURL SerpClassifier::NormalizeUrl(const GURL& url) const {
 
 std::unique_ptr<TemplateURL> SerpClassifier::MaybeGetTemplateUrl(
     const GURL& url) const {
+  for (const auto& search_url : kAdditionalSearchUrls) {
+    auto template_url = BuildTemplateURLFromSearchURL(search_url);
+    if (DoesTemplateURLMatch(template_url, url)) {
+      return template_url;
+    }
+  }
+
   for (const auto* prepopulated_engine :
        TemplateURLPrepopulateData::GetAllPrepopulatedEngines()) {
     if (auto search_engine = MaybeGetTemplateURLForPrepopulatedEngine(

@@ -837,6 +837,10 @@ TEST_F(BraveStatsUpdaterTest, SendSerpMetricsUsageIfEnabled) {
               GetSearchCountForYesterday(serp_metrics::SerpMetricType::kOther))
       .WillOnce(::testing::Return(1));
 
+  EXPECT_CALL(serp_metrics_mock, GetSearchCountForYesterday(
+                                     serp_metrics::SerpMetricType::kYouTube))
+      .WillOnce(::testing::Return(4));
+
   EXPECT_CALL(serp_metrics_mock, GetSearchCountForStalePeriod)
       .WillOnce(::testing::Return(15));
 
@@ -860,6 +864,10 @@ TEST_F(BraveStatsUpdaterTest, SendSerpMetricsUsageIfEnabled) {
   EXPECT_EQ(query_value, "1");
 
   ASSERT_TRUE(
+      net::GetValueForKeyInQuery(update_url, "youTubeSearch", &query_value));
+  EXPECT_EQ(query_value, "4");
+
+  ASSERT_TRUE(
       net::GetValueForKeyInQuery(update_url, "staleSearch", &query_value));
   EXPECT_EQ(query_value, "15");
 }
@@ -880,6 +888,8 @@ TEST_F(BraveStatsUpdaterTest, DoNotSendSerpMetricsUsageIfDisabled) {
   EXPECT_FALSE(net::GetValueForKeyInQuery(update_url, "googleSearch",
                                           /*out_value=*/nullptr));
   EXPECT_FALSE(net::GetValueForKeyInQuery(update_url, "otherSearch",
+                                          /*out_value=*/nullptr));
+  EXPECT_FALSE(net::GetValueForKeyInQuery(update_url, "youTubeSearch",
                                           /*out_value=*/nullptr));
   EXPECT_FALSE(net::GetValueForKeyInQuery(update_url, "staleSearch",
                                           /*out_value=*/nullptr));

@@ -6,12 +6,15 @@
 #include "brave/components/serp_metrics/serp_classifier.h"
 
 #include <optional>
+#include <string>
+#include <string_view>
 
 #include "base/containers/fixed_flat_set.h"
 #include "brave/components/search_engines/brave_prepopulated_engines.h"
 #include "components/search_engines/search_engine_type.h"
 #include "components/search_engines/search_terms_data.h"
 #include "components/search_engines/template_url.h"
+#include "components/search_engines/template_url_data.h"
 #include "components/search_engines/template_url_data_util.h"
 #include "components/search_engines/template_url_prepopulate_data.h"
 #include "testing/gtest/include/gtest/gtest.h"
@@ -42,6 +45,18 @@ void VerifySerpClassifierExpectation(
           classifier.MaybeClassify(url)) {
     EXPECT_TRUE(kAllowedPrepopulatedEngines.contains(*search_engine_type));
   }
+}
+
+void VerifySerpClassifierExpectation(std::string_view search_url) {
+  TemplateURLData template_url_data;
+  template_url_data.SetURL(std::string(search_url));
+  auto template_url = std::make_unique<TemplateURL>(template_url_data);
+
+  GURL url = template_url->GenerateSearchURL(SearchTermsData(), u"test");
+  ASSERT_TRUE(url.is_valid());
+
+  SerpClassifier classifier;
+  EXPECT_TRUE(classifier.MaybeClassify(url));
 }
 
 }  // namespace
@@ -75,6 +90,14 @@ TEST(SerpClassifierTest, IsNotSameSearchQueryWithInvalidUrl) {
 
   EXPECT_FALSE(classifier.IsSameSearchQuery(
       GURL(R"(https://www.qwant.com/?q=foobar)"), GURL("foobar")));
+}
+
+TEST(SerpClassifierTest, ClassifyAdditionalSearchUrls) {
+  for (const auto& search_url : {
+           "https://www.youtube.com/results?search_query=foo",
+       }) {
+    VerifySerpClassifierExpectation(search_url);
+  }
 }
 
 TEST(SerpClassifierTest, OnlyClassifyAllowedSearchEngines) {
