@@ -31,16 +31,6 @@ protocol TabMiscDelegate {
   func updateURLBarWalletButton()
 }
 
-struct RewardsTabChangeReportingState {
-  /// Set to true when the resulting page was restored from session state.
-  var wasRestored = false
-  /// Set to true when the resulting page navigation is not a reload or a
-  /// back/forward type.
-  var isNewNavigation = true
-  /// HTTP status code of the resulting page.
-  var httpStatusCode = -1
-}
-
 /// A broad container of assorted data that was previously stored in Tab
 ///
 /// DO NOT ADD NEW PROPERTIES TO THIS TYPE

@@ -145,15 +145,6 @@ extension BrowserViewController: TabObserver {
       }
     }
 
-    // Notify of tab changes after navigation completes but before notifying that
-    // the tab has loaded, so that any listeners can process the tab changes
-    // before the tab is considered loaded.
-    rewards.maybeNotifyTabDidChange(
-      tab: tab,
-      isSelected: tabManager.selectedTab === tab
-    )
-    rewards.maybeNotifyTabDidLoad(tab: tab)
-
     // The toolbar and url bar changes can not be
     // on different tab than selected. Or the webview
     // previews and etc will effect the status
@@ -418,7 +409,7 @@ extension BrowserViewController {
       BraveGetUA(),
       BraveSearchScriptHandler(profile: profile, rewards: rewards),
       ResourceDownloadScriptHandler(),
-      AdsMediaReportingScriptHandler(rewards: rewards),
+      AdsMediaReportingScriptHandler(),
       ReadyStateScriptHandler(),
       DeAmpScriptHandler(),
       SiteStateListenerScriptHandler(),
