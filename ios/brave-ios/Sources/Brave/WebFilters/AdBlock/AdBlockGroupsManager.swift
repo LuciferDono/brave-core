@@ -249,6 +249,13 @@ import os
     await updateImmediately(fileInfos: [fileInfo])
   }
 
+  /// Update the exclusion rules applied during engine compilation
+  func setExclusionRules(_ rules: [String]) {
+    let ruleSet = Set(rules)
+    standardManager.exclusionRules = ruleSet
+    aggressiveManager.exclusionRules = ruleSet
+  }
+
   /// Handle updated filter list info
   /// - Parameters:
   ///   - fileInfo: The file info to update on the appropriate engine manager
