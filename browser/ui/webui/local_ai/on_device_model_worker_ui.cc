@@ -3,7 +3,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
 // You can obtain one at https://mozilla.org/MPL/2.0/.
 
-#include "brave/browser/ui/webui/candle_wasm/candle_embedding_gemma_ui.h"
+#include "brave/browser/ui/webui/local_ai/on_device_model_worker_ui.h"
 
 #include <memory>
 #include <utility>
@@ -25,7 +25,7 @@
 
 namespace local_ai {
 
-UntrustedCandleEmbeddingGemmaUI::UntrustedCandleEmbeddingGemmaUI(
+UntrustedOnDeviceModelWorkerUI::UntrustedOnDeviceModelWorkerUI(
     content::WebUI* web_ui)
     : ui::MojoWebUIController(web_ui) {
   content::WebUIDataSource* source = content::WebUIDataSource::CreateAndAdd(
@@ -46,11 +46,11 @@ UntrustedCandleEmbeddingGemmaUI::UntrustedCandleEmbeddingGemmaUI(
       network::mojom::CSPDirectiveName::FontSrc, "font-src 'self' data:;");
 }
 
-UntrustedCandleEmbeddingGemmaUI::~UntrustedCandleEmbeddingGemmaUI() = default;
+UntrustedOnDeviceModelWorkerUI::~UntrustedOnDeviceModelWorkerUI() = default;
 
-WEB_UI_CONTROLLER_TYPE_IMPL(UntrustedCandleEmbeddingGemmaUI)
+WEB_UI_CONTROLLER_TYPE_IMPL(UntrustedOnDeviceModelWorkerUI)
 
-void UntrustedCandleEmbeddingGemmaUI::BindInterface(
+void UntrustedOnDeviceModelWorkerUI::BindInterface(
     mojo::PendingReceiver<mojom::LocalAIService> receiver) {
   auto* profile = Profile::FromWebUI(web_ui());
   LocalAIServiceFactory::BindForProfile(profile, std::move(receiver));
@@ -58,15 +58,15 @@ void UntrustedCandleEmbeddingGemmaUI::BindInterface(
 
 ///////////////////////////////////////////////////////////////////////////////
 
-UntrustedCandleEmbeddingGemmaUIConfig::UntrustedCandleEmbeddingGemmaUIConfig()
+UntrustedOnDeviceModelWorkerUIConfig::UntrustedOnDeviceModelWorkerUIConfig()
     : content::WebUIConfig(content::kChromeUIUntrustedScheme,
                            kUntrustedOnDeviceModelWorkerHost) {}
 
 std::unique_ptr<content::WebUIController>
-UntrustedCandleEmbeddingGemmaUIConfig::CreateWebUIController(
+UntrustedOnDeviceModelWorkerUIConfig::CreateWebUIController(
     content::WebUI* web_ui,
     const GURL& url) {
-  return std::make_unique<UntrustedCandleEmbeddingGemmaUI>(web_ui);
+  return std::make_unique<UntrustedOnDeviceModelWorkerUI>(web_ui);
 }
 
 }  // namespace local_ai

@@ -40,7 +40,7 @@
 #include "brave/components/playlist/core/common/features.h"
 #endif
 
-#include "brave/browser/ui/webui/candle_wasm/candle_embedding_gemma_ui.h"
+#include "brave/browser/ui/webui/local_ai/on_device_model_worker_ui.h"
 #include "brave/components/local_ai/core/features.h"
 
 #define RegisterChromeUntrustedWebUIConfigs \
@@ -68,7 +68,7 @@ void RegisterChromeUntrustedWebUIConfigs() {
 #endif  // BUILDFLAG(ENABLE_BRAVE_WALLET)
   if (base::FeatureList::IsEnabled(local_ai::features::kLocalAIModels)) {
     content::WebUIConfigMap::GetInstance().AddUntrustedWebUIConfig(
-        std::make_unique<local_ai::UntrustedCandleEmbeddingGemmaUIConfig>());
+        std::make_unique<local_ai::UntrustedOnDeviceModelWorkerUIConfig>());
   }
 #if !BUILDFLAG(IS_ANDROID)
 #if BUILDFLAG(ENABLE_BRAVE_VPN)
