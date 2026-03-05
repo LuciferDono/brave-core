@@ -376,13 +376,18 @@ import os
 
   /// Ensure all engines are compiled right away.
   func compileEngines() async {
-    await GroupedAdBlockEngine.EngineType.allCases.asyncConcurrentForEach { engineType in
+    for engineType in GroupedAdBlockEngine.EngineType.allCases {
       let enabledSources = self.sourceProvider.enabledSources(for: engineType)
       let manager = self.getManager(for: engineType)
-      await manager.compileAvailableEngines(
+      async let compileEngines: Void = manager.compileAvailableEngines(
         for: enabledSources,
         resourcesInfo: self.resourcesInfo
       )
+      async let compileContentBlockers: Void = manager.ensureGroupedContentBlockers(
+        for: enabledSources,
+        contentBlockerManager: contentBlockerManager
+      )
+      _ = await (compileEngines, compileContentBlockers)
     }
   }
 
