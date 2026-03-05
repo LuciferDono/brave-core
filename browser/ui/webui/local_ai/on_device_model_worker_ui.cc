@@ -11,8 +11,8 @@
 #include "brave/browser/local_ai/local_ai_service_factory.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/local_ai/core/local_ai.mojom.h"
-#include "brave/components/local_ai/resources/grit/candle_embedding_gemma_bridge_generated.h"
-#include "brave/components/local_ai/resources/grit/candle_embedding_gemma_bridge_generated_map.h"
+#include "brave/components/local_ai/resources/grit/on_device_model_worker_generated.h"
+#include "brave/components/local_ai/resources/grit/on_device_model_worker_generated_map.h"
 #include "brave/components/local_ai/resources/grit/candle_embedding_gemma_generated.h"
 #include "brave/components/local_ai/resources/grit/candle_embedding_gemma_generated_map.h"
 #include "chrome/browser/profiles/profile.h"
@@ -33,8 +33,8 @@ UntrustedOnDeviceModelWorkerUI::UntrustedOnDeviceModelWorkerUI(
       kUntrustedOnDeviceModelWorkerURL);
 
   source->AddResourcePaths(kCandleEmbeddingGemmaGenerated);
-  webui::SetupWebUIDataSource(source, kCandleEmbeddingGemmaBridgeGenerated,
-                              IDR_CANDLE_EMBEDDING_GEMMA_BRIDGE_HTML);
+  webui::SetupWebUIDataSource(source, kOnDeviceModelWorkerGenerated,
+                              IDR_ON_DEVICE_MODEL_WORKER_HTML);
 
   // Set up CSP to allow WASM execution and Mojo JS from resources
   source->OverrideContentSecurityPolicy(
