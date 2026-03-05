@@ -1,0 +1,49 @@
+# Copyright (c) 2026 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+import("//ios/web/public/js_messaging/compile_ts.gni")
+import("//ios/web/public/js_messaging/optimize_js.gni")
+
+source_set("reader_mode") {
+  sources = [
+    "reader_mode_javascript_feature.h",
+    "reader_mode_javascript_feature.mm",
+  ]
+  deps = [
+    ":brave_reader_mode_js",
+    "//base",
+    "//ios/web/public",
+    "//ios/web/public/js_messaging",
+  ]
+}
+
+compile_ts("compile_reader_mode_js") {
+  allow_js = true
+  sources = [
+    "//brave/ios/third_party/readability/src/Readability-readerable.js",
+    "//brave/ios/third_party/readability/src/Readability.js",
+
+    # This cannot be named `reader_mode.ts` as Chrome iOS already has a target
+    # that uses that name and all JS files are copied into the same framework
+    # directory.
+    "resources/brave_reader_mode.ts",
+  ]
+  deps = [ "//ios/web/public/js_messaging:gcrweb" ]
+}
+
+optimize_js("brave_reader_mode_js") {
+  visibility = [ ":reader_mode" ]
+
+  _script = filter_include(get_target_outputs(":compile_reader_mode_js"),
+                           [ "*brave_reader_mode.js" ])
+  primary_script = _script[0]
+
+  sources = _script
+
+  deps = [
+    ":compile_reader_mode_js",
+    "//ios/web/public/js_messaging:gcrweb",
+  ]
+}

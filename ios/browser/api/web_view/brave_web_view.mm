@@ -24,6 +24,7 @@
 #include "brave/ios/browser/ui/webui/brave_wallet/wallet_page_handler_bridge_holder.h"
 #include "brave/ios/browser/web/force_paste/force_paste_javascript_feature.h"
 #include "brave/ios/browser/web/page_metadata/page_metadata_javascript_feature.h"
+#include "brave/ios/browser/web/reader_mode/reader_mode_javascript_feature.h"
 #include "components/autofill/core/browser/logging/log_manager.h"
 #include "components/autofill/core/browser/logging/log_router.h"
 #include "components/autofill/ios/browser/autofill_agent.h"
@@ -443,6 +444,28 @@ class BraveWebViewHolder : public web::WebStateUserData<BraveWebViewHolder> {
         }
         completionHandler(nil);
       }));
+}
+
+@end
+
+@implementation BraveWebView (ReaderMode)
+
+- (void)checkReadability:(void (^)(NSString* _Nullable json))completionHandler {
+  brave::ReaderModeJavaScriptFeature::GetInstance()->CheckReadability(
+      self.webState, base::BindOnce(^(const std::string& json) {
+        completionHandler(json.empty() ? nil : base::SysUTF8ToNSString(json));
+      }));
+}
+
+- (void)setReaderModeTheme:(NSString*)theme
+                  fontType:(NSString*)fontType
+                  fontSize:(NSInteger)fontSize {
+  base::DictValue style;
+  style.Set("theme", base::SysNSStringToUTF8(theme));
+  style.Set("fontType", base::SysNSStringToUTF8(fontType));
+  style.Set("fontSize", static_cast<int>(fontSize));
+  brave::ReaderModeJavaScriptFeature::GetInstance()->SetStyle(self.webState,
+                                                              style);
 }
 
 @end
