@@ -39,6 +39,14 @@
 #undef ListCategories
 
 void CustomizeToolbarHandler::ListCategories(ListCategoriesCallback callback) {
+  if (!webui::GetBrowserWindowInterface(web_contents_)) {
+    // This can happen if the web contents is shutting down.
+    // https://github.com/brave/brave-browser/issues/53404
+    std::move(callback).Run(
+        std::vector<side_panel::customize_chrome::mojom::CategoryPtr>());
+    return;
+  }
+
   ListCategories_ChromiumImpl(
       base::BindOnce(
           &customize_chrome::AppendBraveSpecificCategories,
@@ -47,6 +55,14 @@ void CustomizeToolbarHandler::ListCategories(ListCategoriesCallback callback) {
 }
 
 void CustomizeToolbarHandler::ListActions(ListActionsCallback callback) {
+  if (!webui::GetBrowserWindowInterface(web_contents_)) {
+    // This can happen if the web contents is shutting down.
+    // https://github.com/brave/brave-browser/issues/53404
+    std::move(callback).Run(
+        std::vector<side_panel::customize_chrome::mojom::ActionPtr>());
+    return;
+  }
+
   ListActions_ChromiumImpl(
       base::BindOnce(&customize_chrome::FilterUnsupportedChromiumActions)
           .Then(base::BindOnce(
