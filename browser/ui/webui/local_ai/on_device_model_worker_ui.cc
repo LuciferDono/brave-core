@@ -11,10 +11,10 @@
 #include "brave/browser/local_ai/local_ai_service_factory.h"
 #include "brave/components/constants/webui_url_constants.h"
 #include "brave/components/local_ai/core/local_ai.mojom.h"
+#include "brave/components/local_ai/resources/grit/candle_embedding_module_generated.h"
+#include "brave/components/local_ai/resources/grit/candle_embedding_module_generated_map.h"
 #include "brave/components/local_ai/resources/grit/on_device_model_worker_generated.h"
 #include "brave/components/local_ai/resources/grit/on_device_model_worker_generated_map.h"
-#include "brave/components/local_ai/resources/grit/candle_embedding_gemma_generated.h"
-#include "brave/components/local_ai/resources/grit/candle_embedding_gemma_generated_map.h"
 #include "chrome/browser/profiles/profile.h"
 #include "components/grit/brave_components_resources.h"
 #include "content/public/browser/web_contents.h"
@@ -32,7 +32,7 @@ UntrustedOnDeviceModelWorkerUI::UntrustedOnDeviceModelWorkerUI(
       web_ui->GetWebContents()->GetBrowserContext(),
       kUntrustedOnDeviceModelWorkerURL);
 
-  source->AddResourcePaths(kCandleEmbeddingGemmaGenerated);
+  source->AddResourcePaths(kCandleEmbeddingModuleGenerated);
   webui::SetupWebUIDataSource(source, kOnDeviceModelWorkerGenerated,
                               IDR_ON_DEVICE_MODEL_WORKER_HTML);
 
