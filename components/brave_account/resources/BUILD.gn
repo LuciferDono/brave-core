@@ -3,7 +3,31 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at https://mozilla.org/MPL/2.0/.
 
+import("//brave/components/common/typescript.gni")
 import("//ui/webui/resources/tools/build_webui.gni")
+
+transpile_web_ui("opaque_ke") {
+  resource_name = "opaque_ke"
+  generate_grdp = true
+  resource_path_prefix = "brave"
+
+  entry_points = [ [
+        "opaque_ke",
+        rebase_path("wasm_opaque_ke.js"),
+      ] ]
+
+  inputs = [
+    rebase_path("//brave/ui/webui/resources/wasm/Cargo.lock"),
+    rebase_path("//brave/components/brave_account/wasm/opaque_ke/src/lib.rs"),
+  ]
+
+  imports_from = [ "//brave/components/brave_account/resources/" ]
+
+  rust_packages = [ rebase_path(
+          "//brave/components/brave_account/wasm/opaque_ke/Cargo.toml") ]
+
+  public_asset_path = "chrome://resources/brave/"
+}
 
 build_webui("build") {
   grd_prefix = "brave_account"

@@ -3,4 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 
-export { Login, Registration } from 'gen/brave/ui/webui/resources/wasm/opaque_ke/bundler/pkg'
+export {
+  Login,
+  Registration,
+} from 'gen/brave/components/brave_account/wasm/opaque_ke/bundler/pkg'

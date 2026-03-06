@@ -59,16 +59,22 @@ with brave_chromium_utils.sys_path('//tools/rust'):
     CARGO = os.path.join(update_rust.RUST_TOOLCHAIN_OUT_DIR, 'bin',
                          'cargo' + ('.exe' if sys.platform == 'win32' else ''))
 
-CONFIG_TOML = {
-    'source': {
-        'crates-io': {
-            'replace-with': 'vendored-sources'
-        },
-        'vendored-sources': {
-            'directory': '../vendor'
+
+def make_config_toml(member_dir):
+    """Build a cargo config that points to the shared vendor dir."""
+    vendor_rel = os.path.relpath('vendor', member_dir)
+    # Use forward slashes for cross-platform Cargo compatibility.
+    vendor_rel = vendor_rel.replace(os.sep, '/')
+    return {
+        'source': {
+            'crates-io': {
+                'replace-with': 'vendored-sources'
+            },
+            'vendored-sources': {
+                'directory': vendor_rel
+            }
         }
     }
-}
 
 
 def main():
@@ -84,9 +90,10 @@ def main():
 
     subprocess.run([CARGO, 'vendor'], check=True)
     for member in members:
-        Path(f'{member}/.cargo').mkdir(exist_ok=True)
+        Path(f'{member}/.cargo').mkdir(exist_ok=True, parents=True)
+        config = make_config_toml(member)
         with open(Path(f'{member}/.cargo/config.toml'), 'w') as f:
-            toml.dump(CONFIG_TOML, f)
+            toml.dump(config, f)
 
     restore_files(backed_up_files)
     clean_up_files(CLEANUP_PATTERNS)
