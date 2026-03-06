@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Allow <ph name="URL"/> to open Leo AI conversations in Brave?</translation>
 <translation id="4355784577209159847">Allow use of third-party cookies for legacy Google sign-in</translation>
 <translation id="5770656036486891920"><ph name="URL"/> wants to use third-party cookies for legacy Google sign-in</translation>
-<translation id="6053826678715267477">Allow access to localhost resources</translation>
-<translation id="2973562729984406132"><ph name="URL"/> wants access to localhost resources</translation>
 <translation id="2104347391516032700">Bat Rewards Service</translation>
 <translation id="5939518447894949180">Reset</translation>
 <translation id="3349204812119681938">Reset Brave Rewards</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Show key</translation>
 <translation id="8033497299373164724">Hide key</translation>
 <translation id="7514365320538308">Download</translation>
+<translation id="5148285448107770349">Password must be at least 8 characters</translation>
 <translation id="2702143907607790516">Failed to update account name, please try again.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">The receiving address is your own address.</translation>
 <translation id="3124753063207986114">The receiving address is a token's contract address.</translation>
 <translation id="7029817408221097939">Invalid unified address</translation>
-<translation id="6370376419663123629">Address doesn’t look correct</translation>
-<translation id="3767148796886402380">Check your address to make sure it’s the right address (e.g. letters with lower or upper case).</translation>
 <translation id="2585599787090762065">How can I solve it?</translation>
 <translation id="5517732667776806421">Missing checksum information</translation>
-<translation id="2975056993833847787">This address cannot be verified (missing checksum). Proceed?</translation>
-<translation id="6320252966164556855">Address did not pass verification (invalid checksum). Please try again, replacing lowercase letters with uppercase.</translation>
 <translation id="4667144295226514387">Missing gas limit</translation>
 <translation id="2021522108838444624">Amount must be greater than 0</translation>
 <translation id="8464365289405373974">To address is required</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Bridging</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> on <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">There was an error attempting to <ph name="SWAP_OR_BRIDGE"/> on <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Pending</translation>
 <translation id="1778601041100951971">Shielding <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Unshielding <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> has been shielded</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">This service is provided by <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> and is subject to their <ph name="TERMS_LINK_BEFORE"/>Terms of Service<ph name="TERMS_LINK_AFTER"/> and <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Privacy Policy<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Available</translation>
 <translation id="5296640085393149413">Funds available for you to use.</translation>
-<translation id="3248185426436836442">Pending</translation>
 <translation id="2515906149804238711">A pending change in your wallet balance.</translation>
 <translation id="7700365440186054030">Your available funds plus any not-yet-confirmed transactions.</translation>
 <translation id="4118601537508887039">Some balances may be unavailable</translation>
@@ -2325,7 +2320,6 @@
 <translation id="4808122506413075135">Send page content from your browser history to give Leo more context for the conversation.</translation>
 <translation id="220541218939267992">Page contents will be sent to Leo along with your messages.</translation>
 <translation id="2152389270152475874">Add tabs, bookmarks, or history for context. Selected contents will be sent to Leo with your messages.</translation>
-<translation id="6237410387937453423">No matching attachments</translation>
 <translation id="2315654674554095762">Leo will now remember your conversations so you can go back to them. They are stored encrypted on your device, and you can delete them any time.</translation>
 <translation id="7821251979960635244">Your conversation history will appear here once you start a conversation.</translation>
 <translation id="887511360213807449">History is disabled</translation>
@@ -2427,7 +2421,6 @@
 <translation id="4773299976671772492">Stopped</translation>
 <translation id="6946722113367118030">Thinking</translation>
 <translation id="2113810663179257944">Code Execution</translation>
-<translation id="4790888275629207278">Executed code in sandbox</translation>
 <translation id="4379566111233326721">Code:</translation>
 <translation id="3542130965673205258">Output:</translation>
 <translation id="3428245742224818842">AI browsing</translation>
@@ -2439,11 +2432,7 @@
 <translation id="864117099189791993">You can switch back to your regular profile at any time from the main menu or the Leo avatar in your toolbar. Agent mode will always open in this profile.</translation>
 <translation id="3486480638399578250">Keep your personal email address private</translation>
 <translation id="7765422154906712751">Create unique, random addresses that forward to your Brave account email and can be deleted at any time. Keep your actual email address from being disclosed or used by advertisers.</translation>
-<translation id="5222676887888702881">Sign out</translation>
-<translation id="8090292425230843109">Sign out of Email Aliases</translation>
-<translation id="8471990782451394141">Connecting to Brave Account...</translation>
 <translation id="71316462802471551">Email Aliases</translation>
-<translation id="5713644099811900409">Brave Account</translation>
 <translation id="6002159997868894136">Click to copy alias</translation>
 <translation id="8105770564756958406">Used by <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Create up to 5 free email aliases to protect your real email address.</translation>
@@ -2467,8 +2456,6 @@
 <translation id="646524615209870492">Removing <ph name="ALIAS"/> as an alias will result in the loss of your ability to receive emails.</translation>
 <translation id="8133100642915054515">Error deleting alias. Check your internet connection and try again.</translation>
 <translation id="8465742443901727718">This action is irreversible. Are you sure you want to proceed?</translation>
-<translation id="8662104432574824754">To get started, sign in or create a Brave account</translation>
-<translation id="8069030342700068465">Enter your email address to get a secure login link sent to your email. Clicking this link will either create or access a Brave Account and let you use the free Email Aliases service.</translation>
 <translation id="2133391407495495735">Get login link</translation>
 <translation id="2650906829817220223">Error requesting authentication. Check your internet connection and try again.</translation>
 <translation id="3699624789011381381">Email address</translation>
@@ -2501,7 +2488,7 @@
 <translation id="466214682712474574">Log in to your <ph name="PROVIDER"/> account to see your balance</translation>
 <translation id="8332875111286275890">Log in to see your balance</translation>
 <translation id="5430001801813715388">REWARDS</translation>
-<translation id="5966055668402779222">Ask anything, find anything...</translation>
+<translation id="2430295257226173518">Ask anything, find anything…</translation>
 <translation id="167018310108390163">Customise New Tab Page</translation>
 <translation id="6851426306697017546">Show clock</translation>
 <translation id="4844370919312937270">Show search widget in new tabs</translation>
@@ -2542,7 +2529,6 @@
 <translation id="4677356505199464553">Looks good</translation>
 <translation id="1992750560347846445">Report site</translation>
 <translation id="2863270180245144869">Ad Block Only mode enabled</translation>
-<translation id="2302218429308447288">You're currently using Ad Blocking Only mode. This mode only offers ad blocking protection. If you wish to return to full Shields mode, disable this mode from settings.</translation>
 <translation id="4820891023903368625">Ads blocked <ph name="LINK_BEFORE"/>Learn more<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Trackers, ads and more blocked <ph name="LINK_BEFORE"/>Learn more<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Not protected by Brave Shields <ph name="LINK_BEFORE"/>Learn more<ph name="LINK_AFTER"/></translation>

@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Tillåter du <ph name="URL"/> att öppna Leo AI-konversationer i Brave?</translation>
 <translation id="4355784577209159847">Tillåt användning av cookies från tredje part för äldre Google-inloggning</translation>
 <translation id="5770656036486891920"><ph name="URL"/> vill använda cookies från tredje part för äldre Google-inloggning</translation>
-<translation id="6053826678715267477">Tillåt åtkomst till localhost-resurser</translation>
-<translation id="2973562729984406132"><ph name="URL"/> vill ha åtkomst till localhost-resurser</translation>
 <translation id="2104347391516032700">Bat-belöningstjänst</translation>
 <translation id="5939518447894949180">Återställ</translation>
 <translation id="3349204812119681938">Återställ Brave Rewards</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Visa nyckel</translation>
 <translation id="8033497299373164724">Dölj nyckel</translation>
 <translation id="7514365320538308">Hämta hem</translation>
+<translation id="5148285448107770349">Lösenord måste ha minst 8 tecken</translation>
 <translation id="2702143907607790516">Det gick inte att uppdatera kontonamnet. Vänligen försök igen.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Mottagaradressen är din egen adress.</translation>
 <translation id="3124753063207986114">Mottagaradressen är en tokens kontraktadress</translation>
 <translation id="7029817408221097939">Ogiltig adress</translation>
-<translation id="6370376419663123629">Adressen verkar inte vara korrekt</translation>
-<translation id="3767148796886402380">Kontrollera att adressen verkar rätt (t.ex. bokstäver med gemener eller versaler).</translation>
 <translation id="2585599787090762065">Hur kan jag lösa detta?</translation>
 <translation id="5517732667776806421">Information om kontrollsumma saknas</translation>
-<translation id="2975056993833847787">Den här adressen kan inte verifieras (kontrollsumma saknas). Vill du fortsätta?</translation>
-<translation id="6320252966164556855">Adressen godkändes inte i verifieringen (ogiltig kontrollsumma). Försök igen och byt ut gemener med versaler.</translation>
 <translation id="4667144295226514387">Gasgräns saknas</translation>
 <translation id="2021522108838444624">Beloppet måste vara större än 0</translation>
 <translation id="8464365289405373974">Till-adress krävs</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Överbrygga</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> på <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Ett fel inträffade vid försök att <ph name="SWAP_OR_BRIDGE"/> på <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Väntande</translation>
 <translation id="1778601041100951971">Skyddar <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Avskärmar <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> har skyddats</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Den här tjänsten tillhandahålls av <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> och omfattas av deras <ph name="TERMS_LINK_BEFORE"/>användarvillkor<ph name="TERMS_LINK_AFTER"/> och <ph name="PRIVACY_POLICY_LINK_BEFORE"/>integritetspolicy<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Tillgängligt</translation>
 <translation id="5296640085393149413">Tillgängliga medel som du kan använda.</translation>
-<translation id="3248185426436836442">Väntande</translation>
 <translation id="2515906149804238711">En väntande förändring i ditt plånbokssaldo.</translation>
 <translation id="7700365440186054030">Dina tillgängliga medel plus eventuella ännu inte bekräftade transaktioner.</translation>
 <translation id="4118601537508887039">Vissa saldon kan vara otillgängliga</translation>
@@ -2289,6 +2284,7 @@
 <translation id="6495402307502950726">Rensa konversationen</translation>
 <translation id="903201991022343217">Starta ny konversation</translation>
 <translation id="8171760814579050200">Byt namn på konversation</translation>
+<translation id="5397794290049113714">Du</translation>
 <translation id="7754678742055438573">Ta bort konversation</translation>
 <translation id="1946267518364740045">Resonemang ...</translation>
 <translation id="4198859185714743678">Resonemang komplett</translation>
@@ -2325,7 +2321,6 @@
 <translation id="4808122506413075135">Skicka sidinnehåll från din webbläsarhistorik för att ge Leo mer sammanhang i samtalet.</translation>
 <translation id="220541218939267992">Sidinnehållet kommer att skickas till Leo tillsammans med dina meddelanden.</translation>
 <translation id="2152389270152475874">Lägg till flikar, bokmärken eller historik för sammanhang. Valda innehåll kommer att skickas till Leo med dina meddelanden.</translation>
-<translation id="6237410387937453423">Inga matchande bilagor</translation>
 <translation id="2315654674554095762">Leo kommer nu ihåg dina konversationer så att du kan gå tillbaka till dem. De lagras krypterade på din enhet, och du kan ta bort dem när som helst.</translation>
 <translation id="7821251979960635244">Din konversationshistorik kommer att visas här när du startar en konversation.</translation>
 <translation id="887511360213807449">Historik är avaktiverad</translation>
@@ -2427,7 +2422,6 @@
 <translation id="4773299976671772492">Stoppad</translation>
 <translation id="6946722113367118030">Tänker</translation>
 <translation id="2113810663179257944">Kodkörning</translation>
-<translation id="4790888275629207278">Körde kod i sandbox</translation>
 <translation id="4379566111233326721">Kod:</translation>
 <translation id="3542130965673205258">Ut:</translation>
 <translation id="3428245742224818842">AI-bläddring</translation>
@@ -2439,11 +2433,7 @@
 <translation id="864117099189791993">Du kan när som helst växla tillbaka till din vanliga profil från huvudmenyn eller Leo-avataren i verktygsfältet. Agentläge öppnas alltid i denna profil.</translation>
 <translation id="3486480638399578250">Håll din personliga e-postadress privat</translation>
 <translation id="7765422154906712751">Skapa unika, slumpmässiga adresser som vidarebefordras till ditt Brave-kontos e-post och kan tas bort när som helst. Förhindra att din faktiska e-postadress avslöjas eller används av annonsörer.</translation>
-<translation id="5222676887888702881">Logga ut</translation>
-<translation id="8090292425230843109">Logga ut från E-postalias</translation>
-<translation id="8471990782451394141">Ansluter till Brave-konto ...</translation>
 <translation id="71316462802471551">E-post alias</translation>
-<translation id="5713644099811900409">Brave-konto</translation>
 <translation id="6002159997868894136">Klicka för att kopiera alias</translation>
 <translation id="8105770564756958406">Används av <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Skapa upp till 5 gratis e-postalias för att skydda din riktiga e-postadress.</translation>
@@ -2467,8 +2457,6 @@
 <translation id="646524615209870492">Om du tar bort <ph name="ALIAS"/> som alias kommer du att förlora din möjlighet att ta emot e-post.</translation>
 <translation id="8133100642915054515">Fel vid borttagning av alias. Kontrollera din internetanslutning och försök igen.</translation>
 <translation id="8465742443901727718">Denna åtgärd är oåterkallelig. Är du säker på att du vill fortsätta?</translation>
-<translation id="8662104432574824754">För att komma igång, logga in eller skapa ett Brave-konto</translation>
-<translation id="8069030342700068465">Ange din e-postadress för att få en säker inloggningslänk skickad till din e-post. Genom att klicka på denna länk skapas eller öppnas ett Brave-konto som låter dig använda den kostnadsfria E-postalias-tjänsten.</translation>
 <translation id="2133391407495495735">Få inloggningslänk</translation>
 <translation id="2650906829817220223">Fel vid begäran om autentisering. Kontrollera din internetanslutning och försök igen.</translation>
 <translation id="3699624789011381381">E-postadress</translation>
@@ -2501,7 +2489,7 @@
 <translation id="466214682712474574">Logga in på ditt <ph name="PROVIDER"/>-konto för att se ditt saldo</translation>
 <translation id="8332875111286275890">Logga in för att se ditt saldo</translation>
 <translation id="5430001801813715388">BELÖNINGAR</translation>
-<translation id="5966055668402779222">Fråga vad som helst, hitta vad som helst...</translation>
+<translation id="2430295257226173518">Fråga vad som helst, hitta vad som helst…</translation>
 <translation id="167018310108390163">Anpassa sidan för ny flik</translation>
 <translation id="6851426306697017546">Visa klocka</translation>
 <translation id="4844370919312937270">Visa sökwidgeten i nya flikar</translation>
@@ -2542,7 +2530,6 @@
 <translation id="4677356505199464553">Ser bra ut</translation>
 <translation id="1992750560347846445">Rapportera webbplats</translation>
 <translation id="2863270180245144869">Endast annonsblockeringsläge aktiverat</translation>
-<translation id="2302218429308447288">Du använder för närvarande läget Endast annonsblockering. Detta läge erbjuder endast skydd mot annonsblockering. Om du vill återgå till fullständigt Shields-läge inaktiverar du det här läget i inställningarna.</translation>
 <translation id="4820891023903368625">Annonser blockerade <ph name="LINK_BEFORE"/>Läs mer<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Spårare, annonser och mer blockeras <ph name="LINK_BEFORE"/>Läs mer<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Skyddas inte av Brave Shields <ph name="LINK_BEFORE"/>Läs mer<ph name="LINK_AFTER"/></translation>

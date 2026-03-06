@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Benarkan <ph name="URL"/> membuka perbualan AI Leo dalam Brave?</translation>
 <translation id="4355784577209159847">Benarkan penggunaan kuki pihak ketiga untuk Log Masuk Google lama</translation>
 <translation id="5770656036486891920"><ph name="URL"/> mahu menggunakan kuki pihak ketiga untuk Log Masuk Google yang lama</translation>
-<translation id="6053826678715267477">Benarkan akses kepada sumber localhost</translation>
-<translation id="2973562729984406132"><ph name="URL"/> mahukan akses kepada sumber localhost</translation>
 <translation id="2104347391516032700">Perkhidmatan Ganjaran Bat</translation>
 <translation id="5939518447894949180">Tetapkan semula</translation>
 <translation id="3349204812119681938">Set Semula Ganjaran Brave</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Tunjukkan kekunci</translation>
 <translation id="8033497299373164724">Sembunyikan kunci</translation>
 <translation id="7514365320538308">Muat Turun</translation>
+<translation id="5148285448107770349">Kata laluan mestilah sekurang-kurangnya 8 aksara</translation>
 <translation id="2702143907607790516">Gagal mengemas kini nama akaun, sila cuba lagi.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Alamat penerima ialah alamat anda sendiri.</translation>
 <translation id="3124753063207986114">Alamat penerima ialah alamat kontrak token.</translation>
 <translation id="7029817408221097939">Alamat yang digabungkan tidak sah</translation>
-<translation id="6370376419663123629">Alamat kelihatan tidak betul</translation>
-<translation id="3767148796886402380">Semak alamat anda untuk memastikan maklumat tersebut betul (contohnya, huruf kecil atau besar).</translation>
 <translation id="2585599787090762065">Bagaimanakah boleh saya selesaikannya?</translation>
 <translation id="5517732667776806421">Tiada maklumat hasil tambah semak</translation>
-<translation id="2975056993833847787">Alamat ini tidak dapat disahkan (tiada hasil tambah semak). Teruskan?</translation>
-<translation id="6320252966164556855">Alamat tidak lulus pengesahan (hasil tambah semak tidak sah). Sila cuba sekali lagi, dengan menggantikan huruf kecil kepada huruf besar.</translation>
 <translation id="4667144295226514387">Tiada had gas</translation>
 <translation id="2021522108838444624">Jumlah mestilah lebih besar daripada 0</translation>
 <translation id="8464365289405373974">Alamat kepada diperlukan</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Menyambungkan</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> melalui <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Terdapat ralat semasa cuba <ph name="SWAP_OR_BRIDGE"/> melalui <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Menunggu</translation>
 <translation id="1778601041100951971">Melindungi <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Sedang nyahpelindungan <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> telah dilindungi</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Perkhidmatan ini disediakan oleh <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> dan tertakluk pada <ph name="TERMS_LINK_BEFORE"/>Syarat Perkhidmatan<ph name="TERMS_LINK_AFTER"/> dan <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Dasar Privasi mereka<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Tersedia</translation>
 <translation id="5296640085393149413">Dana tersedia untuk anda gunakan.</translation>
-<translation id="3248185426436836442">Menunggu</translation>
 <translation id="2515906149804238711">Wang baki belum selesai dalam baki dompet anda.</translation>
 <translation id="7700365440186054030">Dana anda yang tersedia serta mana-mana transaksi yang belum disahkan.</translation>
 <translation id="4118601537508887039">Sesetengah baki mungkin tidak tersedia</translation>
@@ -2289,6 +2284,7 @@
 <translation id="6495402307502950726">Kosongkan perbualan</translation>
 <translation id="903201991022343217">Mulakan perbualan baru</translation>
 <translation id="8171760814579050200">Namakan semula perbualan</translation>
+<translation id="5397794290049113714">Anda</translation>
 <translation id="7754678742055438573">Padam perbualan</translation>
 <translation id="1946267518364740045">Menganalisis...</translation>
 <translation id="4198859185714743678">Analisis selesai</translation>
@@ -2325,7 +2321,6 @@
 <translation id="4808122506413075135">Hantar kandungan halaman dari sejarah pelayar anda untuk memberikan lebih konteks kepada Leo dalam perbualan.</translation>
 <translation id="220541218939267992">Kandungan halaman akan dihantar kepada Leo bersama dengan mesej anda.</translation>
 <translation id="2152389270152475874">Tambah tab, penanda halaman, atau sejarah untuk konteks. Kandungan yang dipilih akan dihantar kepada Leo bersama mesej anda.</translation>
-<translation id="6237410387937453423">Tiada lampiran sepadan</translation>
 <translation id="2315654674554095762">Leo kini boleh menyimpan perbualan anda, membolehkan anda mengaksesnya semula. Perbualan ini disimpan secara terenkripsi pada peranti anda, dan anda boleh memadamkannya pada bila-bila masa.</translation>
 <translation id="7821251979960635244">Sejarah perbualan anda akan muncul di sini setelah anda memulakan perbualan.</translation>
 <translation id="887511360213807449">Sejarah dimatikan</translation>
@@ -2427,7 +2422,6 @@
 <translation id="4773299976671772492">Dihentikan</translation>
 <translation id="6946722113367118030">Berfikir</translation>
 <translation id="2113810663179257944">Pelaksanaan Kod</translation>
-<translation id="4790888275629207278">Kod dilaksanakan dalam sandbox</translation>
 <translation id="4379566111233326721">Kod:</translation>
 <translation id="3542130965673205258">Output:</translation>
 <translation id="3428245742224818842">Pelayaran AI</translation>
@@ -2439,11 +2433,7 @@
 <translation id="864117099189791993">Anda boleh beralih semula kepada profil biasa anda pada bila-bila masa dari menu utama atau dari menu profil di bar alatan. Pelayaran AI akan sentiasa dibuka dalam profil pelayaran AI.</translation>
 <translation id="3486480638399578250">Lindungi alamat e-mel peribadi anda</translation>
 <translation id="7765422154906712751">Cipta alamat rawak dan unik yang dihantar terus ke e-mel akaun Brave anda, dan boleh dipadam bila-bila masa. Lindungi alamat e-mel sebenar anda daripada didedahkan atau digunakan oleh pengiklan.</translation>
-<translation id="5222676887888702881">Log keluar</translation>
-<translation id="8090292425230843109">Log keluar daripada Alias E-mel</translation>
-<translation id="8471990782451394141">Menyambung ke Akaun Brave...</translation>
 <translation id="71316462802471551">Alias E-mel</translation>
-<translation id="5713644099811900409">Akaun Brave</translation>
 <translation id="6002159997868894136">Klik untuk salin alias</translation>
 <translation id="8105770564756958406">Digunakan oleh <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Cipta sehingga 5 alias email percuma untuk melindungi alamat e-mel sebenar anda.</translation>
@@ -2467,8 +2457,6 @@
 <translation id="646524615209870492">Mengalih keluar <ph name="ALIAS"/> sebagai alias akan menyebabkan anda tidak dapat menerima e-mel.</translation>
 <translation id="8133100642915054515">Ralat semasa memadam alias. Semak sambungan internet anda dan cuba lagi.</translation>
 <translation id="8465742443901727718">Tindakan ini tidak boleh dipulihkan. Adakah anda pasti mahu meneruskan?</translation>
-<translation id="8662104432574824754">Untuk memulakan, log masuk atau cipta akaun Brave</translation>
-<translation id="8069030342700068465">Masukkan alamat e-mel anda untuk menerima pautan log masuk yang selamat. Dengan mengklik pautan ini, anda akan mencipta atau mengakses Akaun Brave dan menggunakan perkhidmatan Alias E-mel percuma.</translation>
 <translation id="2133391407495495735">Dapatkan pautan log masuk</translation>
 <translation id="2650906829817220223">Ralat semasa meminta pengesahan. Periksa sambungan internet anda dan cuba lagi.</translation>
 <translation id="3699624789011381381">Alamat e-mel</translation>
@@ -2501,7 +2489,7 @@
 <translation id="466214682712474574">Log masuk ke akaun <ph name="PROVIDER"/> anda untuk melihat baki</translation>
 <translation id="8332875111286275890">Log masuk untuk melihat baki</translation>
 <translation id="5430001801813715388">GANJARAN</translation>
-<translation id="5966055668402779222">Tanya apa sahaja, cari apa sahaja...</translation>
+<translation id="2430295257226173518">Tanya apa sahaja, cari apa sahaja…</translation>
 <translation id="167018310108390163">Sesuaikan Halaman Tab Baharu</translation>
 <translation id="6851426306697017546">Tunjukkan jam</translation>
 <translation id="4844370919312937270">Tunjukkan widget carian dalam tab baru</translation>
@@ -2542,7 +2530,6 @@
 <translation id="4677356505199464553">Nampak baik</translation>
 <translation id="1992750560347846445">Laporkan laman</translation>
 <translation id="2863270180245144869">Mod Hanya Sekat Iklan diaktifkan</translation>
-<translation id="2302218429308447288">Anda sedang menggunakan mod Hanya Sekat Iklan. Mod ini hanya menawarkan perlindungan penyekatan iklan. Jika anda ingin kembali ke mod Perisai penuh, nyahaktifkan mod ini daripada tetapan.</translation>
 <translation id="4820891023903368625">Iklan telah disekat <ph name="LINK_BEFORE"/>Ketahui lebih lanjut<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Penjejak, iklan dan lagi sekatan<ph name="LINK_BEFORE"/>Ketahui lebih lanjut<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Tidak dilindungi oleh Brave Shields <ph name="LINK_BEFORE"/>Ketahui lebih lanjut <ph name="LINK_AFTER"/></translation>

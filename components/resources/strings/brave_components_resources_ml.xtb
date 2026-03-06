@@ -483,8 +483,6 @@
 <translation id="1518915449477235311"><ph name="URL"/> Brave-ൽ Leo AI സംഭാഷണങ്ങൾ തുറക്കാൻ അനുവദിക്കുമോ?</translation>
 <translation id="4355784577209159847">പാരമ്പര്യ Google സൈനിന് മൂന്നാം കക്ഷി കുക്കികളെ ഉപയോഗിച്ചുകൊണ്ടുള്ള അനുമതി അനുവദിക്കുക</translation>
 <translation id="5770656036486891920"><ph name="URL"/> പാരമ്പര്യ Google സൈനിന് മൂന്നാം കക്ഷി കുക്കികളെ ഉപയോഗിക്കുന്നതാണ്</translation>
-<translation id="6053826678715267477">localhost പ്രദാനങ്ങൾ ഉപയോഗിക്കുന്നതിന് അനുമതി നൽകുക</translation>
-<translation id="2973562729984406132"><ph name="URL"/> localhost പ്രദാനങ്ങൾ ഉപയോഗിക്കുന്നതിന് അനുമതി ദ്രിശ്യമാണ്</translation>
 <translation id="2104347391516032700">ബാറ്റ് റിവാർഡ്സ് സേവനം</translation>
 <translation id="5939518447894949180">റീസെറ്റ് ചെയ്യുക</translation>
 <translation id="3349204812119681938">Brave Rewards പുനഃക്രമീകരിക്കുക</translation>
@@ -1051,6 +1049,7 @@ other {<ph name="EXCHANGE_NAME"/> + {SWAP_EXCHANGE_STEPS} ഘട്ടങ്ങ�
 <translation id="2902856457593699108">കീ കാണിക്കുക</translation>
 <translation id="8033497299373164724">കീ മറയ്ക്കുക</translation>
 <translation id="7514365320538308">ഡൌണ്‍ലോഡ്</translation>
+<translation id="5148285448107770349">പാസ്‌വേഡ് കുറഞ്ഞത് 8 അക്കങ്ങൾ വേണ്ട</translation>
 <translation id="2702143907607790516">അക്കൗണ്ട് പേര് അപ്‌ഡേറ്റ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു, വീണ്ടും ശ്രമിക്കുക.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@ other {<ph name="EXCHANGE_NAME"/> + {SWAP_EXCHANGE_STEPS} ഘട്ടങ്ങ�
 <translation id="4932382283590063268">സ്വീകരിക്കുന്ന വിലാസം നിങ്ങളുടെ സ്വന്തം വിലാസമാണ്.</translation>
 <translation id="3124753063207986114">സ്വീകരിക്കുന്ന വിലാസം ടോക്കൺ കമ്മിഷൻ വിലാസമാണ്.</translation>
 <translation id="7029817408221097939">അസാധുവായ യൂണിഫൈഡ് വിലാസം</translation>
-<translation id="6370376419663123629">വിലാസം ശരിയായതായി തോന്നുന്നില്ല</translation>
-<translation id="3767148796886402380">അത് ശരിയായ വിലാസമാക്കുന്നതിന് നിങ്ങളുടെ വിലാസം പേർക്കണ്‍ വീക്ഷിക്കുക (ഉദാ. കുറുക്പായന്ന ചെറുകഥകള്‍ അല്ലെങ്കില്‍ വലിയകഥകള്‍).</translation>
 <translation id="2585599787090762065">അത് എങ്ങനെ പരിഹരിക്കാം?</translation>
 <translation id="5517732667776806421">ചെക്ക്‌സം വിവരങ്ങൾ നഷ്ടമാണ്</translation>
-<translation id="2975056993833847787">ഈ വിലാസം സ്ഥിരീകരിക്കാനാവില്ല (ചെക്ക്‌സം നഷ്ടം). മുന്നോട്ടു പോകോ?</translation>
-<translation id="6320252966164556855">വിലാസം സ്ഥിരീകരണ (ചെക്ക്‌സം അസാധു) വിജയിച്ചില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക, ചെറുകഥകൾ വലിയകഥകളായി മാറ്റുക.</translation>
 <translation id="4667144295226514387">അഭാവം േക്കാഴുന്നതിനായി നിശ്ചിതരും ഗ്യാസ് പരിധി വിവരങ്ങൾ</translation>
 <translation id="2021522108838444624">രൂപത്തിലുള്ള തുക 0 ല് വലുതായിരിക്കണം</translation>
 <translation id="8464365289405373974">വിലാസം ആവശ്യമാണ്</translation>
@@ -1382,6 +1377,7 @@ other {<ph name="EXCHANGE_NAME"/> + {SWAP_EXCHANGE_STEPS} ഘട്ടങ്ങ�
 <translation id="7694836973509310467">ബ്രിഡ്ജ്</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> <ph name="NETWORK"/> ൽ</translation>
 <translation id="7903225589949400974"><ph name="SWAP_OR_BRIDGE"/> <ph name="NETWORK"/> ൽ ശ്രമിച്ചത് ഒരു പിഴവാണെന്ന് കണ്ടെത്തി</translation>
+<translation id="3248185426436836442">അപൂർത്തിയായ</translation>
 <translation id="1778601041100951971"><ph name="AMOUNT"/> ഷീൽഡിംഗ്</translation>
 <translation id="6439110433198887239"><ph name="AMOUNT"/> അൺഷീൽഡ് ചെയ്യുന്നു</translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> ഷീൽഡ് ചെയ്തു</translation>
@@ -1752,7 +1748,6 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="2410455471299328417">ഈ സേവനം <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> എന്നവരുടെ സേവനം ഉപയോഗിച്ച് നൽകപ്പെടുന്നു. അവരുടെ <ph name="TERMS_LINK_BEFORE"/>Terms of Service<ph name="TERMS_LINK_AFTER"/> and <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Privacy Policy<ph name="PRIVACY_POLICY_LINK_AFTER"/> പ്രയോഗം സബ്ജന്റ് ആണ്.</translation>
 <translation id="8688672835843460752">ലഭ്യമാണ്</translation>
 <translation id="5296640085393149413">നിങ്ങൾക്ക് ഉപയോഗിക്കാൻ ലഭ്യമായ ഫണ്ടുകൾ.</translation>
-<translation id="3248185426436836442">അപൂർത്തിയായ</translation>
 <translation id="2515906149804238711">നിങ്ങളുടെ വാലറ്റിൽ ഒരു മാറ്റം അപൂർത്തിയായിരിക്കുന്നു.</translation>
 <translation id="7700365440186054030">ലഭ്യമായ ഫണ്ടുകളും ഇതുവരെ സ്ഥിരീകരിക്കാത്ത ഇടപാടുകളും.</translation>
 <translation id="4118601537508887039">ചില ബാലൻസുകൾ ലഭ്യമല്ല</translation>
@@ -2319,7 +2314,6 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="4808122506413075135">സംഭാഷണത്തിന് കൂടുതൽ വഴികാട്ടിയുള്ള സ്വഭാവം നൽകാൻ നിങ്ങളുടെ ബ്രൗസർ ചരിത്രത്തിൽ നിന്നുള്ള പേജ് ഉള്ളടക്കം ലിയോയ്ക്ക് അയയ്ക്കുക.</translation>
 <translation id="220541218939267992">നിങ്ങളുടെ സന്ദേശങ്ങൾക്കൊപ്പം പേജ് ഉള്ളടക്കങ്ങളും ലിയോയ്ക്ക് അയയ്ക്കപ്പെടും.</translation>
 <translation id="2152389270152475874">സന്ദർഭത്തിനായി ടാബുകൾ, ബുക്ക്‌മാർക്കുകൾ അല്ലെങ്കിൽ ഹിസ്റ്ററി ചേർക്കുക. തിരഞ്ഞെടുക്കപ്പെട്ട ഉള്ളടക്കങ്ങൾ ലിയോയ്ക്ക് നിങ്ങളുടെ സന്ദേശങ്ങളോടൊപ്പം അയയ്ക്കും.</translation>
-<translation id="6237410387937453423">തെരിവിനോട് യോജിക്കുന്ന അറ്റാച്ച്മെന്റുകളൊന്നുമില്ല</translation>
 <translation id="2315654674554095762">ഇനി ലിയോ നിങ്ങളുടെ സംഭാഷണങ്ങൾ വർക്കുവേണ്ടി സൂക്ഷിക്കും, ഏത് സമയത്തും വീണ്ടും സന്ദർശിക്കുക. ഇവ നിങ്ങളുടെ ഉപകരണത്തിൽ എൻക്രിപ്റ്റ് ചെയ്യപ്പെട്ട നിലയിലാണ് സൂക്ഷിക്കുന്നു, നിങ്ങൾക്ക് ഇവ എത്രമാത്രം വേണെങ്കിലും ഇല്ലായാമാക്കാം.</translation>
 <translation id="7821251979960635244">നിങ്ങൾ ഒരിക്കൽ ഒരു സംഭാഷണം ആരംഭിച്ചാൽ, നിങ്ങളുടെ സംഭാഷണ ചരിത്രം ഇവിടെ ദൃശ്യമാകുമെന്ന് പ്രതീക്ഷിക്കുന്നു.</translation>
 <translation id="887511360213807449">ചരിത്രം പ്രവർത്തനരഹിതമായി</translation>
@@ -2421,7 +2415,6 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="4773299976671772492">നിര്‍ത്തി</translation>
 <translation id="6946722113367118030">ചിന്തിക്കുന്നു</translation>
 <translation id="2113810663179257944">കോഡ് പ്രവർത്തനം</translation>
-<translation id="4790888275629207278">സാന്‍ഡ്‌ബോക്‌സിൽ കോഡ് പ്രവർത്തിപ്പിച്ചു</translation>
 <translation id="4379566111233326721">കോഡ്:</translation>
 <translation id="3542130965673205258">ഔട്ട്പുട്ട്:</translation>
 <translation id="3428245742224818842">AI ബ്രൗസിംഗ്</translation>
@@ -2433,11 +2426,7 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="864117099189791993">നിങ്ങൾ പ്രധാന മെനുവിലോ ടൂൾബാറിലെ പ്രൊഫൈൽ മെനുവിലോ നിന്ന് ഏതെങ്കിലും സമയത്തും നിങ്ങളുടെ സാധാരണ പ്രൊഫൈലിലേക്ക് തിരിച്ചുപോകാം. AI ബ്രൗസിംഗ് എപ്പാഴും AI ബ്രൗസിംഗ് പ്രൊഫൈലിലാണ് തുറക്കുന്നത്.</translation>
 <translation id="3486480638399578250">താങ്കളുടെ വ്യക്തിപരമായ ഇമെയിൽ വിലാസം സ്വകാര്യമായി സൂക്ഷിക്കുക</translation>
 <translation id="7765422154906712751">നിങ്ങളുടെ Brave അക്കൗണ്ട് ഇമെയിലിലേക്ക് ഫോർവേഡ് ചെയ്യാൻ കഴിവുള്ള, നിശ്ചിതസമയത്തു ഇല്ലാതാക്കാവുന്ന, തനതായ, അനിയന്ത്രിത വിലാസങ്ങൾ സൃഷ്ടിക്കുക. നിങ്ങളുടെ യഥാർത്ഥ ഇമെയിൽ വിലാസം പരസ്യഫലമേറിയമായി ഉപയോഗിക്കപ്പെടാതെയുമാണ് സുരക്ഷിതമാക്കുന്നത്.</translation>
-<translation id="5222676887888702881">സൈൻ ഔട്ട്</translation>
-<translation id="8090292425230843109">ഇമെയിൽ അലിയാസുകളിൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്യുക</translation>
-<translation id="8471990782451394141">Brave അക്കൗണ്ടിലേക്ക് ബന്ധിപ്പിക്കുന്നു...</translation>
 <translation id="71316462802471551">ഇമെയിൽ അലയാസുകൾ</translation>
-<translation id="5713644099811900409">Brave അക്കൗണ്ട്</translation>
 <translation id="6002159997868894136">അലിയാസ് പകർത്താൻ ക്ലിക്കുചെയ്യുക</translation>
 <translation id="8105770564756958406"><ph name="DOMAINS"/> ഉപയോഗിച്ച്</translation>
 <translation id="5006956315579221642">സുരക്ഷിത ഇൻബോക്സിനെ സംരക്ഷിക്കാൻ നിങ്ങളുടെ യഥാർത്ഥ ഇമെയിൽ വിലാസം സംരക്ഷിക്കുന്ന 5 സൗജന്യ ഇമെയിൽ അലിയാസുകൾ സൃഷ്ടികൂടി ചെയ്യുക.</translation>
@@ -2461,8 +2450,6 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="646524615209870492"><ph name="ALIAS"/> യൂസുഫ്, അലിയാസ് എന്ന നിലയിൽ നീക്കം ചെയ്യുക നിങ്ങളുടെ ഇമെയിലുകൾ സ്വീകരിക്കാനുള്ള കഴിവിന് നഷ്ടമാകും.</translation>
 <translation id="8133100642915054515">അലിയാസ് ഇല്ലാതാക്കുന്നതിൽ പിശക് . നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</translation>
 <translation id="8465742443901727718">ഈ നടപടി പരിഷ്കരിക്കാനാകില്ല. നിങ്ങൾ തുട prosചിയ്ക്കും in ?</translation>
-<translation id="8662104432574824754">തുടങ്ങുവാൻ, സൈ൨ ഇൻ ചെയ്യുകയോ Brave അക്കൗന്റ് സൃഷ്ടിക്കുകയോ ചെയ്യുക</translation>
-<translation id="8069030342700068465">സുരക്ഷിത ലോഗിൻ ലിങ്ക് ലഭിക്കാൻ നിങ്ങളുടെ ഇമെയിൽ വിലാസം നൽകുക. ഈ ലിങ്ക് ക്ലിക്കുചെയ്താൽ Brave Account നിർമ്മിക്കുകയോ ആക്സസ് ചെയ്യുകയോ ചെയ്യാം, അതിനുശേഷം സൗജന്യ ഇമെയിൽ അലിയാസുകൾ സേവനം ഉപയോഗിക്കാൻ കഴിയും.</translation>
 <translation id="2133391407495495735">ലോഗിൻ ലിങ്ക് നേടുക</translation>
 <translation id="2650906829817220223">അധികാരം ആവശ്യപ്പെടുന്നതിലെ പിശക് . നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</translation>
 <translation id="3699624789011381381">ഇമെയിൽ വിലാസം</translation>
@@ -2495,7 +2482,6 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="466214682712474574">താങ്കളുടെ <ph name="PROVIDER"/> അക്കൗണ്ടിൽ പ്രവേശിച്ച്, താങ്കളുടെ ബാലൻസ് കാണുക</translation>
 <translation id="8332875111286275890">താങ്കളുടെ ബാലൻസ് കാണാൻ പ്രവേശിക്കുക</translation>
 <translation id="5430001801813715388">Rewards</translation>
-<translation id="5966055668402779222">Brave Search-നോട് ചോദിക്കുക</translation>
 <translation id="167018310108390163">പുതിയ ടാബ് പേജ് ഇഷ്‌ടാനുസരണമാക്കുക</translation>
 <translation id="6851426306697017546">ഘടികാരം കാണിക്കുക</translation>
 <translation id="4844370919312937270">പുതിയ ടാബുകളിൽ സെർച്ച് വിഡ്ഡ്ജറ്റ് കാണിക്കുക</translation>
@@ -2536,7 +2522,6 @@ other {{PENDING_TRANSACTIONS} കൂടുതൽ ഇടപാടുകൾ‌ ക
 <translation id="4677356505199464553">ശരിയാണ്</translation>
 <translation id="1992750560347846445">സൈറ്റ് റിപ്പോർട്ട് ചെയ്യുക</translation>
 <translation id="2863270180245144869">പരസ്യ തടയൽ മാത്രം മോഡ് സജീവമാക്കി</translation>
-<translation id="2302218429308447288">നിങ്ങൾ ഇപ്പോൾ പരസ്യ തടയൽ മാത്രം മോഡ് ഉപയോഗിക്കുന്നു. ഈ മോഡ് പരസ്യ തടയൽ സംരക്ഷണമെത്രയും മാത്രമേ നൽകൂ. നിങ്ങൾ വീണ്ടും പൂർണ്ണമായ Shields മോഡിലേക്ക് തിരിച്ചുപോകാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, ഈ മോഡ് ക്രമീകരണങ്ങളിൽ നിന്ന് നീക്കംചെയ്യുക.</translation>
 <translation id="4820891023903368625">പരസ്യങ്ങൾ തടയപ്പെട്ടിരിക്കുന്നു <ph name="LINK_BEFORE"/>കൂടുതലറിയുക<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">ട്രാക്കുകൾ, പരസ്യങ്ങൾ, കൂടുതൽ തടഞ്ഞു <ph name="LINK_BEFORE"/>കൂടുതല് അറിയുക<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Brave Shields നൽകാതെ <ph name="LINK_BEFORE"/>കൂടുതല് അറിയുക<ph name="LINK_AFTER"/></translation>

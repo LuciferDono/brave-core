@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Erlaubst du <ph name="URL"/>das Öffnen von Leo AI-Chats in Brave?</translation>
 <translation id="4355784577209159847">Verwendung von Drittanbieter-Cookies für die alte Google-Anmeldung zulassen</translation>
 <translation id="5770656036486891920"><ph name="URL"/> möchte Drittanbieter-Cookies für alte Google-Anmeldung nutzen</translation>
-<translation id="6053826678715267477">Zugriff auf Localhost-Ressourcen erlauben</translation>
-<translation id="2973562729984406132"><ph name="URL"/> bittet um Zugriff auf Localhost-Ressourcen.</translation>
 <translation id="2104347391516032700">Bat-Belohnungen-Service</translation>
 <translation id="5939518447894949180">Zurücksetzen</translation>
 <translation id="3349204812119681938">Brave Rewards zurücksetzen</translation>
@@ -532,7 +530,7 @@
 <translation id="1100743684843603297">{ADS_VIEWED, plural,
       =0 {Sie haben diesen Monat <ph name="COUNT_BEGIN"/> # Anzeigen<ph name="COUNT_END"/> gesehen.}
       =1 {Sie werden für die <ph name="COUNT_BEGIN"/> # Anzeige<ph name="COUNT_END"/> bezahlt, die Sie diesen Monat gesehen haben.}
-      other {Sie werden für die <ph name="COUNT_BEGIN"/> # Anzeigen<ph name="COUNT_END"/> bezaht, die Sie diesen Monat gesehen haben.}
+      other {Sie werden für die <ph name="COUNT_BEGIN"/> # Anzeigen<ph name="COUNT_END"/> bezahlt, die Sie diesen Monat gesehen haben.}
     }</translation>
 <translation id="6067959437127691361">Mit Brave-Belohnungen unterstützen Sie die Ersteller von Inhalten und können BAT verdienen.</translation>
 <translation id="2359808026110333948">Fortfahren</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Schlüssel anzeigen</translation>
 <translation id="8033497299373164724">Schlüssel ausblenden</translation>
 <translation id="7514365320538308">Herunterladen</translation>
+<translation id="5148285448107770349">Das Passwort muss mindestens 8 Zeichen haben</translation>
 <translation id="2702143907607790516">Fehler beim Aktualisieren des Kontonamens. Bitte versuchen Sie es erneut.</translation>
 <translation id="3318280255740629162">25 %</translation>
 <translation id="2636487255623744079">50 %</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Die Empfangsadresse ist Ihre eigene Adresse.</translation>
 <translation id="3124753063207986114">Die Empfangsadresse ist die Vertragsadresse eines Tokens.</translation>
 <translation id="7029817408221097939">Ungültige einheitliche Adresse</translation>
-<translation id="6370376419663123629">Die Adresse sieht nicht korrekt aus</translation>
-<translation id="3767148796886402380">Überprüfen Sie Ihre Adresse, um sicherzustellen, dass es sich um die richtige Adresse handelt (z. B. Buchstaben mit Klein- oder Großbuchstaben).</translation>
 <translation id="2585599787090762065">Wie kann ich das lösen?</translation>
 <translation id="5517732667776806421">Fehlende Prüfsummeninformationen</translation>
-<translation id="2975056993833847787">Diese Adresse kann nicht verifiziert werden (fehlende Prüfsumme). Fortfahren?</translation>
-<translation id="6320252966164556855">Adresse hat Überprüfung nicht bestanden (ungültige Prüfsumme). Bitte versuchen Sie es erneut und ersetzen Sie Kleinbuchstaben durch Großbuchstaben.</translation>
 <translation id="4667144295226514387">Gaslimit fehlt</translation>
 <translation id="2021522108838444624">Der Betrag muss größer als 0 sein</translation>
 <translation id="8464365289405373974">Eine Adresse ist erforderlich</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Bridging</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> im <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Beim Versuch, <ph name="SWAP_OR_BRIDGE"/> im Netzwerk <ph name="NETWORK"/> durchzuführen, ist ein Fehler aufgetreten</translation>
+<translation id="3248185426436836442">Ausstehend</translation>
 <translation id="1778601041100951971">Schütze <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Abschirmung von <ph name="AMOUNT"/> wird aufgehoben</translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> wurde geschützt</translation>
@@ -1752,7 +1748,6 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="2410455471299328417">Dieser Dienst wird von <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> erbracht und unterliegt dessen <ph name="TERMS_LINK_BEFORE"/>Nutzungsbedingungen<ph name="TERMS_LINK_AFTER"/> und <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Datenschutzrichtlinie<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Verfügbar</translation>
 <translation id="5296640085393149413">Mittel, die Ihnen zur Verfügung stehen.</translation>
-<translation id="3248185426436836442">Ausstehend</translation>
 <translation id="2515906149804238711">Eine anstehende Änderung Ihres Wallet-Guthabens</translation>
 <translation id="7700365440186054030">Ihre verfügbaren Mittel plus alle noch nicht bestätigten Transaktionen.</translation>
 <translation id="4118601537508887039">Einige Guthaben sind eventuell nicht verfügbar</translation>
@@ -2289,6 +2284,7 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="6495402307502950726">Chat löschen</translation>
 <translation id="903201991022343217">Neuen Chat starten</translation>
 <translation id="8171760814579050200">Unterhaltung umbenennen</translation>
+<translation id="5397794290049113714">Ich</translation>
 <translation id="7754678742055438573">Unterhaltung löschen</translation>
 <translation id="1946267518364740045">Verarbeitung...</translation>
 <translation id="4198859185714743678">Prozess abgeschlossen</translation>
@@ -2325,7 +2321,6 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="4808122506413075135">Seiteninhalte aus deinem Browserverlauf senden, um Leo mehr Kontext für das Gespräch zu geben.</translation>
 <translation id="220541218939267992">Der Inhalt dieser Seite wird zusammen mit deinen Nachrichten an Leo gesendet.</translation>
 <translation id="2152389270152475874">Fügen Sie Tabs, Lesezeichen oder Verläufe hinzu, um Kontext bereitzustellen. Ausgewählte Inhalte werden zusammen mit Ihren Nachrichten an Leo gesendet.</translation>
-<translation id="6237410387937453423">Keine passenden Anhänge</translation>
 <translation id="2315654674554095762">Leo merkt sich jetzt deine Unterhaltungen, damit du zu ihnen zurückkehren kannst. Sie werden verschlüsselt auf deinem Gerät gespeichert, und du kannst sie jederzeit löschen.</translation>
 <translation id="7821251979960635244">Dein Konversationsverlauf wird hier angezeigt, sobald du eine Konversation beginnst.</translation>
 <translation id="887511360213807449">Verlauf ist deaktiviert</translation>
@@ -2427,7 +2422,6 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="4773299976671772492">Angehalten</translation>
 <translation id="6946722113367118030">Denkt nach</translation>
 <translation id="2113810663179257944">Codeausführung</translation>
-<translation id="4790888275629207278">Code in der Sandbox ausgeführt</translation>
 <translation id="4379566111233326721">Code:</translation>
 <translation id="3542130965673205258">Ausgabe:</translation>
 <translation id="3428245742224818842">KI-Browsing</translation>
@@ -2439,11 +2433,7 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="864117099189791993">Sie können jederzeit über das Hauptmenü oder über das Profilmenü in der Symbolleiste zu Ihrem normalen Profil zurückkehren. KI-Browsing wird immer im KI-Browsing-Profil geöffnet.</translation>
 <translation id="3486480638399578250">Schütze deine private E-Mail-Adresse</translation>
 <translation id="7765422154906712751">Erstelle einzigartige, zufällige Adressen, die an deine Brave-Konto-E-Mail weitergeleitet werden und jederzeit gelöscht werden können. So bleibt deine echte E-Mail-Adresse vor Werbetreibenden verborgen und wird nicht weitergegeben.</translation>
-<translation id="5222676887888702881">Abmelden</translation>
-<translation id="8090292425230843109">Abmelden von den E-Mail-Aliasen</translation>
-<translation id="8471990782451394141">Verbindung zum Brave Konto wird hergestellt…</translation>
 <translation id="71316462802471551">E-Mail-Aliase</translation>
-<translation id="5713644099811900409">Brave Konto</translation>
 <translation id="6002159997868894136">Alias kopieren</translation>
 <translation id="8105770564756958406">Verwendet von <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Erstelle bis zu 5 kostenlose E-Mail-Aliase, um deine echte E-Mail-Adresse zu schützen.</translation>
@@ -2467,8 +2457,6 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="646524615209870492">Das Entfernen von <ph name="ALIAS"/> als Alias führt dazu, dass du keine E-Mails mehr empfangen kannst.</translation>
 <translation id="8133100642915054515">Fehler beim Löschen des Alias. Überprüfe deine Internetverbindung und versuche es erneut.</translation>
 <translation id="8465742443901727718">Diese Aktion ist unwiderruflich. Bist du sicher, dass du fortfahren möchtest?</translation>
-<translation id="8662104432574824754">Um loszulegen, melde dich an oder erstelle ein Brave Konto</translation>
-<translation id="8069030342700068465">Gib deine E-Mail-Adresse ein, um einen sicheren Anmeldelink an deine E-Mail zu erhalten. Wenn du auf diesen Link klickst, wird entweder ein Brave Konto erstellt oder du erhältst Zugriff darauf, und kannst den kostenlosen E-Mail-Alias-Service nutzen.</translation>
 <translation id="2133391407495495735">Anmeldelink erhalten</translation>
 <translation id="2650906829817220223">Fehler bei der Authentifizierungsanfrage. Überprüfe deine Internetverbindung und versuche es erneut.</translation>
 <translation id="3699624789011381381">E-Mail-Adresse</translation>
@@ -2501,7 +2489,7 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="466214682712474574">Melde dich bei deinem <ph name="PROVIDER"/>-Konto an, um deinen Kontostand anzuzeigen</translation>
 <translation id="8332875111286275890">Melden dich an, um dein Guthaben anzuzeigen</translation>
 <translation id="5430001801813715388">REWARDS</translation>
-<translation id="5966055668402779222">Frag alles, finde alles...</translation>
+<translation id="2430295257226173518">Frag alles, finde alles…</translation>
 <translation id="167018310108390163">Startseite des neuen Tabs personalisieren</translation>
 <translation id="6851426306697017546">Uhr anzeigen</translation>
 <translation id="4844370919312937270">Such-Widget in neuen Tabs anzeigen</translation>
@@ -2542,7 +2530,6 @@ other {{PENDING_TRANSACTIONS} weitere anstehende Transaktionen.}
 <translation id="4677356505199464553">Sieht gut aus</translation>
 <translation id="1992750560347846445">Website melden</translation>
 <translation id="2863270180245144869">Nur-Ad-Block-Modus aktiviert</translation>
-<translation id="2302218429308447288">Sie verwenden derzeit den Nur-Ad-Block-Modus. Dieser Modus bietet nur Schutz vor Werbung. Wenn Sie zum Modus mit umfassender Shields-Funktion zurückkehren möchten, deaktivieren Sie diesen Modus in den Einstellungen.</translation>
 <translation id="4820891023903368625">Ads blockiert <ph name="LINK_BEFORE"/>Mehr erfahren<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Tracker, Werbung und mehr blockiert <ph name="LINK_BEFORE"/>Weitere Informationen<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Nicht geschützt durch Brave Schutz <ph name="LINK_BEFORE"/>Mehr erfahren<ph name="LINK_AFTER"/></translation>

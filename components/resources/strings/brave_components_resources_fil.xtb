@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Payagan ang <ph name="URL"/> na buksan sa Brave ang mga pakikipag-usap sa Leo AI?</translation>
 <translation id="4355784577209159847">Pahintulutan ang paggamit ng third-party cookies para sa legacy sa Google Sign-In</translation>
 <translation id="5770656036486891920">Gustong gumamit ng <ph name="URL"/> ng third-party na cookies para sa legacy na Pag-sign In sa Google</translation>
-<translation id="6053826678715267477">Payagan ang access sa mga resource ng localhost</translation>
-<translation id="2973562729984406132">Gusto ni <ph name="URL"/> ng access sa mga resource ng localhost</translation>
 <translation id="2104347391516032700">Serbisyo ng Bat Rewards</translation>
 <translation id="5939518447894949180">I-reset</translation>
 <translation id="3349204812119681938">I-reset ang Mga Reward ng Brave</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Ipakita ang key</translation>
 <translation id="8033497299373164724">Itago ang key</translation>
 <translation id="7514365320538308">I-download</translation>
+<translation id="5148285448107770349">Kailangang hindi bababa sa 8 character ang password</translation>
 <translation id="2702143907607790516">Hindi na-update ang pangalan ng account, pakisubukan ulit.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Ang receiving address ang sarili mong address.</translation>
 <translation id="3124753063207986114">Ang receiving address ang contract address ng token.</translation>
 <translation id="7029817408221097939">Hindi valid ang pinag-isang address</translation>
-<translation id="6370376419663123629">Mukhang mali ang address</translation>
-<translation id="3767148796886402380">Suriin ang iyong address para tiyaking ito ang tamang address (hal. mga letrang may lower o upper case).</translation>
 <translation id="2585599787090762065">Paano ko ito malulutas?</translation>
 <translation id="5517732667776806421">Kulang ng impormasyon ng checksum</translation>
-<translation id="2975056993833847787">Hindi ma-verify ang address na ito (walang checksum). Magpatuloy?</translation>
-<translation id="6320252966164556855">Hindi pumasa sa verification ang address (invalid na checksum). Pakisubukan ulit, nang pinapalitan ang mga lowercase na letra ng uppercase.</translation>
 <translation id="4667144295226514387">Nawawala ang limitasyon sa gas</translation>
 <translation id="2021522108838444624">Higit dapat sa 0 ang halaga</translation>
 <translation id="8464365289405373974">Kinakailangan ang address ng pupuntahan</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Bridging</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> sa <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Nagka-error sa pagsubok na <ph name="SWAP_OR_BRIDGE"/> sa <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Pending</translation>
 <translation id="1778601041100951971">Nagshi-shield ng <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Nagshi-shield ng <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936">Na-shield na ang <ph name="AMOUNT"/></translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Ang serbisyong ito ay inihahatid ng <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> at napapailalim sa kanilang <ph name="TERMS_LINK_BEFORE"/>Mga Tuntunin ng Serbisyo<ph name="TERMS_LINK_AFTER"/> at <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Patakaran sa Privacy<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Available</translation>
 <translation id="5296640085393149413">Mga pondong magagamit mo.</translation>
-<translation id="3248185426436836442">Pending</translation>
 <translation id="2515906149804238711">Isang nakabinbing pagbabago sa balanse sa wallet mo.</translation>
 <translation id="7700365440186054030">Ang mga available mong pondo pati na anumang transaksyong hindi pa nakumpirma.</translation>
 <translation id="4118601537508887039">Posibleng hindi available ang ilang balanse</translation>
@@ -2325,7 +2320,6 @@
 <translation id="4808122506413075135">Magpadala ng content ng page mula sa iyong history ng browser para bigyan ang Leo ng higit na konteksto para sa pag-uusap.</translation>
 <translation id="220541218939267992">Ang nilalaman ng pahina ay ipapadala kay Leo kasabay ng iyong mga mensahe.</translation>
 <translation id="2152389270152475874">Magdagdag ng mga content ng tab at bookmark para sa konteksto. Ipapadala ang mga content sa Leo kasama ng iyong mga mensahe.</translation>
-<translation id="6237410387937453423">Walang tumutugmang attachment</translation>
 <translation id="2315654674554095762">Tatandaan na ng Leo ang iyong mga pakikipag-usap para mabalikan mo ang mga ito. Naka-store nang encrypted ang mga ito sa iyong device, at puwede mong i-delete ang mga ito anumang oras.</translation>
 <translation id="7821251979960635244">Makikita rito ang iyong history ng pakikipag-usap kapag nagsimula ka na ng pakikipag-usap.</translation>
 <translation id="887511360213807449">Naka-disable ang history</translation>
@@ -2427,7 +2421,6 @@
 <translation id="4773299976671772492">Ipinahinto</translation>
 <translation id="6946722113367118030">Nag-iisip</translation>
 <translation id="2113810663179257944">Pagpapatupad ng Code</translation>
-<translation id="4790888275629207278">Naipatupad ang code sa sandbox</translation>
 <translation id="4379566111233326721">Code:</translation>
 <translation id="3542130965673205258">Output:</translation>
 <translation id="3428245742224818842">AI browsing</translation>
@@ -2439,11 +2432,7 @@
 <translation id="864117099189791993">Maaari kang lumipat pabalik sa iyong karaniwang profile anumang oras mula sa pangunahing menu o sa pamamagitan ng paggamit ng profile menu sa toolbar. Palaging magbubukas ang AI browsing sa AI browsing profile.</translation>
 <translation id="3486480638399578250">Panatilihing pribado ang iyong personal na email address</translation>
 <translation id="7765422154906712751">Gumawa ng natatangi, random na mga address na ipinapasa sa iyong email account ng Brave at puwedeng i-delete anumang oras. Panatilihing hindi maipapakita o magagamit ng mga advertiser ang iyong aktwal na email address.</translation>
-<translation id="5222676887888702881">Mag-sign out</translation>
-<translation id="8090292425230843109">Mag-sign out sa Email Aliases</translation>
-<translation id="8471990782451394141">Kumokonekta sa Brave Account...</translation>
 <translation id="71316462802471551">Mga Email Alias</translation>
-<translation id="5713644099811900409">Brave Account</translation>
 <translation id="6002159997868894136">I-click para kopyahin ang alias</translation>
 <translation id="8105770564756958406">Ginagamit ng <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Gumwa ng hanggang 5 libreng email alias para protektahan ang iyong totoong email address.</translation>
@@ -2467,8 +2456,6 @@
 <translation id="646524615209870492">Kapag inalis ang <ph name="ALIAS"/> bilang alias, magreresulta ito sa pagkawala ng iyong kakayahang tumanggap ng mga email.</translation>
 <translation id="8133100642915054515">Nagka-error sa pag-delete ng alias. Tingnan ang iyong koneksyon sa internet at subukan ulit.</translation>
 <translation id="8465742443901727718">Hindi maibabalik ang pagkilos na ito. Sigurado ka bang gusto mong magpatuloy?</translation>
-<translation id="8662104432574824754">Para magsimula, mag-sign in o gumawa ng Brave account</translation>
-<translation id="8069030342700068465">Ilagay ang iyong email address para makuha ang secure na link sa pag-login na ipapadala sa email mo. Kapag na-click ang link na ito, gagawa o mag-a-access ng Brave Account at bibigyang-daan kang gamitin ang libreng serbisyo sa mga Email Alias.</translation>
 <translation id="2133391407495495735">Kunin ang link sa pag-login</translation>
 <translation id="2650906829817220223">Nagka-error sa pag-request ng authentication. Tingnan ang iyong koneksyon sa internet at subukan ulit.</translation>
 <translation id="3699624789011381381">Email address</translation>
@@ -2501,7 +2488,6 @@
 <translation id="466214682712474574">Mag-log in sa iyong <ph name="PROVIDER"/> account para makita ang balanse mo</translation>
 <translation id="8332875111286275890">Mag-log in para makita ang balanse mo</translation>
 <translation id="5430001801813715388">MGA REWARD</translation>
-<translation id="5966055668402779222">Tanungin ang Brave Search</translation>
 <translation id="167018310108390163">I-customize ang Page ng Bagong Tab</translation>
 <translation id="6851426306697017546">Ipakita ang orasan</translation>
 <translation id="4844370919312937270">Ipakita ang search widget sa sa mga bagong tab</translation>
@@ -2542,7 +2528,6 @@
 <translation id="4677356505199464553">Ayos na</translation>
 <translation id="1992750560347846445">Iulat ang site</translation>
 <translation id="2863270180245144869">Naka-enable ang Adblock-Only mode</translation>
-<translation id="2302218429308447288">Kasalukuyan kang gumagamit ng Adblock-Only mode. Ang mode na ito ay nagbibigay lang ng ad blocking na proteksyon. Kung gusto mong bumalik sa full mode ng Shields, i-disable ang mode na ito mula sa settings.</translation>
 <translation id="4820891023903368625">Mga ad na naka-block <ph name="LINK_BEFORE"/>Matuto pa<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Na-block ang mga tracker, ad, at higit pa <ph name="LINK_BEFORE"/>Matuto pa<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Hindi pinoprotektahan ng Brave Shields <ph name="LINK_BEFORE"/>Matuto pa<ph name="LINK_AFTER"/></translation>

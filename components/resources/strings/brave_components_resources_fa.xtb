@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">به <ph name="URL"/> اجازه می‌دهید مکالمه‌های هوش مصنوعی Leo را در Brave باز کند؟</translation>
 <translation id="4355784577209159847">مجاز کردن استفاده از کوکی‌های شخصی ثالث برای «ورود به سیستم Google» قدیمی</translation>
 <translation id="5770656036486891920"><ph name="URL"/> می‌خواهد از کوکی‌های شخص ثالث برای Google Sign-In قدیمی استفاده کند</translation>
-<translation id="6053826678715267477">دسترسی به منابع میزبان محلی مجاز شود</translation>
-<translation id="2973562729984406132"><ph name="URL"/> می‌خواهد به منابع میزبان محلی دسترسی داشته باشد</translation>
 <translation id="2104347391516032700">سرویس پاداش توکن توجه اولیه</translation>
 <translation id="5939518447894949180">بازنشانی</translation>
 <translation id="3349204812119681938">جوایز مرورگر بریو را از ابتدا شروع کن.</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">نمایش کلید</translation>
 <translation id="8033497299373164724">مخفی کردن کلید</translation>
 <translation id="7514365320538308">بارگیری</translation>
+<translation id="5148285448107770349">رمز عبور باید حداقل 8 نویسه باشد</translation>
 <translation id="2702143907607790516">نام حساب به‌روزرسانی نشد، لطفاً دوباره امتحان کنید.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">آدرس دریافت همان آدرس خودتان است.</translation>
 <translation id="3124753063207986114">آدرس دریافت، آدرس قرارداد توکن است.</translation>
 <translation id="7029817408221097939">آدرس یکپارچه نامعتبر است</translation>
-<translation id="6370376419663123629">آدرس به نظر صحیح نیست</translation>
-<translation id="3767148796886402380">آدرس خود را بررسی کنید تا مطمئن شوید درست است (به‌عنوان مثال حروف کوچک یا بزرگ).</translation>
 <translation id="2585599787090762065">چطور می‌توانم آن را حل کنم؟</translation>
 <translation id="5517732667776806421">فاقد اطلاعات جمع‌‌آزما</translation>
-<translation id="2975056993833847787">این آدرس را نمی‌توان تأیید کرد (فاقد چک‌سام). ادامه می‌دهید؟</translation>
-<translation id="6320252966164556855">آدرس تأیید نشد (چک‌سام نامعتبر). لطفاً دوباره امتحان کنید، حروف کوچک را با حروف بزرگ جایگزین کنید.</translation>
 <translation id="4667144295226514387">محدودیت گاز وجود ندارد</translation>
 <translation id="2021522108838444624">مقدار باید بیشتر از 0 باشد</translation>
 <translation id="8464365289405373974">ارائه آدرس الزامی است</translation>
@@ -1383,6 +1378,7 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="7694836973509310467">اتصال</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> در <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">هنگام تلاش برای <ph name="SWAP_OR_BRIDGE"/> در <ph name="NETWORK"/> خطایی رخ داد</translation>
+<translation id="3248185426436836442">معوق</translation>
 <translation id="1778601041100951971">در حال محافظت از <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">در حال لغو محافظت از <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> محافظت شده است</translation>
@@ -1753,7 +1749,6 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="2410455471299328417">این خدمات توسط <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> ارائه شده است و <ph name="TERMS_LINK_BEFORE"/>شرایط خدمات<ph name="TERMS_LINK_AFTER"/> و <ph name="PRIVACY_POLICY_LINK_BEFORE"/>حفظ حریم خصوصی<ph name="PRIVACY_POLICY_LINK_AFTER"/> آنها در این خصوص اعمال می‌گردد</translation>
 <translation id="8688672835843460752">دردسترس</translation>
 <translation id="5296640085393149413">وجوهی که در دسترس شماست تا از آن استفاده کنید.</translation>
-<translation id="3248185426436836442">معوق</translation>
 <translation id="2515906149804238711">یک تغییر معلق در موجودی کیف پول شما.</translation>
 <translation id="7700365440186054030">وجوه در دسترس شما به اضافه هرگونه تراکنشی که هنوز تأیید نشده است.</translation>
 <translation id="4118601537508887039">ممکن است برخی از موجودی‌ها در دسترس نباشد</translation>
@@ -2326,7 +2321,6 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="4808122506413075135">محتوای صفحه را از سابقه مرورگرتان ارسال کنید تا Leo اطلاعات بیشتری برای گفتگو داشته باشد.</translation>
 <translation id="220541218939267992">محتوای صفحه همراه پیام‌های شما به لئو ارسال خواهد شد.</translation>
 <translation id="2152389270152475874">زبانه‌ها، نشانک‌ها یا تاریخچه را برای ایجاد زمینه گفت‌وگو اضافه کنید. محتوای انتخاب‌شده همراه پیام‌های شما برای Leo ارسال خواهد شد.</translation>
-<translation id="6237410387937453423">هیچ پیوستی با فیلتر مطابقت ندارد</translation>
 <translation id="2315654674554095762">از این پس Leo گفتگوهای شما را به خاطر خواهد سپرد تا بتوانید به آن‌ها رجوع کنید. این گفتگوها به‌صورت رمزنگاری‌شده روی دستگاهتان ذخیره می‌شوند و هر وقت بخواهید می‌توانید آن‌ها را حذف کنید.</translation>
 <translation id="7821251979960635244">سابقه گفتگوهای شما پس از شروع گفتگو در اینجا نمایش داده خواهد شد.</translation>
 <translation id="887511360213807449">سابقه غیرفعال است</translation>
@@ -2428,7 +2422,6 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="4773299976671772492">متوقف شد</translation>
 <translation id="6946722113367118030">در حال فکر کردن</translation>
 <translation id="2113810663179257944">اجرای کد</translation>
-<translation id="4790888275629207278">کد در sandbox اجرا شد</translation>
 <translation id="4379566111233326721">کد:</translation>
 <translation id="3542130965673205258">خروجی:</translation>
 <translation id="3428245742224818842">گشت‌وگذار AI</translation>
@@ -2440,11 +2433,7 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="864117099189791993">شما می‌توانید هر زمان که خواستید از منوی اصلی یا از طریق فهرست نمایه در نوار ابزار، به نمایه‌ی معمول خود بازگردید. گشت‌وگذار AI همیشه در نمایه گشت‌وگذار AI باز می‌شود.</translation>
 <translation id="3486480638399578250">آدرس ایمیل شخصی خود را خصوصی نگه دارید</translation>
 <translation id="7765422154906712751">آدرس‌های تصادفی و منحصربه‌فرد ایجاد کنید که به ایمیل حساب Brave شما بازارسال می‌شوند و می‌توان در هر زمان حذف کرد. از افشا یا استفاده شدن آدرس ایمیل واقعی خود توسط تبلیغ‌کنندگان جلوگیری کنید.</translation>
-<translation id="5222676887888702881">خروج از سیستم</translation>
-<translation id="8090292425230843109">خروج از سیستم ایمیل‌های مستعار</translation>
-<translation id="8471990782451394141">در حال اتصال به حساب Brave...</translation>
 <translation id="71316462802471551">ایمیل‌های مستعار</translation>
-<translation id="5713644099811900409">حساب Brave</translation>
 <translation id="6002159997868894136">برای کپی کردن نام مستعار کلیک کنید</translation>
 <translation id="8105770564756958406">استفاده‌شده توسط <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">تا ۵ ایمیل مستعار رایگان برای محافظت از آدرس ایمیل واقعی خود ایجاد کنید.</translation>
@@ -2468,8 +2457,6 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="646524615209870492">با حذف <ph name="ALIAS"/> به‌عنوان ایمیل مستعار، امکان دریافت ایمیل را از دست خواهید داد.</translation>
 <translation id="8133100642915054515">خطا در حذف ایمیل مستعار. لطفاً اتصال اینترنت خود را بررسی و دوباره امتحان کنید.</translation>
 <translation id="8465742443901727718">این اقدم غیرقابل بازگشت است. مطمئن هستید که می‌خواهید ادامه دهید؟</translation>
-<translation id="8662104432574824754">برای شروع، وارد شوید یا یک حساب Brave ایجاد کنید</translation>
-<translation id="8069030342700068465">برای دریافت لینک ورود امن که به ایمیل شما ارسال می‌شود، آدرس ایمیل خود را وارد کنید. کلیک کردن روی این لینک، یک حساب Brave ایجاد می‌کند یا دسترسی به آن را ممکن می‌سازد و به شما امکان استفاده از خدمات نام‌های مستعار ایمیل رایگان را می‌دهد.</translation>
 <translation id="2133391407495495735">دریافت لینک ورود</translation>
 <translation id="2650906829817220223">خطا در درخواست احراز هویت. لطفاً اتصال اینترنت خود را بررسی و دوباره امتحان کنید.</translation>
 <translation id="3699624789011381381">آدرس ایمیل</translation>
@@ -2502,7 +2489,6 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="466214682712474574">برای مشاهده موجودی، وارد حساب <ph name="PROVIDER"/> خود شوید</translation>
 <translation id="8332875111286275890">برای مشاهده موجودی خود وارد شوید</translation>
 <translation id="5430001801813715388">پاداش‌ها</translation>
-<translation id="5966055668402779222">از جستجوی Brave بپرس</translation>
 <translation id="167018310108390163">سفارشی کردن صفحه برگه جدید</translation>
 <translation id="6851426306697017546">نمایش ساعت</translation>
 <translation id="4844370919312937270">نمایش ابزارک جستجو در برگه‌های جدید</translation>
@@ -2543,7 +2529,6 @@ Meld‏<ph name="LINK_AFTER"/> را خوانده‌ام و با آن موافق�
 <translation id="4677356505199464553">ظاهر خوب است</translation>
 <translation id="1992750560347846445">گزارش سایت</translation>
 <translation id="2863270180245144869">حالت فقط مسدودسازی تبلیغات فعال شد</translation>
-<translation id="2302218429308447288">شما در حال استفاده از حالت فقط مسدودسازی تبلیغات هستید. این حالت فقط محافظت در برابر تبلیغات را فعال می‌کند. اگر می‌خواهید به حالت کامل سپرها برگردید، این حالت را از تنظیمات غیرفعال کنید.</translation>
 <translation id="4820891023903368625">تبلیغات مسدود شدند <ph name="LINK_BEFORE"/>بیشتر بدانید<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">ردیاب‌ها، آگهی‌ها و <ph name="LINK_BEFORE"/> موارد دیگر مسدود شدند. بیشتر بدانید<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">تحت محافظت «سپر ایمنی Brave» نیست <ph name="LINK_BEFORE"/>بیشتر بدانید<ph name="LINK_AFTER"/></translation>

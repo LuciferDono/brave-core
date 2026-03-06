@@ -167,10 +167,6 @@ Brave News သည် လယ်မြေကို မှီခိုနေသည�
 <translation id="9110294136812584522">ဆိုက်များသည် third-party cookies အသုံးပြု၍ legacy Google Sign-In ကို အသုံးပြုရန် မေးပေးနိုင်ပါသည်</translation>
 <translation id="2903783737778379345">legacy Google Sign-In ကို third-party cookies ဖြင့် အသုံးပြုခွင့်ပြုမည်မဟုတ်ပါ</translation>
 <translation id="6880817299303842099">legacy Google Sign-In အတွက် third-party cookies အတွက် အသုံးပြုခွင့်ပြုထားသည်</translation>
-<translation id="2136412236435693622">localhost access</translation>
-<translation id="4172219483893066798">ဆိုဒ်များသည် localhost ကားဆက်မှုအရင်းအမြစ်များနှင့် လမ်းကြောင်းရောက်မှုကို မေးရာပွင့်ဖြစ်ပါသည်</translation>
-<translation id="7181706637590665047">localhost ကားဆက်အရင်းအမြစ်များကို မကမ်းလှမ်းပါ</translation>
-<translation id="1485435696620658073">localhost အရင်းအမြစ်များကို သုံးခွင့်ပေးထားသည်</translation>
 <translation id="181905442828471321">Shields global defaults</translation>
 <translation id="2675679258824361492">ကာကွယ်မှာ ဆင်းခ်ဘန်း</translation>
 <translation id="8026334261755873520">ခင်များကိုကြည့်ရန်</translation>
@@ -424,6 +420,7 @@ Brave News သည် လယ်မြေကို မှီခိုနေသည�
 <translation id="7141438739990875547">Bitcoin နက်ဝတ်က</translation>
 <translation id="9055546041146396417">ဤဆိုက်၏ ပြသမှုပုံစံ ပျက်သွားပါက ဒိုင်းကာချပြီး ပြန်စမ်းကြည့်ပါ။</translation>
 <translation id="7898672232170410330">Element ကိုပိတ်ရန်</translation>
+<translation id="7961015016161918242">ဘယ်တော့မျှ မလုပ်</translation>
 <translation id="1209739344687072997">ကောင်းစွာအလုပ်လုပ်ခြင်းမရှိသော ဆိုက်ကို ရီပို့တ်လုပ်ရန်</translation>
 <translation id="8510478288840333677">ဒီ ဆိုက်ကို Shields နဲ့ အလုပ်မလုပ်ဘူးလို့ Brave ၏ ဖွံ့ဖြိုးရေးသူများကို သတိပေးရန်</translation>
 <translation id="1653405824851871276">Brave ကို စုဆောင်းရန်အတွက် ကျသင့်သော အင်္ဂါရပ်များသည် သီးသန့်အခွင့်အလမ်းများ၏ သင့်အတွက် လက်ရှိ ကန့်သတ်ချက်ဖြစ်သည်။ <ph name="LEARN_MORE"/></translation>
@@ -1070,7 +1067,6 @@ Brave News သည် လယ်မြေကို မှီခိုနေသည�
 <translation id="1336494649091412226">ရဲ့မှာလာတဲ့အခါမှာ Brave ကို ထွက်မည်လား။</translation>
 <translation id="6061635824229591714">ဆိုက်ဒေတာဖျက်ရန်လား?</translation>
 <translation id="1265051174491933207">ဖျက်ခြင်းလုပ်ဆောင်မည်ဆိုပါက ဆိုက်ဒေတာများ ဖျက်ပစ်ပြီး '<ph name="SITE_NAME"/>' တැබလ်များကို ပိတ်ပါလိမ့်မည်။ ၎င်းကို မပြန်ပြင်နိုင်ပါ။</translation>
-<translation id="4279349293084858577">ဖျက်မည်</translation>
 <translation id="4426990318287827331">ဒေတာဖျက်မည်</translation>
 <translation id="7942415993090181327">စာပြန်ပြင် မှတ်တမ်းများ</translation>
 <translation id="6859935199732075666">လုံခြုံစွာ ဝင်ကြည့်ခြင်း အမှားများကို ပြပါ</translation>

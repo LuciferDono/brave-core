@@ -164,10 +164,6 @@
 <translation id="9110294136812584522">គេហទំព័រអាចស្នើសុំប្រើចូលគណនី Google ថ្មីតាមខូគីជាបីរួច</translation>
 <translation id="2903783737778379345">កុំអនុញ្ញាតចូលគណនី Google ថ្មីតាមខូគីជាបីរួច</translation>
 <translation id="6880817299303842099">អនុញ្ញាតឱ្យប្រើខូគីជាបីរួចសម្រាប់ចូលគណនី Google ថ្មី</translation>
-<translation id="2136412236435693622">ចូលប្រើ localhost</translation>
-<translation id="4172219483893066798">គេហទំព័រអាចស្នើសុំចូលប្រើធនធាន localhost</translation>
-<translation id="7181706637590665047">កុំអនុញ្ញាតឱ្យចូលប្រើធនធាន localhost</translation>
-<translation id="1485435696620658073">អនុញ្ញាតឱ្យចូលប្រើធនធាន localhost</translation>
 <translation id="181905442828471321">លំនាំដើមសកលរបស់ខែលការពារ Brave</translation>
 <translation id="2675679258824361492">ការកំណត់ឯកជនភាពផ្សេងទៀត</translation>
 <translation id="8026334261755873520">ជម្រះទិន្នន័យរុករក</translation>
@@ -434,6 +430,7 @@ Brave រារាំងអ្វីៗទាំងនេះដើម្បី�
 <translation id="7141438739990875547">បណ្តាញ Bitcoin</translation>
 <translation id="9055546041146396417">ប្រសិនបើគេហទំព័រនេះហាក់ដូចជាមិនដំណើរការ សាកល្បងបិទខែលការពារ។</translation>
 <translation id="7898672232170410330">បិទធាតុ</translation>
+<translation id="7961015016161918242">មិនដែល</translation>
 <translation id="1209739344687072997">រាយការណ៍ពីគេហទំព័រដែលមិនដំណើរការ</translation>
 <translation id="8510478288840333677">សូមឲ្យក្រុមអភិវឌ្ឍន៍ Brave ដឹងថា គេហទំព័រនេះមិនដំណើរការល្អជាមួយ Shields:</translation>
 <translation id="1653405824851871276">សូមអរគុណចំពោះការជួយធ្វើឱ្យ Brave មានកាន់តែប្រសើរឡើងសម្រាប់គ្រប់គ្នា។ របាយការណ៍នេះគ្រាន់តែរួមបញ្ចូលព័ត៌មានចាំបាច់សម្រាប់យើងដើម្បីជួសជុលគេហទំព័រនេះតែប៉ុណ្ណោះ។ <ph name="LEARN_MORE"/></translation>
@@ -1097,7 +1094,7 @@ Brave រារាំងអ្វីៗទាំងនេះដើម្បី�
 <translation id="1336494649091412226">តើ​អ្នក​ប្រាកដ​ថា​ចង់​ចាក​ចេញ​ពី Brave ទេ?</translation>
 <translation id="6061635824229591714">បំផ្លាញទិន្នន័យគេហទំព័រ?</translation>
 <translation id="1265051174491933207">ការបំផ្លាញនេះ នឹងលុបទិន្នន័យគេហទំព័រ ហើយបិទផ្ទាំង '<ph name="SITE_NAME"/>' ទាំងអស់។ វាមិនអាចត្រូវបានធ្វើវិញឡើងវិញបានទេ។</translation>
-<translation id="4279349293084858577">បំផ្លាញ</translation>
+<translation id="5528772406060281700">បំផ្លាញទិន្នន័យគេហទំព័រ</translation>
 <translation id="4426990318287827331">បំផ្លាញទិន្នន័យ</translation>
 <translation id="7942415993090181327">ប្រវត្តិការជជែក</translation>
 <translation id="6859935199732075666">បង្ហាញកំហុសការសមន្ត្រីទំងែសកម្មភាព</translation>

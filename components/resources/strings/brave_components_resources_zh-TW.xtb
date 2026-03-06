@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">要允許 <ph name="URL"/> 在 Brave 中開啟 Leo 人工智慧對話嗎？</translation>
 <translation id="4355784577209159847">允許使用第三方 cookie 進行舊版 Google 登入</translation>
 <translation id="5770656036486891920"><ph name="URL"/> 想要使用第三方 Cookie 進行舊版 Google 登入</translation>
-<translation id="6053826678715267477">允許存取本地主機資源</translation>
-<translation id="2973562729984406132"><ph name="URL"/> 想存取本地主機資源</translation>
 <translation id="2104347391516032700">Bat 獎勵服務</translation>
 <translation id="5939518447894949180">重設</translation>
 <translation id="3349204812119681938">重設 Brave Rewards</translation>
@@ -1225,12 +1223,8 @@
 <translation id="4932382283590063268">接收位址是您自己的位址。</translation>
 <translation id="3124753063207986114">接收位址是權杖的合約位址。</translation>
 <translation id="7029817408221097939">無效的統一位址</translation>
-<translation id="6370376419663123629">位址似乎有誤</translation>
-<translation id="3767148796886402380">請檢查您的位址是否正確 (例如：字母大小寫)。</translation>
 <translation id="2585599787090762065">該如何解決此問題？</translation>
 <translation id="5517732667776806421">缺少總和檢查碼資訊</translation>
-<translation id="2975056993833847787">此位址無法驗證 (缺少總和檢查碼)，要繼續嗎？</translation>
-<translation id="6320252966164556855">位址未通過驗證 (總和檢查碼無效)，請將小寫字母改成大寫並再試一次。</translation>
 <translation id="4667144295226514387">缺少 Gas 上限</translation>
 <translation id="2021522108838444624">金額必須大於 0</translation>
 <translation id="8464365289405373974">目的地位址為必填項目</translation>
@@ -1382,6 +1376,7 @@
 <translation id="7694836973509310467">建橋</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> 在 <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">嘗試<ph name="SWAP_OR_BRIDGE"/> 在<ph name="NETWORK"/>時出現錯誤</translation>
+<translation id="3248185426436836442">未定</translation>
 <translation id="1778601041100951971">正在保護 <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">正在取消盾牌 <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> 已被保護</translation>
@@ -1752,7 +1747,6 @@
 <translation id="2410455471299328417">此服務由 <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> 提供，須遵守其《<ph name="TERMS_LINK_BEFORE"/>服務條款<ph name="TERMS_LINK_AFTER"/>》和《<ph name="PRIVACY_POLICY_LINK_BEFORE"/>隱私權政策<ph name="PRIVACY_POLICY_LINK_AFTER"/>》</translation>
 <translation id="8688672835843460752">可用</translation>
 <translation id="5296640085393149413">可供您使用的資金。</translation>
-<translation id="3248185426436836442">未定</translation>
 <translation id="2515906149804238711">錢包餘額尚待更新。</translation>
 <translation id="7700365440186054030">可動用的資金加上任何尚未確認的交易。</translation>
 <translation id="4118601537508887039">部分餘額可能無法使用</translation>
@@ -2289,6 +2283,7 @@
 <translation id="6495402307502950726">清除對話</translation>
 <translation id="903201991022343217">開啟新對話</translation>
 <translation id="8171760814579050200">重新命名對話</translation>
+<translation id="5397794290049113714">你</translation>
 <translation id="7754678742055438573">刪除對話</translation>
 <translation id="1946267518364740045">推算⋯⋯</translation>
 <translation id="4198859185714743678">推算完成</translation>
@@ -2325,7 +2320,6 @@
 <translation id="4808122506413075135">傳送瀏覽歷史中的頁面內容，為 Leo 提供更多對話內容。</translation>
 <translation id="220541218939267992">頁面內容將連同您的訊息一併傳送給 Leo。</translation>
 <translation id="2152389270152475874">添加分頁、書籤或瀏覽記錄以查看上下文。所選內容將與您的訊息一併傳送給 Leo。</translation>
-<translation id="6237410387937453423">沒有匹配的附件</translation>
 <translation id="2315654674554095762">現在，Leo 會記住您的對話，以便您可以重新返回。它們會加密儲存於您的裝置中，您可以隨時刪除它們。</translation>
 <translation id="7821251979960635244">開始對話後，您的對話紀錄就會出現在這裡。</translation>
 <translation id="887511360213807449">紀錄已停用</translation>
@@ -2427,7 +2421,6 @@
 <translation id="4773299976671772492">已停止</translation>
 <translation id="6946722113367118030">思考中</translation>
 <translation id="2113810663179257944">程式碼執行</translation>
-<translation id="4790888275629207278">在 sandbox 中執行了程式碼</translation>
 <translation id="4379566111233326721">程式碼：</translation>
 <translation id="3542130965673205258">輸出:</translation>
 <translation id="3428245742224818842">AI 瀏覽</translation>
@@ -2439,11 +2432,7 @@
 <translation id="864117099189791993">您可隨時從主選單或工具列上的個人檔案選單切換回您的常規個人檔案。AI 瀏覽將始終在 AI 瀏覽個人檔案中開啟。</translation>
 <translation id="3486480638399578250">保持您的個人電子郵件地址私密</translation>
 <translation id="7765422154906712751">建立唯一且隨機的地址，這些地址會轉發到您的 Brave 帳戶電子郵件，並可以隨時刪除。防止實際電子郵件地址被揭露或被廣告商使用。</translation>
-<translation id="5222676887888702881">登出</translation>
-<translation id="8090292425230843109">登出電子郵件別名</translation>
-<translation id="8471990782451394141">連接到 Brave 帳戶...</translation>
 <translation id="71316462802471551">電子郵件別名</translation>
-<translation id="5713644099811900409">Brave 帳戶</translation>
 <translation id="6002159997868894136">點擊以複製別名</translation>
 <translation id="8105770564756958406">被 <ph name="DOMAINS"/> 使用</translation>
 <translation id="5006956315579221642">建立最多 5 個免費的電子郵件別名來保護您的真實電子郵件地址。</translation>
@@ -2467,8 +2456,6 @@
 <translation id="646524615209870492">移除 <ph name="ALIAS"/> 作為別名，將導致您無法接收電子郵件。</translation>
 <translation id="8133100642915054515">刪除別名出錯。請檢查您的網路連線，然後再試一次。</translation>
 <translation id="8465742443901727718">這個動作不可回復。您確定要繼續嗎？</translation>
-<translation id="8662104432574824754">要開始，請登錄或建立一個 Brave 帳戶</translation>
-<translation id="8069030342700068465">輸入您的電子郵件地址以獲取發送到您郵箱的安全登入連結。點擊此連結將建立或存取一個 Brave 帳戶，並允許您使用免費的電子郵件別名服務。</translation>
 <translation id="2133391407495495735">獲取登入連結</translation>
 <translation id="2650906829817220223">請求驗證出錯。請檢查您的網路連線，然後再試一次。</translation>
 <translation id="3699624789011381381">電子郵件地址</translation>
@@ -2501,7 +2488,7 @@
 <translation id="466214682712474574">登入您的 <ph name="PROVIDER"/> 帳戶查看您的餘額</translation>
 <translation id="8332875111286275890">登入查看您的餘額</translation>
 <translation id="5430001801813715388">獎勵</translation>
-<translation id="5966055668402779222">無所不問，無所不答...</translation>
+<translation id="2430295257226173518">無所不問，無所不答…</translation>
 <translation id="167018310108390163">自定義新標籤頁面</translation>
 <translation id="6851426306697017546">顯示時鐘</translation>
 <translation id="4844370919312937270">在新標籤頁中顯示搜尋小工具</translation>
@@ -2542,7 +2529,6 @@
 <translation id="4677356505199464553">看起來不錯</translation>
 <translation id="1992750560347846445">回報網站狀況</translation>
 <translation id="2863270180245144869">啟用「僅限廣告封鎖」模式</translation>
-<translation id="2302218429308447288">您目前正在使用「僅限廣告封鎖」模式。此模式僅提供廣告封鎖保護。如果您希望返回完整的盾牌模式，請在設定中停用此模式。</translation>
 <translation id="4820891023903368625">廣告已攔截 <ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">已封鎖追蹤程式、廣告等 <ph name="LINK_BEFORE"/>了解更多<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">未受 Brave Shields 保護 <ph name="LINK_BEFORE"/>深入瞭解<ph name="LINK_AFTER"/></translation>

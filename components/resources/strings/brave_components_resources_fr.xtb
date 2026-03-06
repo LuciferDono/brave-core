@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Autoriser <ph name="URL"/> à ouvrir le chat avec Leo AI dans Brave ?</translation>
 <translation id="4355784577209159847">Autoriser l'utilisation de cookies tiers pour l'ancienne connexion à Google</translation>
 <translation id="5770656036486891920"><ph name="URL"/> souhaite utiliser des cookies tiers pour l'ancienne connexion à Google</translation>
-<translation id="6053826678715267477">Autoriser l'accès aux ressources localhost</translation>
-<translation id="2973562729984406132"><ph name="URL"/> souhaite avoir accès aux ressources localhost</translation>
 <translation id="2104347391516032700">Service des récompenses en BAT</translation>
 <translation id="5939518447894949180">Réinitialiser</translation>
 <translation id="3349204812119681938">Réinitialiser Récompenses Brave</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Afficher la clé</translation>
 <translation id="8033497299373164724">Masquer la clé</translation>
 <translation id="7514365320538308">Télécharger</translation>
+<translation id="5148285448107770349">Le mot de passe doit contenir au moins 8 caractères</translation>
 <translation id="2702143907607790516">La mise à jour du nom du compte a échoué. Veuillez réessayer.</translation>
 <translation id="3318280255740629162">25 %</translation>
 <translation id="2636487255623744079">50 %</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">L'adresse de réception est votre propre adresse.</translation>
 <translation id="3124753063207986114">L'adresse de réception est l'adresse d'un contrat de jeton.</translation>
 <translation id="7029817408221097939">Adresse unifiée non valide</translation>
-<translation id="6370376419663123629">L'adresse semble incorrecte</translation>
-<translation id="3767148796886402380">Vérifiez votre adresse (par ex. lettres en minuscule ou majuscule).</translation>
 <translation id="2585599787090762065">Comment résoudre cela ?</translation>
 <translation id="5517732667776806421">Informations sur la somme de contrôle manquantes</translation>
-<translation id="2975056993833847787">Cette adresse ne peut pas être vérifiée (somme de contrôle manquante). Voulez-vous continuer ?</translation>
-<translation id="6320252966164556855">L'adresse n'a pas réussi la vérification (somme de contrôle non valide). Veuillez réessayer en remplaçant les lettres minuscules par des majuscules.</translation>
 <translation id="4667144295226514387">Limite de Gas manquante</translation>
 <translation id="2021522108838444624">Le montant doit être supérieur à 0</translation>
 <translation id="8464365289405373974">L'adresse de destination est requise</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Pontage de</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> sur <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Une erreur s'est produite lors de la transaction suivante : <ph name="SWAP_OR_BRIDGE"/> sur <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">En attente</translation>
 <translation id="1778601041100951971">Anonymisation de <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Désanonymisation de <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936">Le montant de <ph name="AMOUNT"/> a été transféré vers un compte anonymisé</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Ce service est fourni par <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/>, dont vous acceptez les <ph name="TERMS_LINK_BEFORE"/>conditions générales d'utilisation<ph name="TERMS_LINK_AFTER"/> et la <ph name="PRIVACY_POLICY_LINK_BEFORE"/>politique de confidentialité<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Disponible</translation>
 <translation id="5296640085393149413">Fonds disponibles que vous pouvez utiliser.</translation>
-<translation id="3248185426436836442">En attente</translation>
 <translation id="2515906149804238711">Un changement est en attente dans le solde de votre portefeuille.</translation>
 <translation id="7700365440186054030">Vos fonds disponibles ainsi que toutes les transactions qui n'ont pas encore été confirmées.</translation>
 <translation id="4118601537508887039">Certains soldes peuvent être indisponibles</translation>
@@ -2289,6 +2284,7 @@
 <translation id="6495402307502950726">Effacer la conversation</translation>
 <translation id="903201991022343217">Démarrer une nouvelle conversation</translation>
 <translation id="8171760814579050200">Renommer la conversation</translation>
+<translation id="5397794290049113714">Vous</translation>
 <translation id="7754678742055438573">Effacer la conversation</translation>
 <translation id="1946267518364740045">Raisonnement…</translation>
 <translation id="4198859185714743678">Raisonnement terminé</translation>
@@ -2325,7 +2321,6 @@
 <translation id="4808122506413075135">Envoyez à Leo le contenu de votre historique du navigateur pour enrichir les réponses.</translation>
 <translation id="220541218939267992">Le contenu de cette page et vos messages seront envoyés à Leo.</translation>
 <translation id="2152389270152475874">Ajoutez des onglets, des favoris ou l’historique pour le contexte. Les contenus sélectionnés seront envoyés à Leo avec vos messages.</translation>
-<translation id="6237410387937453423">Aucune pièce jointe correspondante</translation>
 <translation id="2315654674554095762">Leo conservera désormais vos conversations pour que vous puissiez les retrouver plus tard. Elles sont enregistrées de façon sécurisée sur votre appareil et vous pouvez les supprimer à tout moment.</translation>
 <translation id="7821251979960635244">Votre historique de conversation apparaîtra ici lorsque vous aurez démarré une discussion.</translation>
 <translation id="887511360213807449">L'historique est désactivé</translation>
@@ -2427,7 +2422,6 @@
 <translation id="4773299976671772492">Arrêté</translation>
 <translation id="6946722113367118030">Réflexion en cours</translation>
 <translation id="2113810663179257944">Exécution du code</translation>
-<translation id="4790888275629207278">Code exécuté dans un bac à sable</translation>
 <translation id="4379566111233326721">Code :</translation>
 <translation id="3542130965673205258">Output:</translation>
 <translation id="3428245742224818842">Navigation avec IA</translation>
@@ -2439,11 +2433,7 @@
 <translation id="864117099189791993">Vous pouvez revenir à votre profil habituel à tout moment depuis le menu principal ou via le menu de profil dans la barre d’outils. La navigation avec IA s’ouvrira toujours dans le profil de navigation avec IA.</translation>
 <translation id="3486480638399578250">Gardez votre adresse e-mail privée.</translation>
 <translation id="7765422154906712751">Créez des adresses uniques et aléatoires qui renvoient vers l'adresse e-mail de votre compte Brave et peuvent être supprimées à tout moment pour empêcher la divulgation ou l'utilisation de votre adresse e-mail personnelle par des annonceurs.</translation>
-<translation id="5222676887888702881">Se déconnecter</translation>
-<translation id="8090292425230843109">Se déconnecter des alias d'adresse e-mail</translation>
-<translation id="8471990782451394141">Connexion au compte Brave…</translation>
 <translation id="71316462802471551">Alias d'adresse e-mail</translation>
-<translation id="5713644099811900409">Compte Brave</translation>
 <translation id="6002159997868894136">Cliquez pour copier l'alias</translation>
 <translation id="8105770564756958406">Utilisée par <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Créez gratuitement jusqu'à 5 alias pour protéger votre adresse e-mail personnelle.</translation>
@@ -2467,8 +2457,6 @@
 <translation id="646524615209870492">Si vous supprimez votre alias <ph name="ALIAS"/>, vous ne pourrez plus recevoir d'e-mails à cette adresse.</translation>
 <translation id="8133100642915054515">Une erreur est survenue lors de la suppression de l'alias. Vérifiez votre connexion et réessayez.</translation>
 <translation id="8465742443901727718">Cette action ne peut pas être annulée. Voulez-vous vraiment continuer ?</translation>
-<translation id="8662104432574824754">Connectez-vous ou créez un compte Brave pour démarrer</translation>
-<translation id="8069030342700068465">Saisissez votre adresse e-mail pour recevoir un lien de connexion sécurisé par e-mail. En cliquant sur ce lien, vous créerez ou accéderez à un compte Brave et pourrez utiliser le service gratuit de création d'alias d'adresse e-mail.</translation>
 <translation id="2133391407495495735">Obtenir le lien de connexion</translation>
 <translation id="2650906829817220223">Une erreur est survenue lors de la demande d'authentification. Vérifiez votre connexion et réessayez.</translation>
 <translation id="3699624789011381381">Adresse e-mail</translation>
@@ -2501,7 +2489,7 @@
 <translation id="466214682712474574">Connectez-vous à <ph name="PROVIDER"/> pour voir votre solde</translation>
 <translation id="8332875111286275890">Connectez-vous pour voir votre solde</translation>
 <translation id="5430001801813715388">RÉCOMPENSES</translation>
-<translation id="5966055668402779222">Des réponses à toutes vos questions…</translation>
+<translation id="2430295257226173518">Des réponses à toutes vos questions…</translation>
 <translation id="167018310108390163">Personnaliser la page de nouvel onglet</translation>
 <translation id="6851426306697017546">Afficher l'horloge</translation>
 <translation id="4844370919312937270">Afficher le widget du moteur de recherche dans les nouveaux onglets</translation>
@@ -2542,7 +2530,6 @@
 <translation id="4677356505199464553">Ce site fonctionne</translation>
 <translation id="1992750560347846445">Signaler le site</translation>
 <translation id="2863270180245144869">Mode Blocage des publicités uniquement activé</translation>
-<translation id="2302218429308447288">Vous êtes actuellement en mode Blocage des publicités uniquement ; seules les publicités sont désactivées. Pour revenir au mode boucliers complet, désactivez ce mode dans les paramètres.</translation>
 <translation id="4820891023903368625">Publicités bloquées <ph name="LINK_BEFORE"/>En savoir plus<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Traqueurs, pubs et autres contenus bloqués. <ph name="LINK_BEFORE"/>En savoir plus.<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Non protégé par les boucliers Brave <ph name="LINK_BEFORE"/>En savoir plus<ph name="LINK_AFTER"/></translation>

@@ -487,8 +487,6 @@
 <translation id="1518915449477235311">האם לאפשר ל-<ph name="URL"/> לפתוח את שיחות Leo AI ב-Brave?</translation>
 <translation id="4355784577209159847">אפשר להשתמש בקובצי Cookie של צד שלישי לכניסה ב-Google מהדור הקודם</translation>
 <translation id="5770656036486891920"><ph name="URL"/> רוצה להשתמש בקובצי Cookie של צד שלישי לצורך כניסה מדור קודם של Google</translation>
-<translation id="6053826678715267477">אפשר גישה למשאבי localhost</translation>
-<translation id="2973562729984406132"><ph name="URL"/> מבקשת גישה למשאבים של localhost</translation>
 <translation id="2104347391516032700">שירות Bat Ads</translation>
 <translation id="5939518447894949180">אפס</translation>
 <translation id="3349204812119681938">איפוס Brave Rewards</translation>
@@ -1061,6 +1059,7 @@
 <translation id="2902856457593699108">הצג מפתח</translation>
 <translation id="8033497299373164724">הסתר מפתח</translation>
 <translation id="7514365320538308">הורדה</translation>
+<translation id="5148285448107770349">על הסיסמה לכלול 8 תווים לפחות</translation>
 <translation id="2702143907607790516">עדכון שם החשבון נכשל. נסה שוב.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1235,12 +1234,8 @@
 <translation id="4932382283590063268">כתובת הקבלה היא הכתובת שלך.</translation>
 <translation id="3124753063207986114">הכתובת המקבלת היא כתובת הקשר של האסימון.</translation>
 <translation id="7029817408221097939">כתובת מאוחדת לא חוקית</translation>
-<translation id="6370376419663123629">הכתובת לא נראית נכונה</translation>
-<translation id="3767148796886402380">בדוק את הכתובת שלך כדי לוודא שזו הכתובת הנכונה (למשל, אותיות קטנות או רישיות).</translation>
 <translation id="2585599787090762065">איך אני יכול לפתור את זה?</translation>
 <translation id="5517732667776806421">חסר מידע על סכום בדיקה</translation>
-<translation id="2975056993833847787">לא ניתן היה לאמת את הכתובת הזו (סכום הבדיקה חסר). להמשיך?</translation>
-<translation id="6320252966164556855">הכתובת לא עברה את האימות (סכום הבדיקה בלתי תקף). יש לנסות שוב, הפעם לאחר החלפה של אותיות קטנות באותיות גדולות.</translation>
 <translation id="4667144295226514387">חסרה מגבלת גז</translation>
 <translation id="2021522108838444624">הסכום חייב להיות גדול מ-0</translation>
 <translation id="8464365289405373974">יש להזין כתובת</translation>
@@ -1392,6 +1387,7 @@
 <translation id="7694836973509310467">גישור</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> דרך <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">אירעה שגיאה בעת ניסיון <ph name="SWAP_OR_BRIDGE"/> דרך <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">בהמתנה</translation>
 <translation id="1778601041100951971">מגן על <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">שולח/ת ממצאים <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> מוגנים</translation>
@@ -1770,7 +1766,6 @@ CoinGecko</translation>
 <translation id="2410455471299328417">שירות זה מסופק על ידי <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> וכפוף <ph name="TERMS_LINK_BEFORE"/>לתנאי השירות<ph name="TERMS_LINK_AFTER"/> <ph name="PRIVACY_POLICY_LINK_BEFORE"/>ולמדיניות הפרטיות שלהם<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">פנוי</translation>
 <translation id="5296640085393149413">הכספים הזמינים עבורכם לשימוש.</translation>
-<translation id="3248185426436836442">בהמתנה</translation>
 <translation id="2515906149804238711">קיים שינוי בהמתנה ביתרת הארנק שלכם.</translation>
 <translation id="7700365440186054030">הכספים הזמינים עבורכם ועסקאות שטרם אושרו.</translation>
 <translation id="4118601537508887039">ייתכן שחלק מהיתרה אינו זמין</translation>
@@ -2309,6 +2304,7 @@ CoinGecko</translation>
 <translation id="6495402307502950726">ניקוי שיחה</translation>
 <translation id="903201991022343217">התחלת שיחה חדשה</translation>
 <translation id="8171760814579050200">שינוי שם שיחה</translation>
+<translation id="5397794290049113714">את/ה</translation>
 <translation id="7754678742055438573">מחיקת שיחה</translation>
 <translation id="1946267518364740045">מעבד תגובה...</translation>
 <translation id="4198859185714743678">העיבוד הושלם</translation>
@@ -2345,7 +2341,6 @@ CoinGecko</translation>
 <translation id="4808122506413075135">שלח את תוכן הדף מההיסטוריה של הדפדפן שלך כדי לספק לליאו יותר הקשר לשיחה.</translation>
 <translation id="220541218939267992">תוכן הדף יישלח ללאו יחד עם ההודעות שלך.</translation>
 <translation id="2152389270152475874">הוסף כרטיסיות, סימניות או היסטוריה לצורך הקשר. התוכן הנבחר יישלח לליאו יחד עם ההודעות שלך.</translation>
-<translation id="6237410387937453423">אין קבצים מצורפים תואמים</translation>
 <translation id="2315654674554095762">עכשיו Leo יזכור את השיחות שלך כך שתהיה לך אפשרות לחזור אליהן. הן מאוחסנות באופן מוצפן במכשיר שלך, ובאפשרותך למחוק אותן בכל עת.</translation>
 <translation id="7821251979960635244">היסטוריית השיחות שלך תופיע כאן ברגע שתתחיל/י שיחה.</translation>
 <translation id="887511360213807449">היסטוריה מושבתת</translation>
@@ -2447,7 +2442,6 @@ CoinGecko</translation>
 <translation id="4773299976671772492">נעצר</translation>
 <translation id="6946722113367118030">חושב</translation>
 <translation id="2113810663179257944">הרצת קוד</translation>
-<translation id="4790888275629207278">הורץ קוד בתוך סנדבוקס</translation>
 <translation id="4379566111233326721">קוד:</translation>
 <translation id="3542130965673205258">פלט:</translation>
 <translation id="3428245742224818842">גלישת AI</translation>
@@ -2459,11 +2453,7 @@ CoinGecko</translation>
 <translation id="864117099189791993">תוכל לעבור חזרה לפרופיל הרגיל שלך בכל רגע מתפריט הראשי או מהתפריט של הפרופיל בשורת הכלים. גלישת AI תמיד תיפתח בפרופיל הגלישה של AI.</translation>
 <translation id="3486480638399578250">לשמור על כתובת המייל האישית שלך פרטית</translation>
 <translation id="7765422154906712751">יצירת כתובות ייחודיות ואקראיות המפנות לאימייל החשבון שלך ב-Brave וניתן למחוק אותן בכל עת. זה שומר על כתובת במייל האמיתית שלך מלהתגלות או להיות בשימוש על ידי מפרסמים.</translation>
-<translation id="5222676887888702881">התנתקות</translation>
-<translation id="8090292425230843109">התנתקות מכתובות אימייל בדויות</translation>
-<translation id="8471990782451394141">מתחבר לחשבון Brave...</translation>
 <translation id="71316462802471551">מיילים בדויים</translation>
-<translation id="5713644099811900409">חשבון Brave</translation>
 <translation id="6002159997868894136">יש ללחוץ כדי להעתיק מייל בדוי</translation>
 <translation id="8105770564756958406">בשימוש על ידי <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">יצירת עד 5 מיילים בדויים בחינם כדי להגן על כתובת האימייל האמיתית שלך.</translation>
@@ -2487,8 +2477,6 @@ CoinGecko</translation>
 <translation id="646524615209870492">הסרת <ph name="ALIAS"/> כמייל בדוי תביא לאובדן היכולת שלך לקבל מיילים.</translation>
 <translation id="8133100642915054515">שגיאה במחיקת מייל בדוי. יש לבדוק את חיבור האינטרנט שלך ולנסות שוב.</translation>
 <translation id="8465742443901727718">פעולה זו היא בלתי הפיכה. בטוח שברצונך להמשיך?</translation>
-<translation id="8662104432574824754">כדי להתחיל, יש להתחבר או או ליצור חשבון Brave</translation>
-<translation id="8069030342700068465">יש להזין את כתובת האימייל שלך כדי לקבל לינק מאובטח לכניסה לאימייל שלך. לחיצה על הקישור תנווט אותך אל חשבון Brave קיים (אם יש כזה) או תיצור חשבון Brave חדש (אם אין), ותאפשר לך להשתמש בשירות המיילים הבדויים החינמי.</translation>
 <translation id="2133391407495495735">קבלת לינק כניסה</translation>
 <translation id="2650906829817220223">שגיאה בבקשת אימות. יש לבדוק את חיבור האינטרנט שלך ולנסות שוב.</translation>
 <translation id="3699624789011381381">כתובת אימייל</translation>
@@ -2521,7 +2509,6 @@ CoinGecko</translation>
 <translation id="466214682712474574">יש להתחבר ךחשבון <ph name="PROVIDER"/> שלך כדי לראות את היתרה שלך</translation>
 <translation id="8332875111286275890">יש להתחבר כדי לראות את היתרה שלך</translation>
 <translation id="5430001801813715388">תגמולים</translation>
-<translation id="5966055668402779222">כדאי לשאול את חיפוש Brave</translation>
 <translation id="167018310108390163">התאמה אישית של דף הכרטיסיה החדשה</translation>
 <translation id="6851426306697017546">הצגת שעון</translation>
 <translation id="4844370919312937270">הצגת ווידג׳ט חיפוש בכרטיסיות חדשות</translation>
@@ -2562,7 +2549,6 @@ CoinGecko</translation>
 <translation id="4677356505199464553">נראה טוב</translation>
 <translation id="1992750560347846445">דיווח על בעיה באתר</translation>
 <translation id="2863270180245144869">מצב חסימת מודעות בלבד מופעל</translation>
-<translation id="2302218429308447288">כרגע אתה משתמש במצב חסימת פרסומות בלבד. מצב זה מציע רק הגנה מפני חסימת פרסומות. אם ברצונך לחזור למצב מגן מלא, השבת מצב זה מההגדרות.</translation>
 <translation id="4820891023903368625">מודעות חסומות <ph name="LINK_BEFORE"/>למידע נוסף<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">עוקבים, מודעות ועוד חסומים <ph name="LINK_BEFORE"/>
 למידע נוסף<ph name="LINK_AFTER"/></translation>

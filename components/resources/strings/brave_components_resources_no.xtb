@@ -484,8 +484,6 @@
 <translation id="1518915449477235311">Vil du tillate at <ph name="URL"/> åpner Leo AI-samtaler i Brave?</translation>
 <translation id="4355784577209159847">Tillat bruken av tredjepartscookies for gammel Google-pålogging</translation>
 <translation id="5770656036486891920"><ph name="URL"/> ønsker å bruke tredjepartscookies for den gamle versjonen av Google-pålogginger</translation>
-<translation id="6053826678715267477">Gi tilgang til localhost-ressurser</translation>
-<translation id="2973562729984406132"><ph name="URL"/> ber om tilgang til localhost-ressurser</translation>
 <translation id="2104347391516032700">Bat-belønningstjeneste</translation>
 <translation id="5939518447894949180">Tilbakestill</translation>
 <translation id="3349204812119681938">Tilbakestill Brave Rewards</translation>
@@ -1052,6 +1050,7 @@
 <translation id="2902856457593699108">Vis nøkkel</translation>
 <translation id="8033497299373164724">Skjul nøkkel</translation>
 <translation id="7514365320538308">Last ned</translation>
+<translation id="5148285448107770349">Passordet må være på minst 8 tegn</translation>
 <translation id="2702143907607790516">Kunne ikke oppdatere kontonavnet – prøv på nytt.</translation>
 <translation id="3318280255740629162">25 %</translation>
 <translation id="2636487255623744079">50 %</translation>
@@ -1226,12 +1225,8 @@
 <translation id="4932382283590063268">Mottaksadressen er din egen adresse.</translation>
 <translation id="3124753063207986114">Mottaksadressen er et tokens kontraktsadresse.</translation>
 <translation id="7029817408221097939">Ugyldig forent adresse</translation>
-<translation id="6370376419663123629">Adressen ser ikke riktig ut</translation>
-<translation id="3767148796886402380">Kontroller adressen for å sjekke om den er riktig (f.eks. store og små bokstaver).</translation>
 <translation id="2585599787090762065">Hvordan kan jeg løse dette?</translation>
 <translation id="5517732667776806421">Manglende checksum-info</translation>
-<translation id="2975056993833847787">Denne adressen kan ikke bekreftes (checksum mangler). Vil du fortsette?</translation>
-<translation id="6320252966164556855">Adressen ble ikke verifisert (ugyldig checksum). Prøv på nytt, og bytt ut små bokstaver med store bokstaver.</translation>
 <translation id="4667144295226514387">Gas-grense mangler</translation>
 <translation id="2021522108838444624">Beløpet må være større enn 0</translation>
 <translation id="8464365289405373974">Til-adresse kreves</translation>
@@ -1383,6 +1378,7 @@
 <translation id="7694836973509310467">Overføring</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> på <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Det oppstod en feil under forsøket på å <ph name="SWAP_OR_BRIDGE"/> på <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Påventende</translation>
 <translation id="1778601041100951971">Avskjermer <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Avskjermer <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> har blitt avskjermet</translation>
@@ -1753,7 +1749,6 @@
 <translation id="2410455471299328417">Denne tjenesten leveres av <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> og er underlagt deres <ph name="TERMS_LINK_BEFORE"/>bruksvilkår<ph name="TERMS_LINK_AFTER"/> og <ph name="PRIVACY_POLICY_LINK_BEFORE"/>personvernerklæring<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Tilgjengelig</translation>
 <translation id="5296640085393149413">Midler som er tilgjengelige for å brukes.</translation>
-<translation id="3248185426436836442">Påventende</translation>
 <translation id="2515906149804238711">En ventende endring i saldoen i lommeboken din.</translation>
 <translation id="7700365440186054030">De tilgjengelige midlene dine pluss eventuelle transaksjoner som ikke er bekreftet ennå.</translation>
 <translation id="4118601537508887039">Enkelte saldoer er kanskje ikke tilgjengelige</translation>
@@ -2326,7 +2321,6 @@
 <translation id="4808122506413075135">Send sideinnhold fra nettleserloggen din for å gi Leo mer kontekst i samtalen.</translation>
 <translation id="220541218939267992">Sideinnhold vil bli sendt til Leo sammen med meldingene dine.</translation>
 <translation id="2152389270152475874">Legg til fane-, bokmerke- eller historikkinnhold for kontekst. Valgt innhold sendes til Leo sammen med meldingene dine.</translation>
-<translation id="6237410387937453423">Ingen matchende vedlegg</translation>
 <translation id="2315654674554095762">Fra nå av vil Leo huske samtalene dine, slik at du kan enkelt ta opp tråden. De lagres kryptert på enheten din, og du kan slette dem når som helst.</translation>
 <translation id="7821251979960635244">Samtaleloggen din vil vises her når du innleder din første samtale.</translation>
 <translation id="887511360213807449">Loggen er deaktivert</translation>
@@ -2428,7 +2422,6 @@
 <translation id="4773299976671772492">Stoppet</translation>
 <translation id="6946722113367118030">Tenker</translation>
 <translation id="2113810663179257944">Kodekjøring</translation>
-<translation id="4790888275629207278">Kjørte kode i sandkasse</translation>
 <translation id="4379566111233326721">Kode:</translation>
 <translation id="3542130965673205258">Ut:</translation>
 <translation id="3428245742224818842">AI-surfing</translation>
@@ -2440,11 +2433,7 @@
 <translation id="864117099189791993">Du kan når som helst bytte tilbake til den vanlige profilen din via hovedmenyen eller ved å bruke profilikonet på verktøylinjen. AI-surfing vil alltid åpnes i profilen for AI-surfing.</translation>
 <translation id="3486480638399578250">Hold din personlige e-postadresse hemmelig</translation>
 <translation id="7765422154906712751">Lag unike, tilfeldige e-postadresser som videresender alle e-poster til e-postadressen som er knyttet til Brave-kontoen din. Aliasene kan slettes når som helst. Hindre at den ekte e-postadressen din deles eller brukes av annonsører.</translation>
-<translation id="5222676887888702881">Logg ut</translation>
-<translation id="8090292425230843109">Logg ut av e-postaliaser</translation>
-<translation id="8471990782451394141">Kobler til Brave-konto…</translation>
 <translation id="71316462802471551">E-postalias</translation>
-<translation id="5713644099811900409">Brave-konto</translation>
 <translation id="6002159997868894136">Klikk for å kopiere alias</translation>
 <translation id="8105770564756958406">Brukes av <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Lag opptil 5 gratis e-postaliaser for å beskytte den ekte e-postadressen din.</translation>
@@ -2468,8 +2457,6 @@
 <translation id="646524615209870492">Dersom du fjerner <ph name="ALIAS"/> som alias, mister du muligheten til å motta e-poster.</translation>
 <translation id="8133100642915054515">Aliaset kunne ikke slettes. Sjekk internettkoblingen og prøv på nytt.</translation>
 <translation id="8465742443901727718">Dette kan ikke angres. Er du sikker på at du ønsker å fortsette?</translation>
-<translation id="8662104432574824754">Logg inn eller opprett en Brave-konto for å komme i gang</translation>
-<translation id="8069030342700068465">Skriv inn e-postadressen din for å få tilsendt en sikker innloggingslenke. Trykk så på lenken i e-posten for å opprette eller få tilgang til en Brave-konto og bruke våre gratis e-postalias.</translation>
 <translation id="2133391407495495735">Få innloggingslenke</translation>
 <translation id="2650906829817220223">Kunne ikke sende autentiseringsforespørselen. Sjekk internettkoblingen og prøv på nytt.</translation>
 <translation id="3699624789011381381">E-postadresse</translation>
@@ -2502,7 +2489,7 @@
 <translation id="466214682712474574">Logg inn på <ph name="PROVIDER"/>-kontoen for å se saldoen din</translation>
 <translation id="8332875111286275890">Logg inn for å se saldoen din</translation>
 <translation id="5430001801813715388">REWARDS</translation>
-<translation id="5966055668402779222">Spør om hva som helst, finn hva som helst...</translation>
+<translation id="2430295257226173518">Spør om hva som helst, finn hva som helst…</translation>
 <translation id="167018310108390163">Tilpass ny faneside</translation>
 <translation id="6851426306697017546">Vis klokke</translation>
 <translation id="4844370919312937270">Vis søkewidget i nye faner</translation>
@@ -2543,7 +2530,6 @@
 <translation id="4677356505199464553">Ser bra ut</translation>
 <translation id="1992750560347846445">Rapporter nettsted</translation>
 <translation id="2863270180245144869">Kun annonseblokkering er aktivert</translation>
-<translation id="2302218429308447288">Du bruker for tiden kun annonseblokkering. Denne modusen blokkerer kun annonser. Hvis du vil tilbake til full Shields-modus, må du slå dette av i innstillingene.</translation>
 <translation id="4820891023903368625">Annonser blokkert <ph name="LINK_BEFORE"/>Finn ut mer<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Sporinger, reklamer og annet blokkert <ph name="LINK_BEFORE"/>Les mer<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Ikke beskyttet av Brave Shields <ph name="LINK_BEFORE"/>Finn ut mer<ph name="LINK_AFTER"/></translation>

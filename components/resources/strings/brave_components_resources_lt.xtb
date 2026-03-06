@@ -484,8 +484,6 @@
 <translation id="1518915449477235311">Leisti <ph name="URL"/> atverti „Leo“ DI pokalbius naršyklėje „Brave“?</translation>
 <translation id="4355784577209159847">Suteikti leidimą trečiųjų šalių slapukams prisijungti prie Google paskyros</translation>
 <translation id="5770656036486891920"><ph name="URL"/> nori naudoti trečiosios šalies slapukus senesniam prisijungimui prie „Google“</translation>
-<translation id="6053826678715267477">Suteikti prieigą prie vietinio serverio išteklių</translation>
-<translation id="2973562729984406132"><ph name="URL"/> nori prieigos prie vietinio serverio išteklių.</translation>
 <translation id="2104347391516032700">BAT atlygių paslauga</translation>
 <translation id="5939518447894949180">Nustatyti iš naujo</translation>
 <translation id="3349204812119681938">Iš naujo nustatyti „Brave Rewards“</translation>
@@ -1053,6 +1051,7 @@
 <translation id="2902856457593699108">Rodyti raktą</translation>
 <translation id="8033497299373164724">Slėpti raktą</translation>
 <translation id="7514365320538308">Atsisiųsti</translation>
+<translation id="5148285448107770349">Slaptažodį turi sudaryti bent 8 ženklai</translation>
 <translation id="2702143907607790516">Atnaujinti sąskaitos pavadinimo nepavyko, bandykite dar kartą.</translation>
 <translation id="3318280255740629162">25 %</translation>
 <translation id="2636487255623744079">50 %</translation>
@@ -1227,12 +1226,8 @@
 <translation id="4932382283590063268">Gavimo adresas yra jūsų pačių adresas.</translation>
 <translation id="3124753063207986114">Gavimo adresas yra žetono sutarties adresas.</translation>
 <translation id="7029817408221097939">Netinkamas bendrasis adresas</translation>
-<translation id="6370376419663123629">Adresas neteisingas</translation>
-<translation id="3767148796886402380">Patikrinkite, ar teisingai įvedėte adresą (pvz., ar teisingai įvedėte didžiąsias ir mažąsias raides).</translation>
 <translation id="2585599787090762065">Ką galiu padaryti?</translation>
 <translation id="5517732667776806421">Trūksta kontrolinės sumos informacijos</translation>
-<translation id="2975056993833847787">Šio adreso patvirtinti negalima (trūksta kontrolinės sumos). Tęsti?</translation>
-<translation id="6320252966164556855">Adreso patvirtinti nepavyko (netinkama kontrolinė suma). Bandykite dar kartą, mažąsias raides pakeisdami didžiosiomis raidėmis.</translation>
 <translation id="4667144295226514387">Trūksta dujų limito</translation>
 <translation id="2021522108838444624">Suma turi būti didesnė nei 0</translation>
 <translation id="8464365289405373974">Reikalingas gavėjo adresas</translation>
@@ -1384,6 +1379,7 @@
 <translation id="7694836973509310467">Tiltas</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> iš <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Įvyko klaida bandant <ph name="SWAP_OR_BRIDGE"/> iš <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Laukiama</translation>
 <translation id="1778601041100951971">Ekranavimas <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Atskleidžiama <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> buvo uždengta</translation>
@@ -1754,7 +1750,6 @@
 <translation id="2410455471299328417">Šią paslaugą teikia <ph name="BOLD_BEFORE"/>„Blowfish.xyz“<ph name="BOLD_AFTER"/> ir jai taikomos<ph name="TERMS_LINK_BEFORE"/>paslaugų teikimo sąlygos<ph name="TERMS_LINK_AFTER"/> ir <ph name="PRIVACY_POLICY_LINK_BEFORE"/>privatumo politika <ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Galima</translation>
 <translation id="5296640085393149413">Prieinamos jums naudoti lėšos.</translation>
-<translation id="3248185426436836442">Laukiama</translation>
 <translation id="2515906149804238711">Laukiantis pakeitimas jūsų piniginės likutyje.</translation>
 <translation id="7700365440186054030">Jūsų prieinamos lėšos ir visos dar nepatvirtintos operacijos.</translation>
 <translation id="4118601537508887039">Kai kurie likučiai gali būti neprieinami</translation>
@@ -2328,7 +2323,6 @@
 <translation id="4808122506413075135">Siųskite puslapio turinį iš naršyklės istorijos, kad "Leo" suteiktų daugiau konteksto pokalbiui.</translation>
 <translation id="220541218939267992">Puslapio turinys bus išsiųstas Leo kartu su jūsų žinutėmis.</translation>
 <translation id="2152389270152475874">Pridėkite skirtukų, žymelių ar naršymo istorijos konteksto tikslais. Pasirinktas turinys bus siunčiamas Leo kartu su jūsų žinutėmis.</translation>
-<translation id="6237410387937453423">Nėra tinkamų priedų</translation>
 <translation id="2315654674554095762">Nuo šiol „Leo“ įsimins jūsų pokalbius, kad galėtumėte prie jų grįžti. Užšifruoti pokalbiai saugomi jūsų įrenginyje, ir bet kada galite juos ištrinti.</translation>
 <translation id="7821251979960635244">Jūsų pokalbių istorija bus rodoma čia, kai pradėsite pokalbį.</translation>
 <translation id="887511360213807449">Istorija išjungta</translation>
@@ -2430,7 +2424,6 @@
 <translation id="4773299976671772492">Sustabdyta</translation>
 <translation id="6946722113367118030">Mąstoma</translation>
 <translation id="2113810663179257944">Kodo vykdymas</translation>
-<translation id="4790888275629207278">Kodas įvykdytas "sandbox" aplinkoje</translation>
 <translation id="4379566111233326721">Kodas:</translation>
 <translation id="3542130965673205258">Išvedinys:</translation>
 <translation id="3428245742224818842">AI naršymas</translation>
@@ -2442,11 +2435,7 @@
 <translation id="864117099189791993">Bet kada galite grįžti į įprastinį profilį, naudodamiesi pagrindiniu meniu arba profilio meniu įrankių juostoje. AI naršymas visada bus atidaromas AI naršymo profilyje.</translation>
 <translation id="3486480638399578250">Laikykite savo asmeninį el. pašto adresą privatų</translation>
 <translation id="7765422154906712751">Sukurkite unikalius, atsitiktinius adresus, kuriais laiškai būtų persiunčiami į jūsų „Brave“ paskyros el. paštą ir kuriuos bet kada galėsite ištrinti. Neleiskite, kad jūsų tikrasis el. pašto adresas būtų atskleistas arba naudojamas reklamuotojų.</translation>
-<translation id="5222676887888702881">Atsijungti</translation>
-<translation id="8090292425230843109">Atsijungti nuo el. pašto slapyvardžių</translation>
-<translation id="8471990782451394141">Jungiama prie „Brave“ paskyros...</translation>
 <translation id="71316462802471551">El. pašto slapyvardžiai</translation>
-<translation id="5713644099811900409">„Brave“ paskyra</translation>
 <translation id="6002159997868894136">Spustelėkite, kad nukopijuotumėte el. pašto slapyvardį</translation>
 <translation id="8105770564756958406">Naudojama <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Sukurkite iki 5 nemokamų el. pašto slapyvardžių, kad apsaugotumėte savo tikrąjį el. pašto adresą.</translation>
@@ -2470,8 +2459,6 @@
 <translation id="646524615209870492">Jei pašalinsite <ph name="ALIAS"/> kaip slapyvardį, negalėsite gauti el. laiškų.</translation>
 <translation id="8133100642915054515">Klaida šalinant slapyvardį. Patikrinkite interneto ryšį ir bandykite dar kartą.</translation>
 <translation id="8465742443901727718">Šis veiksmas yra negrįžtamas. Ar tikrai norite tęsti?</translation>
-<translation id="8662104432574824754">Norėdami pradėti, prisijunkite arba sukurkite „Brave“ paskyrą</translation>
-<translation id="8069030342700068465">Įveskite savo el. pašto adresą, kad gautumėte saugią prisijungimo nuorodą, siunčiamą į jūsų el. paštą. Paspaudus šią nuorodą, bus sukurta arba pasiekiama „Brave“ paskyra ir galėsite naudotis nemokama el. pašto slapyvardžių paslauga.</translation>
 <translation id="2133391407495495735">Gauti prisijungimo nuorodą</translation>
 <translation id="2650906829817220223">Klaida prašant patvirtinti paskyrą. Patikrinkite interneto ryšį ir bandykite dar kartą.</translation>
 <translation id="3699624789011381381">El. pašto adresas</translation>
@@ -2504,7 +2491,7 @@
 <translation id="466214682712474574">Prisijunkite prie savo <ph name="PROVIDER"/> sąskaitos, kad pamatytumėte savo likutį</translation>
 <translation id="8332875111286275890">Prisijungti norint pamatyti savo likutį</translation>
 <translation id="5430001801813715388">APDOVANOJIMAI</translation>
-<translation id="5966055668402779222">Klauskite bet ko, raskite viską...</translation>
+<translation id="2430295257226173518">Klauskite bet ko, raskite viską…</translation>
 <translation id="167018310108390163">Naujos kortelės puslapio pritaikymas</translation>
 <translation id="6851426306697017546">Rodyti laikrodį</translation>
 <translation id="4844370919312937270">Rodyti paieškos valdiklį naujose kortelėse</translation>
@@ -2545,7 +2532,6 @@
 <translation id="4677356505199464553">Atrodo gerai</translation>
 <translation id="1992750560347846445">Pranešti apie svetainę</translation>
 <translation id="2863270180245144869">Įjungtas tik skelbimų blokavimo režimas</translation>
-<translation id="2302218429308447288">Šiuo metu naudojate tik skelbimų blokavimo režimą. Šis režimas užtikrina tik skelbimų blokavimo apsaugą. Jei norite grįžti prie visiško "Shields" režimo, išjunkite šį režimą nustatymuose.</translation>
 <translation id="4820891023903368625">Užblokuoti skelbimai <ph name="LINK_BEFORE"/>Sužinokite daugiau<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Sekikliai, reklamos ir kt. užblokuoti <ph name="LINK_BEFORE"/>Sužinoti daugiau<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Neapsaugota „Brave“ skydais <ph name="LINK_BEFORE"/>Sužinoti daugiau<ph name="LINK_AFTER"/></translation>

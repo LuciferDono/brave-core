@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Tillad <ph name="URL"/>, at der åbnes Leo AI-samtaler i Brave?</translation>
 <translation id="4355784577209159847">Tillad brug af cookies fra tredjeparter til Google-login</translation>
 <translation id="5770656036486891920"><ph name="URL"/> vil bruge cookies fra tredjeparter til Google-login</translation>
-<translation id="6053826678715267477">Tillad adgang til localhost-ressourcer</translation>
-<translation id="2973562729984406132"><ph name="URL"/> ønsker adgang til localhost-ressourcer</translation>
 <translation id="2104347391516032700">Bat Rewards-service</translation>
 <translation id="5939518447894949180">Nulstil</translation>
 <translation id="3349204812119681938">Nulstil Brave Rewards</translation>
@@ -1054,6 +1052,7 @@
 <translation id="2902856457593699108">Vis nøgle</translation>
 <translation id="8033497299373164724">Skjul nøgle</translation>
 <translation id="7514365320538308">Download</translation>
+<translation id="5148285448107770349">Adgangskoden skal indeholde mindst 8 tegn</translation>
 <translation id="2702143907607790516">Kunne ikke opdatere kontonavnet. Prøv igen.</translation>
 <translation id="3318280255740629162">25 %</translation>
 <translation id="2636487255623744079">50 %</translation>
@@ -1228,12 +1227,8 @@
 <translation id="4932382283590063268">Modtageradressen er din egen adresse.</translation>
 <translation id="3124753063207986114">Modtageradressen er en tokens kontaktadresse.</translation>
 <translation id="7029817408221097939">Ugyldig forenet adresse</translation>
-<translation id="6370376419663123629">Adressen ser forkert ud</translation>
-<translation id="3767148796886402380">Tjek din adresse for at sikre dig, at den er korrekt (tjek især små og store bogstaver).</translation>
 <translation id="2585599787090762065">Hvordan løser jeg problemet?</translation>
 <translation id="5517732667776806421">Manglende kontrolsumsinformation</translation>
-<translation id="2975056993833847787">Denne adresse kan ikke bekræftes (manglende kontrolsum). Fortsæt?</translation>
-<translation id="6320252966164556855">Adressen blev ikke verificeret (manglende kontrolsum). Prøv igen, og udskift små bogstaver med store.</translation>
 <translation id="4667144295226514387">Mangler gas-grænse</translation>
 <translation id="2021522108838444624">Beløbet skal være større end 0</translation>
 <translation id="8464365289405373974">Til-adresse påkrævet</translation>
@@ -1385,6 +1380,7 @@
 <translation id="7694836973509310467">Overføring</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> på <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Der opstod en fejl ved forsøg på at <ph name="SWAP_OR_BRIDGE"/> på <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Afventer</translation>
 <translation id="1778601041100951971">Afskærmer <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Unshielding <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> er blevet afskærmet</translation>
@@ -1755,7 +1751,6 @@
 <translation id="2410455471299328417">Denne tjeneste leveres af <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> og er underlagt deres <ph name="TERMS_LINK_BEFORE"/>servicevilkår<ph name="TERMS_LINK_AFTER"/> og <ph name="PRIVACY_POLICY_LINK_BEFORE"/>privatlivspolitik<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Tilgængelig</translation>
 <translation id="5296640085393149413">Midler du kan bruge.</translation>
-<translation id="3248185426436836442">Afventer</translation>
 <translation id="2515906149804238711">Der venter en ændring i din tegnebogssaldo.</translation>
 <translation id="7700365440186054030">Din tilgængelige midler plus alle endnu ikke-bekræftede transaktioner.</translation>
 <translation id="4118601537508887039">Nogle saldi kan være utilgængelige</translation>
@@ -2292,6 +2287,7 @@
 <translation id="6495402307502950726">Ryd samtale</translation>
 <translation id="903201991022343217">Begynd en ny samtale</translation>
 <translation id="8171760814579050200">Omdøb samtalen</translation>
+<translation id="5397794290049113714">Dig</translation>
 <translation id="7754678742055438573">Slet samtale</translation>
 <translation id="1946267518364740045">Tænker sig om ...</translation>
 <translation id="4198859185714743678">Færdig</translation>
@@ -2328,7 +2324,6 @@
 <translation id="4808122506413075135">Send sideindhold fra din browserhistorik for at give Leo mere kontekst til samtalen.</translation>
 <translation id="220541218939267992">Sideindhold vil blive sendt til Leo sammen med dine beskeder.</translation>
 <translation id="2152389270152475874">Tilføj faner, bogmærker eller historik for kontekst. Valgte indhold sendes til Leo sammen med dine beskeder.</translation>
-<translation id="6237410387937453423">Ingen matchende vedhæftede filer</translation>
 <translation id="2315654674554095762">Leo vil nu huske dine samtaler, så du kan gå tilbage til dem. De gemmes krypteret på din enhed, og du kan slette dem når som helst.</translation>
 <translation id="7821251979960635244">Din samtalehistorik vises her, når du starter en samtale.</translation>
 <translation id="887511360213807449">Historik er slået fra</translation>
@@ -2430,7 +2425,6 @@
 <translation id="4773299976671772492">Stoppet</translation>
 <translation id="6946722113367118030">Tænker</translation>
 <translation id="2113810663179257944">Kodekørsel</translation>
-<translation id="4790888275629207278">Kørte kode i sandbox</translation>
 <translation id="4379566111233326721">Kode:</translation>
 <translation id="3542130965673205258">Output:</translation>
 <translation id="3428245742224818842">AI-browsing</translation>
@@ -2442,11 +2436,7 @@
 <translation id="864117099189791993">Du kan skifte tilbage til din almindelige profil når som helst fra hovedmenuen eller ved at bruge profilmenuen på værktøjslinjen. AI-browsing åbnes altid i AI-browsing-profilen.</translation>
 <translation id="3486480638399578250">Hold din private e-mailadresse privat</translation>
 <translation id="7765422154906712751">Opret unikke, tilfældige adresser, der videresender til din Brave konto-e-mail og kan slettes når som helst. Hold din reelle e-mailadresse fra at blive afsløret eller brugt af annoncører.</translation>
-<translation id="5222676887888702881">Log ud</translation>
-<translation id="8090292425230843109">Log ud af E-mail Aliaser</translation>
-<translation id="8471990782451394141">Opretter forbindelse til Brave-konto ...</translation>
 <translation id="71316462802471551">E-mail-aliasser</translation>
-<translation id="5713644099811900409">Brave-konto</translation>
 <translation id="6002159997868894136">Klik for at kopiere alias</translation>
 <translation id="8105770564756958406">Brugt af <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Opret op til 5 gratis e-mail-aliaser for at beskytte din rigtige e-mail-adresse.</translation>
@@ -2470,8 +2460,6 @@
 <translation id="646524615209870492">Hvis du fjerner <ph name="ALIAS"/> som alias, mister du muligheden for at modtage e-mails.</translation>
 <translation id="8133100642915054515">Fejl ved sletning af alias. Tjek din internetforbindelse, og prøv igen.</translation>
 <translation id="8465742443901727718">Denne handling kan ikke fortrydes. Er du sikker på, at du vil fortsætte?</translation>
-<translation id="8662104432574824754">For at komme i gang skal du logge ind eller oprette en Brave-konto</translation>
-<translation id="8069030342700068465">Indtast din e-mail-adresse for at få tilsendt et sikkert login-link til din e-mail. Ved at klikke på dette link vil du enten oprette eller få adgang til en Brave-konto og bruge den gratis tjeneste med e-mail-aliaser.</translation>
 <translation id="2133391407495495735">Få login-link</translation>
 <translation id="2650906829817220223">Fejl ved anmodning om godkendelse. Tjek din internetforbindelse, og prøv igen.</translation>
 <translation id="3699624789011381381">E-mail-adresse</translation>
@@ -2504,7 +2492,7 @@
 <translation id="466214682712474574">Log ind på din <ph name="PROVIDER"/>-konto for at se din saldo</translation>
 <translation id="8332875111286275890">Log ind for at se din saldo</translation>
 <translation id="5430001801813715388">BELØNNINGER</translation>
-<translation id="5966055668402779222">Spørg om alt, find alt...</translation>
+<translation id="2430295257226173518">Spørg om alt, find alt…</translation>
 <translation id="167018310108390163">Tilpas siden Ny Fane</translation>
 <translation id="6851426306697017546">Vis ur</translation>
 <translation id="4844370919312937270">Vis søgewidget i nye faner</translation>
@@ -2545,7 +2533,6 @@
 <translation id="4677356505199464553">Ser godt ud</translation>
 <translation id="1992750560347846445">Anmeld side</translation>
 <translation id="2863270180245144869">Ad Block Only-tilstand aktiveret</translation>
-<translation id="2302218429308447288">Du bruger i øjeblikket tilstanden Kun annonceblokering. Denne tilstand tilbyder kun beskyttelse mod Ads. Hvis du vil vende tilbage til fuld Shields-tilstand, skal du deaktivere denne tilstand i indstillingerne.</translation>
 <translation id="4820891023903368625">Annoncer blokeret <ph name="LINK_BEFORE"/>Lær mere<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Trackers, reklamer med mere er blokeret <ph name="LINK_BEFORE"/>Læs mere<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Ikke beskyttet af Brave Shields <ph name="LINK_BEFORE"/>Læs mere<ph name="LINK_AFTER"/></translation>

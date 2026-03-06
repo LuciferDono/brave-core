@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Ali dovolite, da <ph name="URL"/> odpre odpiranje pogovore Leo AI v Brave?</translation>
 <translation id="4355784577209159847">Dovoli uporabo piškotkov tretjih oseb za stare prijave v Google</translation>
 <translation id="5770656036486891920"><ph name="URL"/> želi uporabljati piškotke tretjih oseb za podedovano prijavo v Google</translation>
-<translation id="6053826678715267477">Dovoli dostop do virov lokalnega gostitelja</translation>
-<translation id="2973562729984406132"><ph name="URL"/> želi dostop do virov lokalnega gostitelja</translation>
 <translation id="2104347391516032700">Storitev nagrajevanja Bat rewards</translation>
 <translation id="5939518447894949180">Ponastavi</translation>
 <translation id="3349204812119681938">Ponastavi storitev Brave Rewards</translation>
@@ -1046,6 +1044,7 @@
 <translation id="2902856457593699108">Pokaži ključ</translation>
 <translation id="8033497299373164724">Skrij ključ</translation>
 <translation id="7514365320538308">Prenos</translation>
+<translation id="5148285448107770349">Geslo mora vsebovati vsaj 8 znakov</translation>
 <translation id="2702143907607790516">Ime računa ni bilo mogoče posodobiti. Poskusite znova.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1220,12 +1219,8 @@
 <translation id="4932382283590063268">Naslov prejemnika je tvoj naslov.</translation>
 <translation id="3124753063207986114">Prejemni naslov je pogodbeni naslov žetona.</translation>
 <translation id="7029817408221097939">Neveljavni enotni naslov</translation>
-<translation id="6370376419663123629">Zdi se, da naslov ni pravilen</translation>
-<translation id="3767148796886402380">Preverite svoj naslov in se prepričajte, da je pravi (npr. uporaba malih ali velikih črk).</translation>
 <translation id="2585599787090762065">Kaj naj storim?</translation>
 <translation id="5517732667776806421">Manjkajo podatki o kontrolni vsoti</translation>
-<translation id="2975056993833847787">Tega naslova ni mogoče preveriti (manjka kontrolna vsota). Nadaljujem?</translation>
-<translation id="6320252966164556855">Naslov ni uspešno opravil preverjanja (neveljavna kontrolna vsota). Poskusite znova, vendar male črke zamenjajte z velikimi.</translation>
 <translation id="4667144295226514387">Manjka meja plina</translation>
 <translation id="2021522108838444624">Znesek mora biti večji od 0</translation>
 <translation id="8464365289405373974">Dodajte naslovnika</translation>
@@ -1379,6 +1374,7 @@
 <translation id="7694836973509310467">Bridging</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> na <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Prišlo je do napake pri poskusu <ph name="SWAP_OR_BRIDGE"/> na <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Na čakanju</translation>
 <translation id="1778601041100951971">Varovanje <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Zavarovanje <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936">Znesek <ph name="AMOUNT"/> je bil zavarovan</translation>
@@ -1754,7 +1750,6 @@
 <translation id="2410455471299328417">To storitev zagotavlja <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/>, zanjo pa veljajo <ph name="TERMS_LINK_BEFORE"/>Pogoji poslovanja<ph name="TERMS_LINK_AFTER"/> in <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Pravilnik o zasebnosti<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Na voljo</translation>
 <translation id="5296640085393149413">Sredstva, ki so vam na voljo za uporabo.</translation>
-<translation id="3248185426436836442">Na čakanju</translation>
 <translation id="2515906149804238711">Sprememba stanja v denarnici v pričakovanju.</translation>
 <translation id="7700365440186054030">Vaša razpoložljiva sredstva in morebitne še nepotrjene transakcije.</translation>
 <translation id="4118601537508887039">Nekatera stanja morda ne bodo na voljo.</translation>
@@ -2327,7 +2322,6 @@
 <translation id="4808122506413075135">Pošljite vsebino strani iz zgodovine brskalnika, da Leu omogočite več konteksta za pogovor.</translation>
 <translation id="220541218939267992">Leo bo poleg vaših sporočil prejel tudi vsebino strani.</translation>
 <translation id="2152389270152475874">Dodajte zavihke, zaznamke ali zgodovino za kontekst. Izbrane vsebine bodo poslane Leu skupaj z vašimi sporočili.</translation>
-<translation id="6237410387937453423">Ni ustreznih priponk</translation>
 <translation id="2315654674554095762">Leo si bo zdaj zapomnil vaše pogovore, tako da se boste lahko vrnili k njim. V napravi so shranjeni šifrirano, vi pa jih lahko kadar koli izbrišete.</translation>
 <translation id="7821251979960635244">Ko začnete pogovor, se tukaj prikaže zgodovina vaših pogovorov.</translation>
 <translation id="887511360213807449">Zgodovina je onemogočena</translation>
@@ -2429,7 +2423,6 @@
 <translation id="4773299976671772492">Ustavljeno</translation>
 <translation id="6946722113367118030">Razmišlja</translation>
 <translation id="2113810663179257944">Zagon kode</translation>
-<translation id="4790888275629207278">Izvedena koda v peskovniku</translation>
 <translation id="4379566111233326721">Koda:</translation>
 <translation id="3542130965673205258">Izhod:</translation>
 <translation id="3428245742224818842">AI brskanje</translation>
@@ -2441,11 +2434,7 @@
 <translation id="864117099189791993">Kadarkoli lahko iz glavnega menija ali z menijem profila v orodni vrstici preklopite nazaj na svoj običajni profil. AI brskanje se bo vedno odprlo v profilu za AI brskanje.</translation>
 <translation id="3486480638399578250">Ohranite svoj osebni e-poštni naslov zaseben</translation>
 <translation id="7765422154906712751">Ustvarite unikatne, naključne naslove, ki so presumerjeni na vaš e-poštni naslov Brave in jih lahko kadarkoli izbrišete. Tako vaš dejanski e-poštni naslov ne bo razkrit ali uporabljen s strani oglaševalcev.</translation>
-<translation id="5222676887888702881">Odjava</translation>
-<translation id="8090292425230843109">Odjava iz storitve Email Aliases</translation>
-<translation id="8471990782451394141">Povezovanje z računom Brave ...</translation>
 <translation id="71316462802471551">E-poštni vzdevki</translation>
-<translation id="5713644099811900409">Račun Brave</translation>
 <translation id="6002159997868894136">Kliknite za kopiranje vzdevka</translation>
 <translation id="8105770564756958406">Uporablja <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Ustvarite do 5 brezplačnih e-poštnih vzdevkov za zaščito vašega pravega e-poštnega naslova.</translation>
@@ -2469,8 +2458,6 @@
 <translation id="646524615209870492">Če odstranite <ph name="ALIAS"/> kot vzdevek, boste izgubili možnost prejemanja e-pošte.</translation>
 <translation id="8133100642915054515">Napaka pri brisanju vzdevka. Preverite internetno povezavo in poskusite znova.</translation>
 <translation id="8465742443901727718">Ta ukrep je nepovraten. Ste prepričani, da želite nadaljevati?</translation>
-<translation id="8662104432574824754">Za začetek se prijavite ali ustvarite račun Brave</translation>
-<translation id="8069030342700068465">Vnesite svoj e-poštni naslov, da prejmete varno povezavo za prijavo. Klik na to povezavo bo bodisi ustvaril ali omogočil dostop do računa Brave in vam omogočil uporabo brezplačne storitve e-poštnih vzdevkov.</translation>
 <translation id="2133391407495495735">Pridobi povezavo za prijavo</translation>
 <translation id="2650906829817220223">Napaka pri zahtevi za preverjanje pristnosti. Preverite internetno povezavo in poskusite znova.</translation>
 <translation id="3699624789011381381">E-poštni naslov</translation>
@@ -2503,7 +2490,7 @@
 <translation id="466214682712474574">Prijavite se v svoj račun <ph name="PROVIDER"/> in si oglejte svoje stanje.</translation>
 <translation id="8332875111286275890">Prijavite se in si oglejte svoje stanje</translation>
 <translation id="5430001801813715388">NAGRADE</translation>
-<translation id="5966055668402779222">Vprašajte karkoli, poiščite karkoli...</translation>
+<translation id="2430295257226173518">Vprašajte karkoli, poiščite karkoli…</translation>
 <translation id="167018310108390163">Prilagodi stran novega zavihka</translation>
 <translation id="6851426306697017546">Prikaži uro</translation>
 <translation id="4844370919312937270">Prikaži pripomoček za iskanje v novih zavihkih</translation>
@@ -2544,7 +2531,6 @@
 <translation id="4677356505199464553">Izgleda dobro</translation>
 <translation id="1992750560347846445">Prijavite spletno mesto</translation>
 <translation id="2863270180245144869">Omogočen način samo za blokiranje oglasov</translation>
-<translation id="2302218429308447288">Trenutno uporabljate način Samo blokiranje oglasov. Ta način omogoča samo zaščito pred blokiranjem oglasov. Če se želite vrniti na način popolne zaščite, onemogočite ta način v nastavitvah.</translation>
 <translation id="4820891023903368625">Blokirani oglasi <ph name="LINK_BEFORE"/>Več informacij<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Sledilniki, oglasi in vse drugo so blokirani <ph name="LINK_BEFORE"/>Več o tem<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Nimate zaščite Brave Shields <ph name="LINK_BEFORE"/>Več o tem<ph name="LINK_AFTER"/></translation>

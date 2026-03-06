@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Kas lubada veebisaidil <ph name="URL"/> avada Brave'is Leo AI vestlused?</translation>
 <translation id="4355784577209159847">Luba Google’i pärandsisselogimiseks kasutada kolmanda osapoole küpsiseid</translation>
 <translation id="5770656036486891920"><ph name="URL"/> soovib Google’i pärandsisselogimiseks kasutada kolmanda osapoole küpsiseid</translation>
-<translation id="6053826678715267477">Luba juurdepääs kohaliku hosti ressurssidele</translation>
-<translation id="2973562729984406132"><ph name="URL"/> soovib juurdepääsu kohaliku hosti ressurssidele</translation>
 <translation id="2104347391516032700">Bati preemiate teenus</translation>
 <translation id="5939518447894949180">Lähtesta</translation>
 <translation id="3349204812119681938">Taasta Brave'i preemiad</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Kuva võti</translation>
 <translation id="8033497299373164724">Peida võti</translation>
 <translation id="7514365320538308">Allalaadimine</translation>
+<translation id="5148285448107770349">Parool peab olema vähemalt 8 märgi pikkune</translation>
 <translation id="2702143907607790516">Konto nime uuendamine nurjus, proovige uuesti.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Vastuvõtja aadress on teie enda aadress</translation>
 <translation id="3124753063207986114">Vastuvõtja aadress on tokeni lepinguaadress</translation>
 <translation id="7029817408221097939">Kehtetu ühtlustatud aadress</translation>
-<translation id="6370376419663123629">Aadress ei tundu olevat õige</translation>
-<translation id="3767148796886402380">Kontrollige, kas teie aadress on õige (nt kas suur- või väiketähed on õigesti kirjutatud).</translation>
 <translation id="2585599787090762065">Kuidas seda lahendada?</translation>
 <translation id="5517732667776806421">Kontrollsumma teave puudub</translation>
-<translation id="2975056993833847787">Seda aadressi ei saa kinnitada (puuduv kontrollsumma). Kas jätkata?</translation>
-<translation id="6320252966164556855">Aadress ei läbinud kinnitamist (vigane kontrollsumma). Proovige uuesti ja asendage väiketähed suurtähtedega.</translation>
 <translation id="4667144295226514387">Gaasilimiit puudub</translation>
 <translation id="2021522108838444624">Summa peab olema suurem kui 0</translation>
 <translation id="8464365289405373974">Sihtaadress on nõutav</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Sildamine</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> veebisaidil <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Tekkis viga, kui üritati <ph name="SWAP_OR_BRIDGE"/> kohta <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Ootel</translation>
 <translation id="1778601041100951971">Kaitsmine <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Varjestamine <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> on kaitstud</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Seda teenust pakub <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> ja selle suhtes kehtivad nende <ph name="TERMS_LINK_BEFORE"/>teenusetingimused<ph name="TERMS_LINK_AFTER"/> ja <ph name="PRIVACY_POLICY_LINK_BEFORE"/>privaatsuspõhimõtted<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Saadaval</translation>
 <translation id="5296640085393149413">Teie käsutuses olevad rahalised vahendid.</translation>
-<translation id="3248185426436836442">Ootel</translation>
 <translation id="2515906149804238711">Teie rahakoti saldo ootel muudatus.</translation>
 <translation id="7700365440186054030">Teie käsutuses olevad rahalised vahendid pluss kõik veel kinnitamata tehingud.</translation>
 <translation id="4118601537508887039">Mõni saldo ei pruugi olla kättesaadav.</translation>
@@ -2325,7 +2320,6 @@
 <translation id="4808122506413075135">Saatke lehe sisu oma brauseri ajaloost, et anda Leole rohkem konteksti vestluse jaoks.</translation>
 <translation id="220541218939267992">Lehe sisu saadetakse Leonile koos teie sõnumitega.</translation>
 <translation id="2152389270152475874">Lisage vahekaart, järjehoidjad või ajalugu konteksti eesmärgil. Valitud sisu saadetakse Leole koos teie sõnumitega.</translation>
-<translation id="6237410387937453423">Puuduvad sobivad manused</translation>
 <translation id="2315654674554095762">Leo mäletab nüüd teie vestlusi, nii et saate nende juurde tagasi pöörduda. Need salvestatakse teie seadmesse krüpteeritult ja te saate need igal ajal kustutada.</translation>
 <translation id="7821251979960635244">Teie vestlusajalugu ilmub siia, kui alustate vestlust.</translation>
 <translation id="887511360213807449">Ajalugu on välja lülitatud</translation>
@@ -2427,7 +2421,6 @@
 <translation id="4773299976671772492">Peatatud</translation>
 <translation id="6946722113367118030">Mõtleb</translation>
 <translation id="2113810663179257944">Koodi täitmine</translation>
-<translation id="4790888275629207278">Kood täideti liivakastis</translation>
 <translation id="4379566111233326721">Kood:</translation>
 <translation id="3542130965673205258">Väljund:</translation>
 <translation id="3428245742224818842">AI sirvimine</translation>
@@ -2439,11 +2432,7 @@
 <translation id="864117099189791993">Sa saad igal ajal lülituda tagasi oma tavalisele profiilile pea- või tööriistariba profiilimenüü kaudu. AI sirvimine avaneb alati AI sirvimise profiilis.</translation>
 <translation id="3486480638399578250">Hoidke oma isiklik e-posti aadress privaatne</translation>
 <translation id="7765422154906712751">Looge unikaalseid, juhuslikke aadresse, mis suunatakse edasi teie Brave konto e-posti aadressile ja mida saab igal ajal kustutada. Hoidke oma tegelik e-posti aadress reklaamijate eest kaitstud.</translation>
-<translation id="5222676887888702881">Logi välja</translation>
-<translation id="8090292425230843109">Kirjavahetuse väljalogimine</translation>
-<translation id="8471990782451394141">Ühendamine Brave'i kontoga...</translation>
 <translation id="71316462802471551">E-posti aliased</translation>
-<translation id="5713644099811900409">Brave'i konto</translation>
 <translation id="6002159997868894136">Klõpsa, et kopeerida alias</translation>
 <translation id="8105770564756958406">Kasutatakse domeenides <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Loo kuni 5 tasuta e-posti aliast, et kaitsta oma tegelikku e-posti aadressi.</translation>
@@ -2467,8 +2456,6 @@
 <translation id="646524615209870492">Kui eemaldate <ph name="ALIAS"/> aliase, kaotate oma võime saada e-kirju.</translation>
 <translation id="8133100642915054515">Viga aliase kustutamisel. Kontrollige oma internetiühendust ja proovige uuesti.</translation>
 <translation id="8465742443901727718">See tegevus on pöördumatu. Kas olete kindel, et soovite jätkata?</translation>
-<translation id="8662104432574824754">Alustamiseks logi sisse või loo Brave'i konto</translation>
-<translation id="8069030342700068465">Sisesta oma e-posti aadress, et turvaline sisselogimislink saadetaks sinu e-posti aadressile. Selle lingi klõpsamine loob või võimaldab pääseda ligi Brave'i kontole ja kasutada tasuta e-posti aliase teenust.</translation>
 <translation id="2133391407495495735">Hangi sisselogimislink</translation>
 <translation id="2650906829817220223">Autentimise taotlemise viga. Kontrollige oma internetiühendust ja proovige uuesti.</translation>
 <translation id="3699624789011381381">E-posti aadress</translation>
@@ -2501,7 +2488,7 @@
 <translation id="466214682712474574">Oma saldo vaatamiseks logige sisse platvormi <ph name="PROVIDER"/> kontole</translation>
 <translation id="8332875111286275890">Saldo vaatamiseks logige sisse</translation>
 <translation id="5430001801813715388">PREEMIAD</translation>
-<translation id="5966055668402779222">Küsige midagi, leidke midagi...</translation>
+<translation id="2430295257226173518">Küsige midagi, leidke midagi…</translation>
 <translation id="167018310108390163">Kohanda uue vahelehe lehekülge</translation>
 <translation id="6851426306697017546">Näita kella</translation>
 <translation id="4844370919312937270">Näita otsinguvidinat uutel vahekaartidel</translation>
@@ -2542,7 +2529,6 @@
 <translation id="4677356505199464553">Paistab hea</translation>
 <translation id="1992750560347846445">Veebisaidist teatamine</translation>
 <translation id="2863270180245144869">Ainult reklaamblokeerimise režiim on lubatud</translation>
-<translation id="2302218429308447288">Praegu kasutate ainult reklaamide blokeerimise režiimi. See režiim pakub ainult reklaamide blokeerimise kaitset. Kui soovite naasta täieliku Kaitse-režiimi juurde, lülitage see režiim seadetest välja.</translation>
 <translation id="4820891023903368625">Reklaamid blokeeritud <ph name="LINK_BEFORE"/>Lisateave<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Blokeeritakse jälgijad, reklaamid ja muu <ph name="LINK_BEFORE"/>Lisateave<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Ei ole Brave'i kaitsetega kaitstud <ph name="LINK_BEFORE"/>Lisateave<ph name="LINK_AFTER"/></translation>

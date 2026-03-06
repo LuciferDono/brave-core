@@ -483,8 +483,6 @@
 <translation id="1518915449477235311"><ph name="URL"/>-কে Brave-এ Leo AI কথোপকথন খোলার অনুমতি দেবেন?</translation>
 <translation id="4355784577209159847">লিগ্যাসি Google সাইন-ইন-এর জন্য তৃতীয় পক্ষের কুকিজ ব্যবহারের অনুমতি দিন</translation>
 <translation id="5770656036486891920">লিগেসি Google সাইন-ইন-এর জন্য <ph name="URL"/> তৃতীয়-পক্ষের কুকিজ ব্যবহার করতে চায়</translation>
-<translation id="6053826678715267477">লোকালহোস্টের রিসোর্সে অ্যাক্সেস দিন</translation>
-<translation id="2973562729984406132"><ph name="URL"/> লোকালহোস্টের রিসোর্সে অ্যাক্সেস চায়</translation>
 <translation id="2104347391516032700">Bat পুরষ্কার পরিষেবা</translation>
 <translation id="5939518447894949180">রিসেট করুন</translation>
 <translation id="3349204812119681938">Brave রিওয়ার্ড রিসেট করুন</translation>
@@ -1225,12 +1223,8 @@
 <translation id="4932382283590063268">রিসিভিং অ্যাড্রেসটি হল আপনার নিজের অ্যাড্রেস।</translation>
 <translation id="3124753063207986114">রিসিভিং অ্যাড্রেসটি হল একটি টোকেনের চুক্তির অ্যাড্রেস।</translation>
 <translation id="7029817408221097939">অবৈধ ইউনিফাইড ঠিকানা</translation>
-<translation id="6370376419663123629">ঠিকানা সঠিক বলে মনে হচ্ছে না</translation>
-<translation id="3767148796886402380">ঠিকানাটি যে সঠিক তা নিশ্চিত করতে আপনার ঠিকানা পরীক্ষা করুন (যেমন, ছোটো হাতের ও বড় হাতের অক্ষর)।</translation>
 <translation id="2585599787090762065">এটি আমি কীভাবে সমাধান করব?</translation>
 <translation id="5517732667776806421">চেকসামের তথ্য নেই</translation>
-<translation id="2975056993833847787">এই ঠিকানা যাচাই করা যাবে না (checksum অনুপস্থিত)। এগিয়ে যান?</translation>
-<translation id="6320252966164556855">ঠিকানা যাচাইকরণ পাস করেনি (অবৈধ চেকসাম)। অনুগ্রহ করে, ছোট হাতের অক্ষরগুলিকে বড় হাতের অক্ষর দিয়ে প্রতিস্থাপন করে আবার চেষ্টা করুন।</translation>
 <translation id="4667144295226514387">গ্যাসের সীমা পাওয়া যাচ্ছে না</translation>
 <translation id="2021522108838444624">পরিমাণ অবশ্যই 0-এর বেশি হতে হবে</translation>
 <translation id="8464365289405373974">ঠিকানা প্রয়োজন</translation>
@@ -1382,6 +1376,7 @@
 <translation id="7694836973509310467">ব্রিজ করা হচ্ছে</translation>
 <translation id="8419958386475786929"><ph name="NETWORK"/>-এ <ph name="SWAPPING_OR_BRIDGING"/></translation>
 <translation id="7903225589949400974"><ph name="NETWORK"/> এ <ph name="SWAP_OR_BRIDGE"/> চেষ্টা করার সময় একটি ত্রুটি হয়েছে</translation>
+<translation id="3248185426436836442">বিচারাধীন রয়েছে</translation>
 <translation id="1778601041100951971"><ph name="AMOUNT"/> সুরক্ষিত করা হচ্ছে</translation>
 <translation id="6439110433198887239"><ph name="AMOUNT"/> শিল্ড করা হচ্ছে</translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> সুরক্ষিত করা হয়েছে</translation>
@@ -1752,7 +1747,6 @@
 <translation id="2410455471299328417">এই পরিষেবাটি <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> দ্বারা সরবরাহ করা হয় এবং এটি তাদের <ph name="TERMS_LINK_BEFORE"/>পরিষেবার শর্তাদি<ph name="TERMS_LINK_AFTER"/> ও<ph name="PRIVACY_POLICY_LINK_BEFORE"/>গোপনীয়তা নীতির<ph name="PRIVACY_POLICY_LINK_AFTER"/> বিষয়াধীন</translation>
 <translation id="8688672835843460752">উপলব্ধ</translation>
 <translation id="5296640085393149413">আপনার ব্যবহারের জন্য উপলভ্য ফান্ড।</translation>
-<translation id="3248185426436836442">বিচারাধীন রয়েছে</translation>
 <translation id="2515906149804238711">আপনার ওয়ালেট ব্যালেন্সে একটি পরিবর্তন বাকি আছে।</translation>
 <translation id="7700365440186054030">আপনার উপলভ্য ফান্ড এবং তাছাড়া যেকোনও এখনও কনফার্ম না করা ট্রানজ্যাকশন।</translation>
 <translation id="4118601537508887039">কিছু ব্যালেন্স অনুপলভ্য হতে পারে</translation>
@@ -2325,7 +2319,6 @@
 <translation id="4808122506413075135">কথোপকথনের জন্য Leo-কে আরও প্রসঙ্গ দিতে আপনার ব্রাউজার ইতিহাস থেকে পৃষ্ঠার বিষয়বস্তু পাঠান।</translation>
 <translation id="220541218939267992">পৃষ্ঠার বিষয়বস্তু Leo-কে আপনার বার্তার সাথে পাঠানো হবে।</translation>
 <translation id="2152389270152475874">প্রসঙ্গের জন্য ট্যাব, বুকমার্ক বা ইতিহাস যোগ করুন। নির্বাচিত কন্টেন্টগুলো আপনার বার্তার সাথে Leo-র কাছে পাঠানো হবে।</translation>
-<translation id="6237410387937453423">কোনো মিলযুক্ত সংযুক্তি নেই</translation>
 <translation id="2315654674554095762">Leo এখন আপনার কথোপকথন মনে রাখবে যাতে আপনি তাদের কাছে ফিরে যেতে পারেন। সেগুলি এনক্রিপ্ট করা অবস্থায় আপনার ডিভাইসে সংরক্ষিত হয় এবং আপনি সেগুলি যে কোনো সময় মুছতে পারবেন।</translation>
 <translation id="7821251979960635244">আপনি একটি কথোপকথন শুরু করলে আপনার কথোপকথনের ইতিহাস এখানে প্রদর্শিত হবে।</translation>
 <translation id="887511360213807449">ইতিহাস নিষ্ক্রিয় রয়েছে</translation>
@@ -2427,7 +2420,6 @@
 <translation id="4773299976671772492">থামানো হয়েছে</translation>
 <translation id="6946722113367118030">চিন্তা করছে</translation>
 <translation id="2113810663179257944">কোড কার্যকর</translation>
-<translation id="4790888275629207278">sandbox-এ কোড চালানো হয়েছে</translation>
 <translation id="4379566111233326721">কোড:</translation>
 <translation id="3542130965673205258">আউটপুট:</translation>
 <translation id="3428245742224818842">AI ব্রাউজিং</translation>
@@ -2439,11 +2431,7 @@
 <translation id="864117099189791993">আপনি প্রধান মেনু অথবা টুলবারে প্রোফাইল মেনু ব্যবহার করে যেকোনো সময় আপনার সাধারণ প্রোফাইলে ফিরে যেতে পারেন। AI ব্রাউজিং সবসময় AI ব্রাউজিং প্রোফাইলে খোলে।</translation>
 <translation id="3486480638399578250">আপনার ব্যক্তিগত ইমেল ঠিকানা গোপনীয় রাখুন</translation>
 <translation id="7765422154906712751">অনন্য, এলোমেলো ঠিকানাগুলি তৈরি করুন যা আপনার Brave অ্যাকাউন্ট ইমেলে ফরোয়ার্ড করা হয় এবং যেকোন সময় মুছে ফেলা যেতে পারে। আপনার আসল ইমেল ঠিকানা বিজ্ঞাপনদাতাদের কাছে প্রকাশ বা তাদের দ্বারা ব্যবহৃত হওয়া এড়ান।</translation>
-<translation id="5222676887888702881">সাইন আউট করুন</translation>
-<translation id="8090292425230843109">ইমেল উপনাম থেকে সাইন আউট করুন</translation>
-<translation id="8471990782451394141">Brave অ্যাকাউন্টে সংযুক্ত করা হচ্ছে...</translation>
 <translation id="71316462802471551">ইমেল উপনামগুলি</translation>
-<translation id="5713644099811900409">Brave অ্যাকাউন্ট</translation>
 <translation id="6002159997868894136">উপনাম কপি করতে ক্লিক করুন</translation>
 <translation id="8105770564756958406"><ph name="DOMAINS"/> দ্বারা ব্যবহৃত</translation>
 <translation id="5006956315579221642">আপনার সত্যিকারের ইমেল ঠিকানা সুরক্ষিত রাখার জন্য বিনামূল্যে 5টি পর্যন্ত ইমেল উপনাম তৈরি করুন।</translation>
@@ -2467,8 +2455,6 @@
 <translation id="646524615209870492">একটি উপনাম হিসেবে <ph name="ALIAS"/> সরালে আপনার ইমেলগুলি পাওয়ার ক্ষমতা হারাবেন।</translation>
 <translation id="8133100642915054515">উপনাম মোছার সময় ত্রুটি ঘটেছে। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।</translation>
 <translation id="8465742443901727718">এই কাজটি পূর্বাবস্থায় ফেরানো যাবে না। আপনি কি এগিয়ে যাওয়া বিষয়ে নিশ্চিত?</translation>
-<translation id="8662104432574824754">শুরু করতে, সাইন ইন করুন বা একটি Brave অ্যাকাউন্ট তৈরি করুন</translation>
-<translation id="8069030342700068465">আপনার ইমেলে একটি সুরক্ষিত লগইন লিঙ্ক পাঠানোর জন্য আপনার ইমেল ঠিকানা লিখুন। এই লিঙ্কে ক্লিক করলে একটি Brave অ্যাকাউন্ট তৈরি বা অ্যাক্সেস করবে এবং আপনাকে বিনামূল্যে ইমেল উপনাম পরিষেবা ব্যবহার করতে দেবে।</translation>
 <translation id="2133391407495495735">লগইন লিঙ্ক পান</translation>
 <translation id="2650906829817220223">প্রমাণীকরণের অনুরোধ করার সময় ত্রুটি ঘটেছে। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।</translation>
 <translation id="3699624789011381381">ইমেল ঠিকানা</translation>
@@ -2501,7 +2487,6 @@
 <translation id="466214682712474574">আপনার ব্যালেন্স দেখতে <ph name="PROVIDER"/>-এ লগ ইন করুন</translation>
 <translation id="8332875111286275890">আপনার ব্যালেন্স দেখতে লগ ইন করুন</translation>
 <translation id="5430001801813715388">পুরস্কার</translation>
-<translation id="5966055668402779222">Brave সার্চ-কে জিজ্ঞাসা করুন</translation>
 <translation id="167018310108390163">নতুন ট্যাব পৃষ্ঠা কাস্টমাইজ করুন</translation>
 <translation id="6851426306697017546">ঘড়ি দেখান</translation>
 <translation id="4844370919312937270">নতুন ট্যাব পেজে সার্চ উইজেট দেখান</translation>
@@ -2542,7 +2527,6 @@
 <translation id="4677356505199464553">ভালো দেখাচ্ছে</translation>
 <translation id="1992750560347846445">সাইট রিপোর্ট করুন</translation>
 <translation id="2863270180245144869">শুধুমাত্র বিজ্ঞাপন ব্লক মোড সক্রিয়</translation>
-<translation id="2302218429308447288">আপনি বর্তমানে শুধুমাত্র বিজ্ঞাপন ব্লক মোডে আছেন। এই মোড শুধু বিজ্ঞাপন ব্লকিং সুরক্ষা প্রদান করে। আপনি যদি পূর্ণ রক্ষাকবচ মোডে ফিরতে চান, তাহলে সেটিংস থেকে এই মোডটি নিষ্ক্রিয় করুন।</translation>
 <translation id="4820891023903368625">বিজ্ঞাপন ব্লক করা হয়েছে <ph name="LINK_BEFORE"/>আরও জানুন<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">ট্র্যাকার, বিজ্ঞাপন এবং আরও অনেক কিছু ব্লক করা হয়েছে, <ph name="LINK_BEFORE"/>আরও জানুন<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Brave শিল্ড দিয়ে সুরক্ষিত নয়, <ph name="LINK_BEFORE"/>আরও জানুন<ph name="LINK_AFTER"/></translation>

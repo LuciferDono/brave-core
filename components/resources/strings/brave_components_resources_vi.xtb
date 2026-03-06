@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Cho phép <ph name="URL"/>; mở các cuộc hội thoại Leo AI trong Brave?</translation>
 <translation id="4355784577209159847">Cho phép sử dụng cookie của bên thứ ba cho Đăng nhập bằng Google cũ</translation>
 <translation id="5770656036486891920"><ph name="URL"/> muốn sử dụng cookie của bên thứ ba cho Đăng nhập cũ bằng Google</translation>
-<translation id="6053826678715267477">Cho phép truy cập vào tài nguyên localhost</translation>
-<translation id="2973562729984406132"><ph name="URL"/> muốn truy cập vào tài nguyên localhost</translation>
 <translation id="2104347391516032700">Dịch vụ phần thưởng BAT</translation>
 <translation id="5939518447894949180">Đặt lại</translation>
 <translation id="3349204812119681938">Đặt lại Phần thưởng Brave</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Hiển thị khóa</translation>
 <translation id="8033497299373164724">Ẩn khóa</translation>
 <translation id="7514365320538308">Tải xuống</translation>
+<translation id="5148285448107770349">Mật khẩu cần dài ít nhất 8 ký tự</translation>
 <translation id="2702143907607790516">Không cập nhật được tên tài khoản, vui lòng thử lại.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Địa chỉ nhận là địa chỉ của chính bạn.</translation>
 <translation id="3124753063207986114">Địa chỉ nhận là địa chỉ hợp đồng của token.</translation>
 <translation id="7029817408221097939">Địa chỉ thống nhất không hợp lệ</translation>
-<translation id="6370376419663123629">Địa chỉ có vẻ không chính xác</translation>
-<translation id="3767148796886402380">Kiểm tra địa chỉ của bạn để đảm bảo đó là địa chỉ phù hợp (ví dụ: các chữ cái có chữ thường hoặc chữ hoa).</translation>
 <translation id="2585599787090762065">Cách giải quyết?</translation>
 <translation id="5517732667776806421">Thiếu thông tin tổng kiểm</translation>
-<translation id="2975056993833847787">Địa chỉ này không thể xác minh (thiếu tổng kiểm tra). Tiếp tục?</translation>
-<translation id="6320252966164556855">Địa chỉ không vượt qua bước xác minh (tổng kiểm tra không hợp lệ). Vui lòng thử lại, thay thế các chữ cái thường bằng chữ hoa.</translation>
 <translation id="4667144295226514387">Thiếu giới hạn gas</translation>
 <translation id="2021522108838444624">Số tiền phải lớn hơn 0</translation>
 <translation id="8464365289405373974">Địa chỉ đến là bắt buộc</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Đang tạo cầu nối</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> trên <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">Xảy ra lỗi khi <ph name="SWAP_OR_BRIDGE"/> trên <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">Đang chờ xử lý</translation>
 <translation id="1778601041100951971">Đang bảo vệ <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Đang hủy bảo vệ <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> đã được bảo vệ</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Dịch vụ này được cung cấp bởi <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> và tuân theo <ph name="TERMS_LINK_BEFORE"/>Điều khoản dịch vụ<ph name="TERMS_LINK_AFTER"/> và <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Chính sách quyền riêng tư<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Khả dụng</translation>
 <translation id="5296640085393149413">Tiền có sẵn để bạn sử dụng.</translation>
-<translation id="3248185426436836442">Đang chờ xử lý</translation>
 <translation id="2515906149804238711">Thay đổi đang chờ xử lý trong số dư ví của bạn.</translation>
 <translation id="7700365440186054030">Số tiền khả dụng của bạn cộng với các giao dịch chưa được xác nhận.</translation>
 <translation id="4118601537508887039">Một số số dư có thể không khả dụng</translation>
@@ -2289,6 +2284,7 @@
 <translation id="6495402307502950726">Xóa cuộc trò chuyện</translation>
 <translation id="903201991022343217">Bắt đầu cuộc trò chuyện mới</translation>
 <translation id="8171760814579050200">Đổi tên cuộc trò chuyện</translation>
+<translation id="5397794290049113714">Bạn</translation>
 <translation id="7754678742055438573">Xóa cuộc trò chuyện</translation>
 <translation id="1946267518364740045">Đang lý luận...</translation>
 <translation id="4198859185714743678">Hoàn tất khâu lý luận</translation>
@@ -2325,7 +2321,6 @@
 <translation id="4808122506413075135">Gửi nội dung trang web từ lịch sử trình duyệt của bạn để cung cấp cho Leo thêm bối cảnh cho cuộc trò chuyện.</translation>
 <translation id="220541218939267992">Nội dung trang sẽ được gửi đến Leo cùng với tin nhắn của bạn.</translation>
 <translation id="2152389270152475874">Thêm tab, dấu trang hoặc lịch sử để cung cấp thêm bối cảnh. Nội dung đã chọn sẽ được gửi đến Leo cùng với tin nhắn của bạn.</translation>
-<translation id="6237410387937453423">Không có tệp đính kèm khớp</translation>
 <translation id="2315654674554095762">Giờ đây Leo sẽ nhớ các cuộc trò chuyện để bạn có thể quay lại và tiếp tục. Các cuộc trò chuyện được lưu trữ mã hóa trên thiết bị của bạn và bạn có thể xóa bất kỳ lúc nào.</translation>
 <translation id="7821251979960635244">Lịch sử trò chuyện của bạn sẽ hiển thị ở đây khi bạn bắt đầu một cuộc trò chuyện.</translation>
 <translation id="887511360213807449">Lịch sử không được bật</translation>
@@ -2427,7 +2422,6 @@
 <translation id="4773299976671772492">Đã dừng</translation>
 <translation id="6946722113367118030">Đang suy nghĩ</translation>
 <translation id="2113810663179257944">Thực thi mã</translation>
-<translation id="4790888275629207278">Đã thực thi mã trong sandbox</translation>
 <translation id="4379566111233326721">Mã:</translation>
 <translation id="3542130965673205258">Đầu ra:</translation>
 <translation id="3428245742224818842">Duyệt web bằng AI</translation>
@@ -2439,11 +2433,7 @@
 <translation id="864117099189791993">Bạn có thể quay lại hồ sơ thông thường bất cứ lúc nào từ trình đơn chính hoặc bằng cách sử dụng trình đơn hồ sơ trên thanh công cụ. Duyệt web bằng AI sẽ luôn mở trong hồ sơ duyệt web bằng AI.</translation>
 <translation id="3486480638399578250">Giữ riêng tư địa chỉ email cá nhân của bạn</translation>
 <translation id="7765422154906712751">Tạo các địa chỉ ngẫu nhiên, duy nhất chuyển tiếp đến email tài khoản Brave của bạn và có thể được xóa bất cứ lúc nào. Giữ cho địa chỉ email thực tế của bạn không bị tiết lộ hoặc sử dụng bởi các nhà quảng cáo.</translation>
-<translation id="5222676887888702881">Đăng xuất</translation>
-<translation id="8090292425230843109">Đăng xuất khỏi Bí danh Email</translation>
-<translation id="8471990782451394141">Đang kết nối đến Tài khoản Brave...</translation>
 <translation id="71316462802471551">Bí danh email</translation>
-<translation id="5713644099811900409">Tài khoản Brave</translation>
 <translation id="6002159997868894136">Bấm để sao chép bí danh</translation>
 <translation id="8105770564756958406">Được sử dụng bởi <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Tạo tối đa 5 bí danh email miễn phí để bảo vệ địa chỉ email thực của bạn.</translation>
@@ -2467,8 +2457,6 @@
 <translation id="646524615209870492">Việc xóa bí danh <ph name="ALIAS"/> sẽ khiến bạn không thể nhận email nữa.</translation>
 <translation id="8133100642915054515">Lỗi khi xóa bí danh. Vui lòng kiểm tra kết nối internet của bạn và thử lại.</translation>
 <translation id="8465742443901727718">Hành động này không thể hoàn tác. Bạn có chắc chắn muốn tiếp tục?</translation>
-<translation id="8662104432574824754">Để bắt đầu, hãy đăng nhập hoặc tạo tài khoản Brave</translation>
-<translation id="8069030342700068465">Nhập địa chỉ email của bạn để nhận liên kết đăng nhập an toàn. Bấm vào liên kết này để tạo hoặc truy cập vào Tài khoản Brave và để bạn sử dụng dịch vụ Bí danh Email miễn phí.</translation>
 <translation id="2133391407495495735">Nhận liên kết đăng nhập</translation>
 <translation id="2650906829817220223">Lỗi khi yêu cầu xác thực. Vui lòng kiểm tra kết nối internet của bạn và thử lại.</translation>
 <translation id="3699624789011381381">Địa chỉ email</translation>
@@ -2501,7 +2489,7 @@
 <translation id="466214682712474574">Đăng nhập vào tài khoản <ph name="PROVIDER"/> để xem số dư của bạn</translation>
 <translation id="8332875111286275890">Đăng nhập để xem số dư của bạn</translation>
 <translation id="5430001801813715388">PHẦN THƯỞNG</translation>
-<translation id="5966055668402779222">Hỏi, tìm nội dung bất kỳ...</translation>
+<translation id="2430295257226173518">Hỏi, tìm nội dung bất kỳ…</translation>
 <translation id="167018310108390163">Tùy chỉnh Trang Thẻ Mới</translation>
 <translation id="6851426306697017546">Hiển thị đồng hồ</translation>
 <translation id="4844370919312937270">Hiển thị tiện ích tìm kiếm trong thẻ mới</translation>
@@ -2542,7 +2530,6 @@
 <translation id="4677356505199464553">Trông ổn.</translation>
 <translation id="1992750560347846445">Báo cáo trang</translation>
 <translation id="2863270180245144869">Đã bật chế độ Chỉ chặn quảng cáo</translation>
-<translation id="2302218429308447288">Bạn hiện đang sử dụng chế độ Chỉ chặn quảng cáo. Chế độ này chỉ cung cấp khả năng bảo vệ bằng cách chặn quảng cáo. Nếu bạn muốn quay lại chế độ Lá chắn đầy đủ, hãy tắt chế độ này trong cài đặt.</translation>
 <translation id="4820891023903368625">Quảng cáo bị chặn <ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Đã chặn trình theo dõi, quảng cáo và nhiều hơn nữa <ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Không được bảo vệ bởi Khiên Brave <ph name="LINK_BEFORE"/>Tìm hiểu thêm<ph name="LINK_AFTER"/></translation>

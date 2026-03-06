@@ -19,6 +19,7 @@
 <translation id="1544192797660353713">錢包</translation>
 <translation id="2361906291514218784">Leo AI</translation>
 <translation id="8275068909952022340">其他…</translation>
+<translation id="71316462802471551">電子郵件別名</translation>
 <translation id="1990886731975529483">安裝並執行 Google Widevine</translation>
 <translation id="8926389886865778422">不再詢問這個問題</translation>
 <translation id="4900351245762303149">安裝 Google Widevine</translation>
@@ -204,7 +205,6 @@
 <translation id="253980346046488815">關閉重複的分頁</translation>
 <translation id="8670218546624422041">在容器中開啟</translation>
 <translation id="8638526693050780542">管理容器</translation>
-<translation id="7302999361397024774">重新命名分頁</translation>
 <translation id="2336228925368920074">將所有分頁加入書籤...</translation>
 <translation id="2523967823495420116">使用垂直分頁</translation>
 <translation id="3785071023202624850">{NUM_TABS,plural, =1{關閉分頁音訊}other{關閉多個分頁的音訊}}</translation>
@@ -215,7 +215,6 @@
 <translation id="2703180365855369896">關閉重複的分頁</translation>
 <translation id="1987871867023021397">在容器中開啟</translation>
 <translation id="6745991613881384719">管理容器</translation>
-<translation id="3917844427669888979">重新命名分頁</translation>
 <translation id="3704707436873245822">從圖片複製文字</translation>
 <translation id="5268098808165185458">正在從圖片複製文字…</translation>
 <translation id="4046485130884276245">已從圖片複製文字</translation>
@@ -513,6 +512,7 @@
 <translation id="1199170151481311646">隱私權保護分析</translation>
 <translation id="5990642573624858459">統計報告</translation>
 <translation id="2441719842399509963">重設為預設值</translation>
+<translation id="4530494379350999373">來源</translation>
 <translation id="5567412479632285879">Brave 獎勵已停用</translation>
 <translation id="413570371620795359">開啟 Rewards 面板即可啟用並開始使用</translation>
 <translation id="1051600834033686945">開啟完整 Brave 獎勵設定</translation>
@@ -555,7 +555,6 @@
 <translation id="5747552184818312860">有效期限</translation>
 <translation id="3858860766373142691">名稱</translation>
 <translation id="361106536627977100">Flash 資料</translation>
-<translation id="4530494379350999373">來源</translation>
 <translation id="8195027750202970175">佔磁碟容量</translation>
 <translation id="9116465289595958864">上次修改時間</translation>
 <translation id="4590324241397107707">資料庫儲存空間</translation>
@@ -588,11 +587,6 @@
 <translation id="2903783737778379345">不允許透過第三方 Cookie 使用舊版 Google 登入</translation>
 <translation id="2570833232754279153">不允許使用第三方 Cookie 進行舊版 Google 登入</translation>
 <translation id="6880817299303842099">允許使用第三方 Cookie 進行舊版 Google 登入</translation>
-<translation id="2136412236435693622">存取本地主機</translation>
-<translation id="4172219483893066798">網站可要求存取本地主機資源</translation>
-<translation id="7181706637590665047">禁止存取本地主機資源</translation>
-<translation id="1336116824874668514">未允許存取本地主機資源</translation>
-<translation id="1485435696620658073">已允許存取本地主機資源</translation>
 <translation id="5794692721727586076">Leo AI 人工智慧聊天</translation>
 <translation id="8115153008662981040">網站可以要求開啟 Leo 人工智慧聊天</translation>
 <translation id="1145070115730668595">不允許網站開啟 Leo 人工智慧聊天</translation>

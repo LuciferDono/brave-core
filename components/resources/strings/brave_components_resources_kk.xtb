@@ -483,8 +483,6 @@
 <translation id="1518915449477235311"><ph name="URL"/> мекенжайының Brave браузерінде Leo AI әңгімелерін ашуына рұқсат бересіз бе?</translation>
 <translation id="4355784577209159847">Legacy Google кіруі үшін үшінші тарап cookie файлдарын пайдалануға рұқсат ету</translation>
 <translation id="5770656036486891920"><ph name="URL"/> мекенжайы Legacy Google кіруі үшін үшінші тарап cookie файлдарын пайдаланғысы келеді</translation>
-<translation id="6053826678715267477">Жергілікті хост ресурстарына қол жеткізуге рұқсат ету</translation>
-<translation id="2973562729984406132"><ph name="URL"/> жергілікті хост ресурстарына қол жеткізгісі келеді</translation>
 <translation id="2104347391516032700">Bat Rewards Қызметі</translation>
 <translation id="5939518447894949180">Қалпына келтіру</translation>
 <translation id="3349204812119681938">Brave Марапаттарын қайта орнату</translation>
@@ -1051,6 +1049,7 @@
 <translation id="2902856457593699108">Кілтті көрсету</translation>
 <translation id="8033497299373164724">Кілтті жасыру</translation>
 <translation id="7514365320538308">Жүктеу</translation>
+<translation id="5148285448107770349">Құпия сөз кем дегенде 8 таңбадан тұруы керек</translation>
 <translation id="2702143907607790516">Аккаунт атауын жаңарту сәтсіз аяқталды, қайта қайталап көріңіз.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1225,12 +1224,8 @@
 <translation id="4932382283590063268">Қабылдау мекенжайы өзіңіздің мекенжайыңыз.</translation>
 <translation id="3124753063207986114">Қабылдау мекенжайы токеннің келісімшарт мекенжайы.</translation>
 <translation id="7029817408221097939">Жарамсыз бірыңғай мекенжай</translation>
-<translation id="6370376419663123629">Мекенжай дұрыс көрінбейді</translation>
-<translation id="3767148796886402380">Мекенжайдың дұрыс екеніне көз жеткізіңіз (мысалы, төменгі немесе жоғарғы регистрдегі әріптер).</translation>
 <translation id="2585599787090762065">Мұны қалай шешуге болады?</translation>
 <translation id="5517732667776806421">Бақылау сомасы туралы ақпарат жоқ</translation>
-<translation id="2975056993833847787">Бұл мекенжай тексерілмейді (бақылау сомасы жоқ). Жалғастыру?</translation>
-<translation id="6320252966164556855">Мекенжай тексеруден өтпеді (жарамсыз бақылау сомасы). Қайталап көріңіз, кіші әріптерді бас әріптермен ауыстырыңыз.</translation>
 <translation id="4667144295226514387">Gas лимиті жоқ</translation>
 <translation id="2021522108838444624">Сома 0-ден көп болуы керек</translation>
 <translation id="8464365289405373974">Мекенжай қажет</translation>
@@ -1382,6 +1377,7 @@
 <translation id="7694836973509310467">Көпірлеу үдерісі</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> <ph name="NETWORK"/> желісінде</translation>
 <translation id="7903225589949400974"><ph name="NETWORK"/> желісінде <ph name="SWAP_OR_BRIDGE"/> жасау әрекеті кезінде қате орын алды</translation>
+<translation id="3248185426436836442">Күту тізімінде</translation>
 <translation id="1778601041100951971"><ph name="AMOUNT"/> қорғау</translation>
 <translation id="6439110433198887239"><ph name="AMOUNT"/> қорғалар алдында алынуда</translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> қорғалды</translation>
@@ -1752,7 +1748,6 @@
 <translation id="2410455471299328417">Бұл қызмет <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> арқылы көрсетіледі және олардың <ph name="TERMS_LINK_BEFORE"/>Қызмет көрсету шарттары<ph name="TERMS_LINK_AFTER"/> және <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Құпиялылық саясатына<ph name="PRIVACY_POLICY_LINK_AFTER"/> бағынады</translation>
 <translation id="8688672835843460752">Қолжетімді</translation>
 <translation id="5296640085393149413">Пайдалануға болатын қаражат.</translation>
-<translation id="3248185426436836442">Күту тізімінде</translation>
 <translation id="2515906149804238711">Әмияндағы балансты күтіп тұрған өзгеріс.</translation>
 <translation id="7700365440186054030">Қолжетімді қаражат және әлі расталмаған транзакциялар.</translation>
 <translation id="4118601537508887039">Кейбір баланстар қолжетімсіз болуы мүмкін</translation>
@@ -2325,7 +2320,6 @@
 <translation id="4808122506413075135">Әңгіме үшін көбірек контекст беру үшін Легоға браузер тарихындағы бет контентін жіберіңіз.</translation>
 <translation id="220541218939267992">Бет мазмұны сіздің хабарламаларыңызбен бірге Леоға жіберіледі.</translation>
 <translation id="2152389270152475874">Контекст үшін қойынды, бетбелгі немесе тарихты қосыңыз. Таңдалған мазмұндар хабарламаларыңызбен бірге Леоға жіберіледі.</translation>
-<translation id="6237410387937453423">Сәйкес тіркемелер жоқ</translation>
 <translation id="2315654674554095762">Енді Leo сіздің әңгімелеріңізді жадыда сақтайды, сондықтан оларды кейін қайта қарай аласыз. Әңгімелер құрылғыңызда шифрланған түрде сақталады, және сіз оларды кез келген уақытта өшіре аласыз.</translation>
 <translation id="7821251979960635244">Сөйлесуді бастағаннан кейін мұнда сөйлесу тарихы пайда болады.</translation>
 <translation id="887511360213807449">Тарих өшірілді</translation>
@@ -2427,7 +2421,6 @@
 <translation id="4773299976671772492">Тоқтатылды</translation>
 <translation id="6946722113367118030">Ойлануда</translation>
 <translation id="2113810663179257944">Кодты орындау</translation>
-<translation id="4790888275629207278">sandbox ортада код орындалды</translation>
 <translation id="4379566111233326721">Код:</translation>
 <translation id="3542130965673205258">Шығыс:</translation>
 <translation id="3428245742224818842">AI шолу</translation>
@@ -2439,11 +2432,7 @@
 <translation id="864117099189791993">Негізгі мәзірден немесе құралдар тақтасындағы профиль мәзірі арқылы қай уақытта болсын әдеттегі профиліңізге ауыса аласыз. AI шолу әрдайым AI шолу профилінде ашылады.</translation>
 <translation id="3486480638399578250">Жеке электрондық пошта мекенжайын құпия ұстаңыз</translation>
 <translation id="7765422154906712751">Бірегей, кездейсоқ мекенжайларды жасаңыз, оларды кез-келген уақытта Brave есептік жазбаңыздың электрондық поштасына жіберуге болады және оларды жоюға болады. Жарнама берушілердің электрондық пошта мекенжайын ашудан немесе пайдаланудан сақтаңыз.</translation>
-<translation id="5222676887888702881">Шығу</translation>
-<translation id="8090292425230843109">Email Alias-тан шығу</translation>
-<translation id="8471990782451394141">Brave есептік жазбасына қосылуда...</translation>
 <translation id="71316462802471551">Электрондық Пошта Псевдонимдері</translation>
-<translation id="5713644099811900409">Brave есептік жазбасы</translation>
 <translation id="6002159997868894136">Псевдонимды көшіру үшін басыңыз</translation>
 <translation id="8105770564756958406">Қолданылады <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Нақты электрондық пошта мекенжайыңыздың қорғалуын қамтамасыз ету үшін 5 тегін электрондық пошта псевдонимін жасаңыз.</translation>
@@ -2467,8 +2456,6 @@
 <translation id="646524615209870492"><ph name="ALIAS"/> алиас ретінде жою электрондық пошталарды алу мүмкіндігінен айрылуыңызға әкеледі.</translation>
 <translation id="8133100642915054515">Алиас жою қатесі. Интернет байланысын тексеріп, қайтадан қайталап көріңіз.</translation>
 <translation id="8465742443901727718">Бұл әрекет кері қайтарылмайды. Жалғаныңызға сенімдісіз бе?</translation>
-<translation id="8662104432574824754">Бастау үшін Brave есептік жазбаға кіріңіз не жасаңыз</translation>
-<translation id="8069030342700068465">Электрондық пошта мекенжайын енгізіңіз, сонда қауіпсіз кіру сілтемесі жіберіледі. Brave есептік жазбасын жасауға немесе қол жеткізуге және тегін Email Alias қызметін пайдалануға мүмкіндік береді.</translation>
 <translation id="2133391407495495735">Кіру сілтемесін алу</translation>
 <translation id="2650906829817220223">Аутентификация сұрау қатесі. Интернет байланысын тексеріп, қайтадан қайталап көріңіз.</translation>
 <translation id="3699624789011381381">Электрондық пошта мекенжайы</translation>
@@ -2501,7 +2488,6 @@
 <translation id="466214682712474574">Баланс көру үшін <ph name="PROVIDER"/> аккаунтына кіріңіз</translation>
 <translation id="8332875111286275890">Балансты көру үшін кіріңіз</translation>
 <translation id="5430001801813715388">СЫЙАҚЫЛАР</translation>
-<translation id="5966055668402779222">Brave іздеу құралынан сұраңыз</translation>
 <translation id="167018310108390163">Жаңа қойынды бетін баптау</translation>
 <translation id="6851426306697017546">Сағатты көрсету</translation>
 <translation id="4844370919312937270">Жаңа қойындылардағы іздеу виджетін көрсету</translation>
@@ -2542,7 +2528,6 @@
 <translation id="4677356505199464553">Бәрі дұрыс</translation>
 <translation id="1992750560347846445">Сайтты хабарлау</translation>
 <translation id="2863270180245144869">Тек жарнама бұғаттауды қосу режимі іске қосылды</translation>
-<translation id="2302218429308447288">Сіз қазір Тек жарнама бұғаттау режимінде жұмыс істеп жатырсыз. Бұл режим тек жарнаманы бұғаттау қорғанысын ұсынады. Толық Shields режиміне оралу үшін бұл режимді баптаулардан өшіріңіз.</translation>
 <translation id="4820891023903368625">Жарнама бұғатталды <ph name="LINK_BEFORE"/>Толығырақ білу<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Трекерлер, жарнамалар және көбірек бұғатталған. <ph name="LINK_BEFORE"/>Толығырақ білу<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Brave Shields қорғанысымен қорғалмаған. <ph name="LINK_BEFORE"/>Толығырақ білу<ph name="LINK_AFTER"/></translation>

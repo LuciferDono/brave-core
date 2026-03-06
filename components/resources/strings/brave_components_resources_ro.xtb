@@ -483,8 +483,6 @@
 <translation id="1518915449477235311">Permiteți <ph name="URL"/> să deschidă conversații Leo AI în Brave?</translation>
 <translation id="4355784577209159847">Permiteți utilizarea modulelor cookie ale terților pentru conectarea cu Google anterioară</translation>
 <translation id="5770656036486891920"><ph name="URL"/> dorește să folosească module cookie terțe pentru conectarea Google anterioară</translation>
-<translation id="6053826678715267477">Permiteți accesul la resursele localhost</translation>
-<translation id="2973562729984406132"><ph name="URL"/> dorește acces la resursele localhost</translation>
 <translation id="2104347391516032700">Serviciu de recompense Bat</translation>
 <translation id="5939518447894949180">Resetează</translation>
 <translation id="3349204812119681938">Resetați recompensele Brave</translation>
@@ -1053,6 +1051,7 @@
 <translation id="2902856457593699108">Afișați cheia</translation>
 <translation id="8033497299373164724">Ascundeți cheia</translation>
 <translation id="7514365320538308">Descarcă</translation>
+<translation id="5148285448107770349">Parola trebuie să conțină cel puțin 8 caractere</translation>
 <translation id="2702143907607790516">Nu s-a reușit actualizarea numelui contului. Încercați din nou!</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1227,12 +1226,8 @@
 <translation id="4932382283590063268">Adresa destinatarului este propria dvs. adresă.</translation>
 <translation id="3124753063207986114">Adresa destinatarului este adresa de contract a unui token.</translation>
 <translation id="7029817408221097939">Adresă unificată nevalidă</translation>
-<translation id="6370376419663123629">Adresa nu pare corectă</translation>
-<translation id="3767148796886402380">Verificați adresa dvs. pentru a vă asigura că este cea corectă (de exemplu, literă mică sau mare).</translation>
 <translation id="2585599787090762065">Cum pot să rezolv această problemă?</translation>
 <translation id="5517732667776806421">Informații lipsă privind suma de verificare</translation>
-<translation id="2975056993833847787">Această adresă nu poate fi confirmată (lipsește suma de verificare). Continuați?</translation>
-<translation id="6320252966164556855">Adresa nu a promovat confirmarea (sumă de verificare nevalidă). Încercați din nou, înlocuind literele mici cu litere mari.</translation>
 <translation id="4667144295226514387">Limită gas lipsă</translation>
 <translation id="2021522108838444624">Suma trebuie să fie mai mare decât 0</translation>
 <translation id="8464365289405373974">Adresa destinatarului este solicitată</translation>
@@ -1383,6 +1378,7 @@
 <translation id="7694836973509310467">Se creează o punte</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> pe <ph name="NETWORK"/></translation>
 <translation id="7903225589949400974">A apărut o eroare încercând să <ph name="SWAP_OR_BRIDGE"/> pe <ph name="NETWORK"/></translation>
+<translation id="3248185426436836442">În așteptare</translation>
 <translation id="1778601041100951971">Se protejează <ph name="AMOUNT"/></translation>
 <translation id="6439110433198887239">Se deprotejează <ph name="AMOUNT"/></translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> a fost protejat</translation>
@@ -1753,7 +1749,6 @@
 <translation id="2410455471299328417">Acest serviciu este furnizat de <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> și se supune condițiilor <ph name="TERMS_LINK_BEFORE"/>Termenilor de Serviciu<ph name="TERMS_LINK_AFTER"/> și <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Politicii de confidențialitate<ph name="PRIVACY_POLICY_LINK_AFTER"/></translation>
 <translation id="8688672835843460752">Disponibil</translation>
 <translation id="5296640085393149413">Fonduri disponibile pe care le puteți folosi</translation>
-<translation id="3248185426436836442">În așteptare</translation>
 <translation id="2515906149804238711">O modificare în așteptare în soldul portofelului dvs.</translation>
 <translation id="7700365440186054030">Fondurile disponibile alături de tranzacțiile neconfirmate încă.</translation>
 <translation id="4118601537508887039">Anumite solduri ar putea fi indisponibile</translation>
@@ -2290,6 +2285,7 @@ other {# surse}
 <translation id="6495402307502950726">Ștergeți conversația</translation>
 <translation id="903201991022343217">Începeți o nouă conversație</translation>
 <translation id="8171760814579050200">Redenumiți conversația</translation>
+<translation id="5397794290049113714">Tu</translation>
 <translation id="7754678742055438573">Ștergeți conversația</translation>
 <translation id="1946267518364740045">Raționament...</translation>
 <translation id="4198859185714743678">Raționament finalizat</translation>
@@ -2326,7 +2322,6 @@ other {# surse}
 <translation id="4808122506413075135">Trimiteți conținutul paginii din istoricul browserului pentru a-i oferi lui Leo mai mult context pentru conversație.</translation>
 <translation id="220541218939267992">Conținutul paginii va fi trimis către Leo împreună cu mesajele dumneavoastră.</translation>
 <translation id="2152389270152475874">Adaugă file, marcaje sau istoric pentru context. Conținutul selectat va fi trimis către Leo împreună cu mesajele tale.</translation>
-<translation id="6237410387937453423">Nu există atașamente corespunzătoare</translation>
 <translation id="2315654674554095762">Leo își va aminti acum conversațiile tale ca să te poți întoarce la ele. Acestea sunt stocate criptat pe dispozitivul tău și le poți șterge oricând.</translation>
 <translation id="7821251979960635244">Istoricul conversațiilor tale va apărea aici odată ce începi o conversație.</translation>
 <translation id="887511360213807449">Istoricul este dezactivat</translation>
@@ -2428,7 +2423,6 @@ other {# surse}
 <translation id="4773299976671772492">Oprit</translation>
 <translation id="6946722113367118030">Se gândește</translation>
 <translation id="2113810663179257944">Executare cod</translation>
-<translation id="4790888275629207278">Cod executat în sandbox</translation>
 <translation id="4379566111233326721">Cod:</translation>
 <translation id="3542130965673205258">Output:</translation>
 <translation id="3428245742224818842">IA navigare</translation>
@@ -2440,11 +2434,7 @@ other {# surse}
 <translation id="864117099189791993">Poți comuta înapoi la profilul tău obișnuit oricând din meniul principal sau folosind meniul de profil din bara de instrumente. Navigarea IA se va deschide întotdeauna în profilul de navigare IA.</translation>
 <translation id="3486480638399578250">Menține adresa de e-mail privată</translation>
 <translation id="7765422154906712751">Creează adrese unice și aleatorii care redirecționează către contul tău de e-mail Brave și care pot fi șterse oricând. Menține adresa ta reală de e-mail departe de publicitate.</translation>
-<translation id="5222676887888702881">Deconectare</translation>
-<translation id="8090292425230843109">Deconectare de la numele alternative pentru email</translation>
-<translation id="8471990782451394141">Conectare la Contul Brave...</translation>
 <translation id="71316462802471551">Nume alternative pentru email</translation>
-<translation id="5713644099811900409">Contul Brave</translation>
 <translation id="6002159997868894136">Fă clic pentru a copia numele alternativ</translation>
 <translation id="8105770564756958406">Utilizat de <ph name="DOMAINS"/></translation>
 <translation id="5006956315579221642">Creează până la 5 nume alternative pentru email gratuite pentru a-ți proteja adresa de email reală.</translation>
@@ -2468,8 +2458,6 @@ other {# surse}
 <translation id="646524615209870492">Eliminarea <ph name="ALIAS"/> ca alias va duce la pierderea capacității de a primi e-mailuri.</translation>
 <translation id="8133100642915054515">Eroare la ștergerea aliasului. Verifică conexiunea la internet și încearcă din nou.</translation>
 <translation id="8465742443901727718">Această acțiune este ireversibilă. Sigur vrei să continui?</translation>
-<translation id="8662104432574824754">Pentru a începe, autentifică-te sau creează un cont Brave</translation>
-<translation id="8069030342700068465">Introdu adresa ta de email pentru a primi un link de autentificare securizat trimis la emailul tău. Dacă dai clic pe acest link se va crea sau accesa un Cont Brave și îți va permite să utilizezi serviciul gratuit de Nume alternative pentru Email.</translation>
 <translation id="2133391407495495735">Obține linkul de autentificare</translation>
 <translation id="2650906829817220223">Eroare la solicitarea autentificării. Verifică conexiunea la internet și încearcă din nou.</translation>
 <translation id="3699624789011381381">Adresă de email</translation>
@@ -2502,7 +2490,7 @@ other {# surse}
 <translation id="466214682712474574">Autentifică-te în contul <ph name="PROVIDER"/> pentru a vedea soldul tău</translation>
 <translation id="8332875111286275890">Conectează-te pentru a -ți vedea soldul</translation>
 <translation id="5430001801813715388">RECOMPENSE</translation>
-<translation id="5966055668402779222">Întreabă orice, găsește orice...</translation>
+<translation id="2430295257226173518">Întreabă orice, găsește orice…</translation>
 <translation id="167018310108390163">Personalizează pagina cu file noi</translation>
 <translation id="6851426306697017546">Afișează ceas</translation>
 <translation id="4844370919312937270">Afișează widgetul de căutare pe filele noi</translation>
@@ -2543,7 +2531,6 @@ other {# surse}
 <translation id="4677356505199464553">Arată bine</translation>
 <translation id="1992750560347846445">Raportați site-ul</translation>
 <translation id="2863270180245144869">Mod Adblock-Only activat</translation>
-<translation id="2302218429308447288">În prezent folosești modul Adblock-Only. Acest mod oferă doar protecție împotriva reclamelor. Dacă dorești să revii la modul complet Shields, dezactivează acest mod din setări.</translation>
 <translation id="4820891023903368625">Anunțuri blocate <ph name="LINK_BEFORE"/>Aflați mai multe<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Următori, reclame și multe altele blocate <ph name="LINK_BEFORE"/> Aflați mai multe <ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Fără protecția Brave Shields <ph name="LINK_BEFORE"/>Aflați mai multe<ph name="LINK_AFTER"/></translation>

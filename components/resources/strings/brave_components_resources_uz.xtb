@@ -483,8 +483,6 @@
 <translation id="1518915449477235311"><ph name="URL"/> URL manzilini Brave'da Leo AI suhbatlarini ochishga ruxsat berasizmi?</translation>
 <translation id="4355784577209159847">Eski Google kirish uchun uchinchi tomon cookie fayllaridan foydalanishga ruxsat bering</translation>
 <translation id="5770656036486891920"><ph name="URL"/> eski Google kirish uchun uchinchi tomon cookie fayllaridan foydalanishni xohlaydi</translation>
-<translation id="6053826678715267477">Localhost resurslariga kirishga ruxsat bering</translation>
-<translation id="2973562729984406132"><ph name="URL"/> localhost resurslariga kirishni xohlaydi</translation>
 <translation id="2104347391516032700">BAT Mukofotlar Xizmati</translation>
 <translation id="5939518447894949180">Tiklash</translation>
 <translation id="3349204812119681938">Brave Mukofotlarini tiklash</translation>
@@ -1048,6 +1046,7 @@
 <translation id="2902856457593699108">Kalitni ko'rsatish</translation>
 <translation id="8033497299373164724">Kalitni yashirish</translation>
 <translation id="7514365320538308">Yuklab olish</translation>
+<translation id="5148285448107770349">Parol kamida 8 belgidan iborat bo'lishi kerak</translation>
 <translation id="2702143907607790516">Hisob nomini yangilashda xatolik yuz berdi, qayta urinib ko'ring.</translation>
 <translation id="3318280255740629162">25%</translation>
 <translation id="2636487255623744079">50%</translation>
@@ -1222,12 +1221,8 @@
 <translation id="4932382283590063268">Qabul qiluvchi manzil o'zingizning manzilingiz.</translation>
 <translation id="3124753063207986114">Qabul qiluvchi manzil token kontrakt manzili.</translation>
 <translation id="7029817408221097939">Yaroqsiz birlashtirilgan zcash manzili</translation>
-<translation id="6370376419663123629">Manzil to'g'ri ko'rinmayapti</translation>
-<translation id="3767148796886402380">Manzilingizni tekshirib ko'ring va to'g'ri ekanligiga ishonch hosil qiling (masalan, kichik yoki katta harflar).</translation>
 <translation id="2585599787090762065">Buni qanday hal qilish mumkin?</translation>
 <translation id="5517732667776806421">Tugallanmagan tekshiruv ma'lumotlari</translation>
-<translation id="2975056993833847787">Bu manzilni tasdiqlash mumkin emas (tugallanmagan tekshiruv). Davom etilsinmi?</translation>
-<translation id="6320252966164556855">Manzil tasdiqdan o'tmadi (yaroqsiz tugallanmagan tekshiruv). Iltimos, kichik harflarni katta harflar bilan almashtirib qayta urinib ko'ring.</translation>
 <translation id="4667144295226514387">Gaz limiti yo'q</translation>
 <translation id="2021522108838444624">Miqdor 0 dan katta bo'lishi kerak</translation>
 <translation id="8464365289405373974">Manzil kerak</translation>
@@ -1379,6 +1374,7 @@
 <translation id="7694836973509310467">Ko‘chirilmoqda</translation>
 <translation id="8419958386475786929"><ph name="SWAPPING_OR_BRIDGING"/> <ph name="NETWORK"/> da amalga oshirilmoqda</translation>
 <translation id="7903225589949400974"><ph name="SWAP_OR_BRIDGE"/> <ph name="NETWORK"/> da amalga oshirishda xato yuz berdi</translation>
+<translation id="3248185426436836442">Kutilmoqda</translation>
 <translation id="1778601041100951971"><ph name="AMOUNT"/> miqdorini qo‘riqlash</translation>
 <translation id="6439110433198887239"><ph name="AMOUNT"/> summani himoyasizlantirish</translation>
 <translation id="5549369333299694936"><ph name="AMOUNT"/> miqdori qo‘riqlandi</translation>
@@ -1749,7 +1745,6 @@
 <translation id="2410455471299328417">Ushbu xizmat <ph name="BOLD_BEFORE"/>Blowfish.xyz<ph name="BOLD_AFTER"/> tomonidan taqdim etiladi va ularning <ph name="TERMS_LINK_BEFORE"/>Xizmat koʻrsatish shartlari<ph name="TERMS_LINK_AFTER"/> va <ph name="PRIVACY_POLICY_LINK_BEFORE"/>Maxfiylik siyosati<ph name="PRIVACY_POLICY_LINK_AFTER"/> ga bo'ysunadi</translation>
 <translation id="8688672835843460752">Mavjud</translation>
 <translation id="5296640085393149413">Siz foydalanishingiz uchun mavjud mablag'.</translation>
-<translation id="3248185426436836442">Kutilmoqda</translation>
 <translation id="2515906149804238711">Hamyoningiz balansidagi kutilayotgan o’zgarish.</translation>
 <translation id="7700365440186054030">Mavjud mablag'laringiz va hali tasdiqlanmagan tranzaksiyalar.</translation>
 <translation id="4118601537508887039">Ba'zi balanslar mavjud emas bo'lishi mumkin</translation>
@@ -2322,7 +2317,6 @@
 <translation id="4808122506413075135">Suhbat uchun kontekstni kuchaytirish uchun brauzer tarixingizdan sahifa kontentini Leoga yuboring.</translation>
 <translation id="220541218939267992">Sahifa mazmuni Leo'ga xabarlaringiz bilan yuboriladi.</translation>
 <translation id="2152389270152475874">Kontekst uchun yorliqlar, xatcho‘plar yoki tarixni qo‘shing. Tanlangan kontentlar sizning xabaringiz bilan birga Leo‘ga yuboriladi.</translation>
-<translation id="6237410387937453423">Mos keladigan ilovalar topilmadi</translation>
 <translation id="2315654674554095762">Endi Leo keyin davom ettira olishingiz uchun suhbatlarni eslab qoladi. Suhbatlar shifrlangan holda qurilmangizda saqlanadi va ularni istalgan payt oʻchirib tashlashingiz mumkin.</translation>
 <translation id="7821251979960635244">Siz suhbat boshlaganingizdan keyin suhbat tarixi bu yerda ko‘rinadi.</translation>
 <translation id="887511360213807449">Tarix o‘chirilgan</translation>
@@ -2424,7 +2418,6 @@
 <translation id="4773299976671772492">To‘xtatildi</translation>
 <translation id="6946722113367118030">O‘ylayapman</translation>
 <translation id="2113810663179257944">Kod bajarilishi</translation>
-<translation id="4790888275629207278">Sandboxda kod bajarildi</translation>
 <translation id="4379566111233326721">Kod:</translation>
 <translation id="3542130965673205258">Chiqish:</translation>
 <translation id="3428245742224818842">AI koʻrish</translation>
@@ -2436,11 +2429,7 @@
 <translation id="864117099189791993">Siz bosh menyudan yoki asboblar panelingizdagi profil menyusidan istalgan vaqtda doimiy profilingizga qaytishingiz mumkin. AI koʻrish doim AI koʻrish profilida ochiladi.</translation>
 <translation id="3486480638399578250">Shaxsiy email manzilingizni maxfiy saqlang</translation>
 <translation id="7765422154906712751">Brave hisobingiz emailiga xabarlarni yuboradigan noyob va tasodifiy manzillar yarating hamda ularni istalgan vaqtda oʻchirib tashlang. Bu orqali haqiqiy email manzilingiz reklama beruvchilarga oshkor boʻlishining oldini olasiz.</translation>
-<translation id="5222676887888702881">Hisobdan chiqish</translation>
-<translation id="8090292425230843109">Email taxalluslaridan chiqish</translation>
-<translation id="8471990782451394141">Brave hisobiga ulanmoqda...</translation>
 <translation id="71316462802471551">Elektron pochta taxalluslari</translation>
-<translation id="5713644099811900409">Brave hisob</translation>
 <translation id="6002159997868894136">Taxallusni nusxalash uchun bosing</translation>
 <translation id="8105770564756958406"><ph name="DOMAINS"/> tomonidan foydalanilgan</translation>
 <translation id="5006956315579221642">Haqiqiy email manzilingizni himoyalash uchun 5 tagacha shartli email yarating.</translation>
@@ -2464,8 +2453,6 @@
 <translation id="646524615209870492"><ph name="ALIAS"/> taxallus sifatida olib tashlansa, xatlarni qabul qilish imkoniyati yoʻqoladi.</translation>
 <translation id="8133100642915054515">Taxallus oʻchirilmadi. Internet aloqasini tekshiring va qayta urining.</translation>
 <translation id="8465742443901727718">Bu harakat orqaga qaytarib boʻlmaydi. Davom etishni xohlaysizmi?</translation>
-<translation id="8662104432574824754">Boshlash uchun, tizimga kiring yoki Brave hisobini yarating</translation>
-<translation id="8069030342700068465">Emailingizga yuborilgan xavfsiz kirish havolasini olish uchun email manzilingizni kiriting. Bu havolani bossangiz, Brave hisobini yaratasiz yoki unga kirasiz va sizga bepul Email taxalluslar xizmatidan foydalanish imkonini beradi.</translation>
 <translation id="2133391407495495735">Kirish havolasini olish</translation>
 <translation id="2650906829817220223">Autentifikatsiya soʻrovida xatolik. Internet aloqasini tekshiring va qayta urining.</translation>
 <translation id="3699624789011381381">Email manzili</translation>
@@ -2498,7 +2485,6 @@
 <translation id="466214682712474574">Balansingizni koʻrish uchun <ph name="PROVIDER"/> hisobingizga kiring.</translation>
 <translation id="8332875111286275890">Balansingizni koʻrish uchun tizimga kiring</translation>
 <translation id="5430001801813715388">MUKOFOTLAR</translation>
-<translation id="5966055668402779222">Brave Qidiruv</translation>
 <translation id="167018310108390163">Yangi varaq sahifasini moslashtirish</translation>
 <translation id="6851426306697017546">Soatni ko'rsatish</translation>
 <translation id="4844370919312937270">Yangi varaqlarda qidiruv vidjetini ko'rsatish</translation>
@@ -2539,7 +2525,6 @@
 <translation id="4677356505199464553">Yaxshi koʻrinadi</translation>
 <translation id="1992750560347846445">Saytni hisobot qilish</translation>
 <translation id="2863270180245144869">Faqat Reklama Bloklash rejimi yoqilgan</translation>
-<translation id="2302218429308447288">Siz hozirda faqat Reklama Bloklash rejimidan foydalanyapsiz. Bu rejim faqat reklama bloklashni taklif qiladi. Agar to‘liq Qalqonlar rejimiga qaytmoqchi bo‘lsangiz, bu rejimni sozlamalardan o‘chiring.</translation>
 <translation id="4820891023903368625">Ads bloklandi <ph name="LINK_BEFORE"/>Batafsil ma'lumot<ph name="LINK_AFTER"/></translation>
 <translation id="8377155647357436161">Kuzatuvchilar, Ads va boshqa narsalar bloklandi <ph name="LINK_BEFORE"/>Batafsil<ph name="LINK_AFTER"/></translation>
 <translation id="7604553853176833536">Brave Shields tomonidan himoya qilinmaydi <ph name="LINK_BEFORE"/>Batafsil<ph name="LINK_AFTER"/></translation>
