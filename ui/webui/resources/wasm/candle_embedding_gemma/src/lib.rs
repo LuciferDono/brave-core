@@ -25,13 +25,16 @@
 // modified from 'https://github.com/huggingface/text-embeddings-inference/blob/main/backends/candle/src/models/gemma3.rs'
 
 use candle_core::{DType, Device, IndexOp, Tensor, D};
-use candle_nn::{Embedding, Module, VarBuilder};
+use candle_core::quantized::{gguf_file, GgmlDType, QMatMul, QTensor};
+use candle_nn::{Module, VarBuilder};
 use serde::Deserialize;
 use tokenizers::Tokenizer;
 use wasm_bindgen::prelude::*;
+use std::sync::Arc;
+use half::f16;
 
-use candle_core::quantized::gguf_file;
-use candle_core::quantized::{QMatMul, QTensor};
+const QK8_0: usize = 32;
+const BLOCK_BYTES_Q8_0: usize = 2 + QK8_0; // f16 scale + 32 i8
 
 // each 'dim' dimensional vector is split into even and odd indexed vectors.
 // 1 / base ^ (i / dim) is calculated for each position.
@@ -238,7 +241,7 @@ impl Gemma3RMSNorm {
     ) -> candle_core::Result<Self> {
         let weight = ct.tensor(reader, weight_name, &Device::Cpu)?.dequantize(&Device::Cpu)?;
 
-        Ok(Self { weight, epsilon })
+        Ok(Self {weight, epsilon})
     }
 
     pub fn forward(
@@ -246,6 +249,7 @@ impl Gemma3RMSNorm {
         hidden_states: &Tensor,
         residual: Option<&Tensor>,
     ) -> candle_core::Result<(Tensor, Tensor)> {
+
         let residual_add = if let Some(residual) = residual {
             hidden_states.add(residual)?
         } else {
@@ -266,12 +270,12 @@ impl Gemma3RMSNorm {
         let hidden_states_normed =
             hidden_states.broadcast_div(&(norm_hidden_states + self.epsilon as f64)?.sqrt()?)?;
 
-        // NOTE: Gemma3 multiplies by (1.0 + weight) for scaling after normalization
-        // but quant model weights are already scaled, so DO NOT add 1 if using quant
+        // NOTE: Gemma3 multiplies by (1.0 + weight) for scaling after normalization 
+        // but quant model weights are already scaled, so DO NOT add 1 if using quant 
         // model
-        let output =
+        let output = 
             hidden_states_normed.to_dtype(hidden_states_dtype)?.broadcast_mul(&self.weight)?;
-
+            
         Ok((output, residual_add))
     }
 }
@@ -315,10 +319,10 @@ impl Gemma3Attention {
         let q_w = ct.tensor(reader, &format!("{prefix}.attn_q.weight"), &Device::Cpu)?;
         let k_w = ct.tensor(reader, &format!("{prefix}.attn_k.weight"), &Device::Cpu)?;
         let v_w = ct.tensor(reader, &format!("{prefix}.attn_v.weight"), &Device::Cpu)?;
-        let o_w = ct.tensor(reader, &format!("{prefix}.attn_output.weight"), &Device::Cpu)?;
+        let o_w = ct.tensor(reader, &format!("{prefix}.attn_output.weight"), &Device::Cpu)?;    
 
         // q-k-v weight concatenation cannot be used for quantized models
-
+        
         let q_proj = QLinear::new(q_w, None)?;
         let k_proj = QLinear::new(k_w, None)?;
         let v_proj = QLinear::new(v_w, None)?;
@@ -326,19 +330,21 @@ impl Gemma3Attention {
 
         // not using q-k-v bias as attention_bias is false in this config
 
-        let q_norm = Gemma3RMSNorm::load_from_gguf(
-            ct,
-            reader,
-            &format!("{prefix}.attn_q_norm.weight"),
-            config.rms_norm_eps,
-        )?;
+        let q_norm =
+            Gemma3RMSNorm::load_from_gguf(
+                ct, 
+                reader, 
+                &format!("{prefix}.attn_q_norm.weight"), 
+                config.rms_norm_eps,
+            )?;
 
-        let k_norm = Gemma3RMSNorm::load_from_gguf(
-            ct,
-            reader,
-            &format!("{prefix}.attn_k_norm.weight"),
-            config.rms_norm_eps,
-        )?;
+        let k_norm =
+            Gemma3RMSNorm::load_from_gguf(
+                ct, 
+                reader, 
+                &format!("{prefix}.attn_k_norm.weight"), 
+                config.rms_norm_eps,
+            )?;
 
         let scaling = 1.0 / (config.query_pre_attn_scalar as f64).sqrt();
 
@@ -346,7 +352,7 @@ impl Gemma3Attention {
             Gemma3AttentionType::FullAttention => None,
             Gemma3AttentionType::SlidingAttention => config.sliding_window,
         };
-
+    
         Ok(Self {
             q_proj,
             k_proj,
@@ -360,6 +366,7 @@ impl Gemma3Attention {
             scaling,
             sliding_window,
         })
+
     }
 
     fn create_causal_mask(
@@ -408,6 +415,7 @@ impl Gemma3Attention {
             .to_dtype(dtype)?;
 
         expanded_mask.where_cond(&zeros, &negatives)
+
     }
 
     fn repeat_kv(&self, x: &Tensor) -> candle_core::Result<Tensor> {
@@ -501,7 +509,7 @@ struct Gemma3MLP {
     gate_proj: QLinear,
     up_proj: QLinear,
     down_proj: QLinear,
-
+    
     hidden_activation: HiddenAct,
 }
 
@@ -512,12 +520,13 @@ impl Gemma3MLP {
         prefix: &str,
         config: &Gemma3Config,
     ) -> candle_core::Result<Self> {
-        let gate_w = ct.tensor(reader, &format!("{prefix}.ffn_gate.weight"), &Device::Cpu)?;
-        let up_w = ct.tensor(reader, &format!("{prefix}.ffn_up.weight"), &Device::Cpu)?;
-        let down_w = ct.tensor(reader, &format!("{prefix}.ffn_down.weight"), &Device::Cpu)?;
 
+        let gate_w = ct.tensor(reader, &format!("{prefix}.ffn_gate.weight"), &Device::Cpu)?;
+        let up_w   = ct.tensor(reader, &format!("{prefix}.ffn_up.weight"), &Device::Cpu)?;
+        let down_w = ct.tensor(reader, &format!("{prefix}.ffn_down.weight"), &Device::Cpu)?;
+    
         let gate_proj = QLinear::new(gate_w, None)?;
-        let up_proj = QLinear::new(up_w, None)?;
+        let up_proj   = QLinear::new(up_w, None)?;
         let down_proj = QLinear::new(down_w, None)?;
 
         Ok(Self {
@@ -529,8 +538,9 @@ impl Gemma3MLP {
     }
 
     pub fn forward(&self, hidden_states: &Tensor) -> candle_core::Result<Tensor> {
+
         let gate_states = self.gate_proj.forward(hidden_states)?;
-        let up_states = self.up_proj.forward(hidden_states)?;
+        let up_states   = self.up_proj.forward(hidden_states)?;
 
         let gate_activated = self.hidden_activation.forward(&gate_states)?;
         let fused = (gate_activated * up_states)?;
@@ -547,6 +557,7 @@ struct Gemma3Layer {
     pre_feedforward_layernorm: Gemma3RMSNorm,
     mlp: Gemma3MLP,
     post_feedforward_layernorm: Gemma3RMSNorm,
+
 }
 
 impl Gemma3Layer {
@@ -557,36 +568,39 @@ impl Gemma3Layer {
         config: &Gemma3Config,
         attention_type: Gemma3AttentionType,
     ) -> candle_core::Result<Self> {
-        let input_layernorm = Gemma3RMSNorm::load_from_gguf(
-            ct,
-            reader,
-            &format!("{prefix}.attn_norm.weight"),
-            config.rms_norm_eps,
-        )?;
 
-        let self_attn =
+        let input_layernorm =
+            Gemma3RMSNorm::load_from_gguf(
+                ct, 
+                reader, 
+                &format!("{prefix}.attn_norm.weight"), 
+                config.rms_norm_eps,
+            )?;
+
+        let self_attn = 
             Gemma3Attention::load_from_gguf(ct, reader, config, attention_type, prefix)?;
 
-        let post_attention_layernorm = Gemma3RMSNorm::load_from_gguf(
-            ct,
-            reader,
-            &format!("{prefix}.post_attention_norm.weight"),
-            config.rms_norm_eps,
-        )?;
+        let post_attention_layernorm =
+            Gemma3RMSNorm::load_from_gguf(
+                ct, 
+                reader, 
+                &format!("{prefix}.post_attention_norm.weight"), 
+                config.rms_norm_eps,
+            )?;
 
         let pre_feedforward_layernorm = Gemma3RMSNorm::load_from_gguf(
-            ct,
-            reader,
-            &format!("{prefix}.ffn_norm.weight"),
+            ct, 
+            reader, 
+            &format!("{prefix}.ffn_norm.weight"), 
             config.rms_norm_eps,
         )?;
 
         let mlp = Gemma3MLP::load_from_gguf(ct, reader, prefix, config)?;
 
         let post_feedforward_layernorm = Gemma3RMSNorm::load_from_gguf(
-            ct,
-            reader,
-            &format!("{prefix}.post_ffw_norm.weight"),
+            ct, 
+            reader, 
+            &format!("{prefix}.post_ffw_norm.weight"), 
             config.rms_norm_eps,
         )?;
 
@@ -607,6 +621,7 @@ impl Gemma3Layer {
         cos: &Tensor,
         sin: &Tensor,
     ) -> candle_core::Result<Tensor> {
+        
         let residual = hidden_states.clone();
 
         let (hidden_states, _) = self.input_layernorm.forward(hidden_states, None)?;
@@ -627,37 +642,29 @@ impl Gemma3Layer {
     }
 }
 
+
 pub struct Gemma3Embedding {
-    embedding: Embedding,
-    scale: f64,
+    qembed: Q8GgufEmbedding,
 }
 
 impl Gemma3Embedding {
     pub fn load_from_gguf<R: std::io::Seek + std::io::Read>(
         ct: &gguf_file::Content,
-        reader: &mut R,
+        _reader: &mut R,
         config: &Gemma3Config,
+        gguf_bytes: Arc<Vec<u8>>,
     ) -> candle_core::Result<Self> {
-        // Load quantized embedding weights from GGUF
-        let qweight = ct.tensor(reader, "token_embd.weight", &Device::Cpu)?;
-
-        // Dequantize to FP32
-        let weight = qweight.dequantize(&Device::Cpu)?;
-
-        // Build embedding with FP32 weights
-        let embedding = Embedding::new(weight, config.hidden_size);
-
-        // Gemma3 embedding scale
-        let scale = (config.hidden_size as f64).sqrt();
-
-        Ok(Self { embedding, scale })
+        let qembed = load_token_embedding_q8_0(
+            ct,
+            gguf_bytes,
+            "token_embd.weight",
+            config.hidden_size,
+        )?;
+        Ok(Self { qembed })
     }
 
     pub fn forward(&self, input_ids: &Tensor) -> candle_core::Result<Tensor> {
-        let hidden = self.embedding.forward(input_ids)?;
-        let result = (hidden * self.scale)?;
-
-        Ok(result)
+        self.qembed.forward(input_ids)
     }
 }
 
@@ -688,6 +695,7 @@ impl Gemma3Model {
         vb_dense2: VarBuilder,
         config: &Gemma3Config,
         model_type: ModelType,
+        gguf_bytes: Arc<Vec<u8>>,
     ) -> candle_core::Result<Self> {
         let pool = match model_type {
             ModelType::Classifier => {
@@ -696,7 +704,7 @@ impl Gemma3Model {
             ModelType::Embedding(pool) => pool,
         };
 
-        let embed_tokens = Gemma3Embedding::load_from_gguf(&ct, reader, config)?;
+        let embed_tokens = Gemma3Embedding::load_from_gguf(&ct, reader, config, gguf_bytes)?;
 
         let layers = (0..config.num_hidden_layers)
             .map(|layer_idx| {
@@ -706,16 +714,16 @@ impl Gemma3Model {
                     Gemma3AttentionType::FullAttention
                 };
                 Gemma3Layer::load_from_gguf(
-                    &ct,
-                    reader,
-                    &format!("blk.{layer_idx}"),
-                    config,
-                    attention_type,
+                    &ct, 
+                    reader, 
+                    &format!("blk.{layer_idx}"), 
+                    config, 
+                    attention_type, 
                 )
             })
             .collect::<candle_core::Result<Vec<Gemma3Layer>>>()?;
 
-        let norm =
+        let norm = 
             Gemma3RMSNorm::load_from_gguf(&ct, reader, "output_norm.weight", config.rms_norm_eps)?;
 
         let rotary_dim = config.head_dim.unwrap_or(config.hidden_size / config.num_attention_heads);
@@ -726,7 +734,7 @@ impl Gemma3Model {
 
         let inv_freqs_local = get_inv_freqs(rotary_dim, config.rope_local_base_freq)?;
 
-        let rotary_cache_local_attention =
+        let rotary_cache_local_attention = 
             get_cos_sin(config.max_position_embeddings, &inv_freqs_local, DType::F32, true)?;
 
         let dense1_weight =
@@ -830,7 +838,7 @@ impl Gemma3Model {
 
             (input_ids, position_ids, input_lengths, Some(attention_bias))
         };
-
+        
         let mut hidden_states = self.embed_tokens.forward(&input_ids)?;
 
         let cos = self.rotary_cache.0.index_select(&position_ids.flatten_all()?, 0)?;
@@ -838,10 +846,10 @@ impl Gemma3Model {
         let sin = self.rotary_cache.1.index_select(&position_ids.flatten_all()?, 0)?;
         let sin = sin.reshape((batch_size, 1, max_length, self.rotary_dim))?;
 
-        let cos_local =
+        let cos_local = 
             self.rotary_cache_local_attention.0.index_select(&position_ids.flatten_all()?, 0)?;
         let cos_local = cos_local.reshape((batch_size, 1, max_length, self.rotary_dim))?;
-        let sin_local =
+        let sin_local = 
             self.rotary_cache_local_attention.1.index_select(&position_ids.flatten_all()?, 0)?;
         let sin_local = sin_local.reshape((batch_size, 1, max_length, self.rotary_dim))?;
 
@@ -884,7 +892,7 @@ impl Gemma3Model {
                         Some((embeddings.sum_keepdim(0)? / (length as f64))?)
                     }
                 }
-            }
+            }     
         } else {
             None
         };
@@ -930,7 +938,8 @@ impl Gemma3Embedder {
         let config: Gemma3Config =
             serde_json::from_slice(&config).map_err(|e| JsError::new(&e.to_string()))?;
 
-        let mut cursor = std::io::Cursor::new(weights);
+        let weights = Arc::new(weights);
+        let mut cursor = std::io::Cursor::new(&weights[..]);
 
         let content = gguf_file::Content::read(&mut cursor)
             .map_err(|e| JsError::new(&format!("GGUF parse error: {e}")))?;
@@ -943,15 +952,17 @@ impl Gemma3Embedder {
             VarBuilder::from_buffered_safetensors(weights_dense2, DType::F32, &Device::Cpu)
                 .map_err(|e| JsError::new(&e.to_string()))?;
 
-        let model = Gemma3Model::load(
-            content,
-            &mut cursor,
-            vb_dense1,
-            vb_dense2,
-            &config,
-            ModelType::Embedding(Pool::Mean),
-        )
-        .map_err(|e| JsError::new(&e.to_string()))?;
+        let model =
+            Gemma3Model::load(
+                content, 
+                &mut cursor, 
+                vb_dense1, 
+                vb_dense2, 
+                &config, 
+                ModelType::Embedding(Pool::Mean), 
+                weights.clone()
+            )
+            .map_err(|e| JsError::new(&e.to_string()))?;
 
         Ok(Self { model, tokenizer })
     }
@@ -998,7 +1009,7 @@ impl Gemma3Embedder {
             let ids = encoding.get_ids().to_vec();
             let len = ids.len();
             max_len = max_len.max(len);
-
+            
             all_ids.extend(ids.iter().cloned());
             all_positions.extend((0..len as u32).collect::<Vec<u32>>());
             cumulative.push(cumulative.last().unwrap() + len as u32);
@@ -1014,4 +1025,161 @@ impl Gemma3Embedder {
             pooled_indices: (0..texts.len() as u32).collect(),
         })
     }
+}
+
+pub struct Q8GgufEmbedding {
+    gguf_bytes: Arc<Vec<u8>>,
+    base: usize,          // ct.tensor_data_offset + info.offset
+    rows: usize,          // 262144, vocab size
+    cols: usize,          // 768
+    blocks_per_row: usize, // cols/32 = 24
+    scale: f32,           // sqrt(hidden)
+}
+
+impl Q8GgufEmbedding {
+    pub fn new(
+        gguf_bytes: Arc<Vec<u8>>,
+        base: usize,
+        rows: usize,
+        cols: usize,
+        scale: f32,
+    ) -> candle_core::Result<Self> {
+        if cols % QK8_0 != 0 {
+            candle_core::bail!("cols={cols} must be divisible by {QK8_0} for Q8_0");
+        }
+        Ok(Self {
+            gguf_bytes,
+            base,
+            rows,
+            cols,
+            blocks_per_row: cols / QK8_0,
+            scale,
+        })
+    }
+
+    #[inline]
+    fn block_offset(&self, row: usize, block_in_row: usize) -> usize {
+        let block_idx = row * self.blocks_per_row + block_in_row;
+        self.base + block_idx * BLOCK_BYTES_Q8_0
+    }
+
+    #[inline]
+    fn read_block(&self, row: usize, block_in_row: usize) -> (f32, [i8; QK8_0]) {
+        let off = self.block_offset(row, block_in_row);
+        let b = &self.gguf_bytes[off..off + BLOCK_BYTES_Q8_0];
+
+        // f16 scale, little-endian
+        let d_bits = u16::from_le_bytes([b[0], b[1]]);
+        let d = f16::from_bits(d_bits).to_f32();
+
+        let mut qs = [0i8; QK8_0];
+        for i in 0..QK8_0 {
+            qs[i] = b[2 + i] as i8;
+        }
+        (d, qs)
+    }
+
+    fn dequantize_row_f32(&self, row: usize, out: &mut [f32]) {
+        debug_assert_eq!(out.len(), self.cols);
+        let mut col = 0usize;
+        for b in 0..self.blocks_per_row {
+            let (d, qs) = self.read_block(row, b);
+            for q in qs {
+                out[col] = d * (q as f32);
+                col += 1;
+            }
+        }
+    }
+
+    /// input_ids: [batch, seq] -> output: [batch, seq, cols] in f32
+    pub fn forward(&self, input_ids: &Tensor) -> candle_core::Result<Tensor> {
+        let device = input_ids.device();
+        let mut final_dims = input_ids.dims().to_vec();
+        final_dims.push(self.cols);
+
+        let ids: Vec<u32> = input_ids.flatten_all()?.to_vec1()?;
+
+        let (uniq, remap) = unique_ids(&ids);
+
+        let mut uniq_out = vec![0f32; uniq.len() * self.cols];
+        for (i, &tok) in uniq.iter().enumerate() {
+            let r = tok as usize;
+            if r >= self.rows {
+                candle_core::bail!("token id {r} out of range (rows={})", self.rows);
+            }
+            let dst = &mut uniq_out[i * self.cols..(i + 1) * self.cols];
+            self.dequantize_row_f32(r, dst);
+        }
+
+        let uniq_rows = Tensor::from_vec(uniq_out, (uniq.len(), self.cols), device)?;
+
+        let remap_u32: Vec<u32> = remap.into_iter().map(|i| i as u32).collect();
+        let remap_t = Tensor::from_vec(remap_u32, (ids.len(),), device)?;
+
+        let values = uniq_rows.index_select(&remap_t, 0)?.reshape(final_dims)?;
+
+        Ok((values * (self.scale as f64))?)
+    }
+}
+
+fn unique_ids(ids: &[u32]) -> (Vec<u32>, Vec<usize>) {
+    use std::collections::HashMap;
+    let mut map = HashMap::<u32, usize>::new();
+    let mut uniq = Vec::new();
+    let mut remap = Vec::with_capacity(ids.len());
+    for &id in ids {
+        let idx = *map.entry(id).or_insert_with(|| {
+            let i = uniq.len();
+            uniq.push(id);
+            i
+        });
+        remap.push(idx);
+    }
+    (uniq, remap)
+}
+
+pub fn load_token_embedding_q8_0(
+    ct: &gguf_file::Content,
+    gguf_bytes: Arc<Vec<u8>>,
+    tensor_name: &str,
+    hidden_size: usize,
+) -> candle_core::Result<Q8GgufEmbedding> {
+    let info = ct
+        .tensor_infos
+        .get(tensor_name)
+        .ok_or_else(|| candle_core::Error::Msg(format!("tensor {tensor_name} not found")))?;
+
+    if info.ggml_dtype != GgmlDType::Q8_0 {
+        candle_core::bail!("tensor {tensor_name} is {:?}, expected Q8_0", info.ggml_dtype);
+    }
+
+    let dims = info.shape.dims();
+    if dims.len() != 2 {
+        candle_core::bail!("tensor {tensor_name} expected 2D, got {:?}", dims);
+    }
+
+    let rows = dims[0]; // 262144
+    let cols = dims[1]; // 768
+    if cols != hidden_size {
+        candle_core::bail!("cols={cols} != hidden_size={hidden_size}");
+    }
+
+    let base = (ct.tensor_data_offset + info.offset) as usize;
+
+    // Bounds check
+    let elems = info.shape.elem_count(); // 768 x 262144
+    let block_size = info.ggml_dtype.block_size(); // 32
+    let nblocks = elems / block_size; // 768 x 262144 / 32
+    let bytes_needed = nblocks * info.ggml_dtype.type_size(); // 34 per block (32 + 2 (f16 scale))
+    if base + bytes_needed > gguf_bytes.len() {
+        candle_core::bail!("tensor payload out of bounds: need {bytes_needed} bytes");
+    }
+
+    Q8GgufEmbedding::new(
+        gguf_bytes,
+        base,
+        rows,
+        cols,
+        (hidden_size as f32).sqrt(),
+    )
 }
