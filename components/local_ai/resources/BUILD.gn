@@ -1,0 +1,26 @@
+# Copyright (c) 2025 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+import("//brave/components/common/typescript.gni")
+
+transpile_web_ui("candle_embedding_module") {
+  resource_name = "candle_embedding_module"
+
+  entry_points = [ [
+        "candle_embedding_gemma",
+        rebase_path("wasm_candle_embedding_gemma.js"),
+      ] ]
+
+  inputs = [
+    rebase_path("//brave/ui/webui/resources/wasm/Cargo.lock"),
+    rebase_path(
+        "//brave/components/local_ai/wasm/candle_embedding_gemma/src/lib.rs"),
+  ]
+
+  imports_from = [ "//brave/components/local_ai/resources/" ]
+
+  rust_packages = [ rebase_path(
+          "//brave/components/local_ai/wasm/candle_embedding_gemma/Cargo.toml") ]
+}

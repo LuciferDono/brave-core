@@ -2,5 +2,5 @@
 resolver = "2"
 members = [
   "../../../../components/brave_account/wasm/opaque_ke",
-  "candle_embedding_gemma",
+  "../../../../components/local_ai/wasm/candle_embedding_gemma",
 ]
