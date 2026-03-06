@@ -78,6 +78,10 @@ extension BrowserViewController: TabManagerDelegate {
     // When `BraveShieldsTabHelper+TabPolicyDecider` is moved to `BraveShields` target,
     // we should add it as a policy decider at initialization.
     tab.addPolicyDecider(braveShieldsHelper)
+
+    if FeatureList.kUseProfileWebViewConfiguration.enabled {
+      tab.readerMode = .init(tab: tab)
+    }
   }
 
   func tabManager(
@@ -181,17 +185,22 @@ extension BrowserViewController: TabManagerDelegate {
 
     let shouldShowPlaylistURLBarButton = selected?.visibleURL?.isPlaylistSupportedSiteURL == true
 
-    if let readerMode = selected?.browserData?.getContentScript(
-      name: ReaderModeScriptHandler.scriptName
-    )
-      as? ReaderModeScriptHandler,
-      !shouldShowPlaylistURLBarButton
-    {
-      topToolbar.updateReaderModeState(readerMode.state)
-      if readerMode.state == .active {
-        showReaderModeBar(animated: false)
+    if !shouldShowPlaylistURLBarButton {
+      let readerModeState: ReaderModeState?
+      if FeatureList.kUseProfileWebViewConfiguration.enabled {
+        readerModeState = selected?.readerMode?.state
       } else {
-        hideReaderModeBar(animated: false)
+        readerModeState =
+          (selected?.browserData?.getContentScript(name: ReaderModeScriptHandler.scriptName)
+          as? ReaderModeScriptHandler)?.state
+      }
+      if let readerModeState {
+        topToolbar.updateReaderModeState(readerModeState)
+        if readerModeState == .active {
+          showReaderModeBar(animated: false)
+        } else {
+          hideReaderModeBar(animated: false)
+        }
       }
 
       updatePlaylistURLBar(
