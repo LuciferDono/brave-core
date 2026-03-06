@@ -15,6 +15,7 @@
 
 #include "base/check.h"
 #include "base/functional/bind.h"
+#include "base/numerics/checked_math.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/string_util.h"
 #include "brave/components/brave_wallet/browser/account_resolver_delegate.h"
@@ -174,8 +175,8 @@ void EthTxManager::AddUnapprovedEvmTransaction(
                              std::move(origin_val),
                              std::move(params->swap_info), std::move(callback));
   } else {
-    auto tx_data_1559 = mojom::TxData1559::New(
-        std::move(tx_data), params->chain_id, "", "", nullptr);
+    auto tx_data_1559 =
+        mojom::TxData1559::New(std::move(tx_data), params->chain_id, "", "");
     AddUnapproved1559Transaction(params->chain_id, std::move(tx_data_1559),
                                  params->from, std::move(origin_val),
                                  std::move(params->swap_info),
@@ -393,19 +394,22 @@ void EthTxManager::OnGetGasOracleForUnapprovedTransaction(
     bool sign_only,
     mojom::SwapInfoPtr swap_info,
     mojom::GasEstimation1559Ptr gas_estimation) {
-  auto estimation =
-      Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-          std::move(gas_estimation));
-  if (!estimation) {
+  uint256_t estimation_avg_max_fee_per_gas = 0;
+  uint256_t estimation_avg_max_priority_fee_per_gas = 0;
+  if (!gas_estimation ||
+      !HexValueToUint256(gas_estimation->avg_max_fee_per_gas,
+                         &estimation_avg_max_fee_per_gas) ||
+      !HexValueToUint256(gas_estimation->avg_max_priority_fee_per_gas,
+                         &estimation_avg_max_priority_fee_per_gas)) {
     std::move(callback).Run(
         false, "",
         l10n_util::GetStringUTF8(
             IDS_WALLET_ETH_SEND_TRANSACTION_GET_GAS_FEES_FAILED));
     return;
   }
-  tx->set_gas_estimation(estimation.value());
-  tx->set_max_fee_per_gas(estimation->avg_max_fee_per_gas);
-  tx->set_max_priority_fee_per_gas(estimation->avg_max_priority_fee_per_gas);
+
+  tx->set_max_fee_per_gas(estimation_avg_max_fee_per_gas);
+  tx->set_max_priority_fee_per_gas(estimation_avg_max_priority_fee_per_gas);
 
   if (gas_limit.empty()) {
     json_rpc_service_->GetEstimateGas(
@@ -1120,10 +1124,12 @@ void EthTxManager::ContinueSpeedupOrCancel1559Transaction(
     std::unique_ptr<Eip1559Transaction> tx,
     SpeedupOrCancelTransactionCallback callback,
     mojom::GasEstimation1559Ptr gas_estimation) {
-  auto estimation =
-      Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-          std::move(gas_estimation));
-  if (!estimation) {
+  uint256_t estimation_avg_max_fee_per_gas = 0;
+  uint256_t estimation_avg_max_priority_fee_per_gas = 0;
+  if (!HexValueToUint256(gas_estimation->avg_max_fee_per_gas,
+                         &estimation_avg_max_fee_per_gas) ||
+      !HexValueToUint256(gas_estimation->avg_max_priority_fee_per_gas,
+                         &estimation_avg_max_priority_fee_per_gas)) {
     std::move(callback).Run(
         false, "",
         l10n_util::GetStringUTF8(
@@ -1132,11 +1138,18 @@ void EthTxManager::ContinueSpeedupOrCancel1559Transaction(
   }
 
   // Update gas fees to max(latest_estimate, original_gas_fee + 10%).
-  // Original_gas_fee * 11 / 10 is done using uint64_t because uint256_t does
-  // not support division. It's fairly safe to do so because it's unlikely the
-  // gas fees will be larger than that, they are usually around 10^12 wei.
-  if (tx->max_priority_fee_per_gas() > std::numeric_limits<uint64_t>::max() ||
-      tx->max_fee_per_gas() > std::numeric_limits<uint64_t>::max()) {
+  auto increased_max_priority_fee_per_gas =
+      base::CheckedNumeric<uint256_t>(tx->max_priority_fee_per_gas());
+  increased_max_priority_fee_per_gas *= 11ULL;
+  increased_max_priority_fee_per_gas /= 10ULL;
+
+  auto increased_max_fee_per_gas =
+      base::CheckedNumeric<uint256_t>(tx->max_fee_per_gas());
+  increased_max_fee_per_gas *= 11ULL;
+  increased_max_fee_per_gas /= 10ULL;
+
+  if (!increased_max_priority_fee_per_gas.IsValid() ||
+      !increased_max_fee_per_gas.IsValid()) {
     std::move(callback).Run(
         false, "",
         l10n_util::GetStringUTF8(
@@ -1144,15 +1157,13 @@ void EthTxManager::ContinueSpeedupOrCancel1559Transaction(
     return;
   }
 
-  uint256_t increased_max_priority_fee_per_gas =
-      static_cast<uint64_t>(tx->max_priority_fee_per_gas()) * 11ULL / 10ULL;
-  uint256_t increased_max_fee_per_gas =
-      static_cast<uint64_t>(tx->max_fee_per_gas()) * 11ULL / 10ULL;
   tx->set_max_fee_per_gas(
-      std::max(estimation->avg_max_fee_per_gas, increased_max_fee_per_gas));
+      base::CheckMax(estimation_avg_max_fee_per_gas, increased_max_fee_per_gas)
+          .ValueOrDie());
   tx->set_max_priority_fee_per_gas(
-      std::max(estimation->avg_max_priority_fee_per_gas,
-               increased_max_priority_fee_per_gas));
+      base::CheckMax(estimation_avg_max_priority_fee_per_gas,
+                     increased_max_priority_fee_per_gas)
+          .ValueOrDie());
 
   ContinueAddUnapprovedTransaction(
       chain_id, from, origin, std::move(tx), std::move(callback), false,

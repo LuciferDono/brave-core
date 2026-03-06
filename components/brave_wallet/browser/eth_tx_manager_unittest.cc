@@ -84,14 +84,6 @@ void AddUnapprovedTransactionFailureCallback(bool* callback_called,
   *callback_called = true;
 }
 
-mojom::GasEstimation1559Ptr GetMojomGasEstimation() {
-  return mojom::GasEstimation1559::New(
-      "0x3b9aca00" /* Hex of 1 * 1e9 */, "0xaf16b1600" /* Hex of 47 * 1e9 */,
-      "0x77359400" /* Hex of 2 * 1e9 */, "0xb2d05e000" /* Hex of 48 * 1e9 */,
-      "0xb2d05e00" /* Hex of 3 * 1e9 */, "0xb68a0aa00" /* Hex of 49 * 1e9 */,
-      "0xab5d04c00" /* Hex of 4600000000 */);
-}
-
 void MakeERC721TransferFromDataCallback(base::RunLoop* run_loop,
                                         bool expected_success,
                                         mojom::TransactionType expected_type,
@@ -355,8 +347,7 @@ class EthTxManagerUnitTest : public testing::Test {
         mojom::TxData::New(nonce, "", "0x0974",
                            "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                            "0x016345785d8a0000", data, false, std::nullopt),
-
-        "0x539", max_priority_fee_per_gas, max_fee_per_gas, nullptr);
+        "0x539", max_priority_fee_per_gas, max_fee_per_gas);
 
     auto tx1559 = Eip1559Transaction::FromTxData(tx_data1559, false);
     ASSERT_TRUE(tx1559);
@@ -1090,7 +1081,7 @@ TEST_F(EthTxManagerUnitTest, ValidateTxData1559) {
           mojom::TxData::New(
               "0x00", "", "0x00", "0x0101010101010101010101010101010101010101",
               "0x00", std::vector<uint8_t>(), false, std::nullopt),
-          "0x04", "0x0", "0x1", nullptr),
+          "0x04", "0x0", "0x1"),
       &error_message));
 
   // Can't specify both gas price and max fee per gas
@@ -1100,8 +1091,7 @@ TEST_F(EthTxManagerUnitTest, ValidateTxData1559) {
                              "0x0101010101010101010101010101010101010101",
                              "0x00", std::vector<uint8_t>(), false,
                              std::nullopt),
-
-          "0x04", "0x0", "0x1", nullptr),
+          "0x04", "0x0", "0x1"),
       &error_message));
 }
 
@@ -1272,7 +1262,7 @@ TEST_F(EthTxManagerUnitTest, GetNonceForHardwareTransaction1559) {
       mojom::TxData::New("0x00", "", "0x01",
                          "0x0101010101010101010101010101010101010101", "0x00",
                          std::vector<uint8_t>(), false, std::nullopt),
-      "0x04", "0x1", "0x1", nullptr);
+      "0x04", "0x1", "0x1");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1349,7 +1339,7 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithGasFeeAndLimit) {
       mojom::TxData::New("0x1", "", gas_limit,
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */, nullptr);
+      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */);
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1370,7 +1360,6 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithGasFeeAndLimit) {
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(), Eip1559Transaction::GasEstimation());
 }
 
 TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithoutGasLimit) {
@@ -1378,7 +1367,7 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithoutGasLimit) {
       mojom::TxData::New("0x1", "", "",
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */, nullptr);
+      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */);
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1399,7 +1388,6 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithoutGasLimit) {
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(), Eip1559Transaction::GasEstimation());
 }
 
 TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithoutGasFee) {
@@ -1408,7 +1396,7 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithoutGasFee) {
       mojom::TxData::New("0x1", "", gas_limit,
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1429,9 +1417,6 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionWithoutGasFee) {
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                GetMojomGasEstimation()));
 }
 
 TEST_F(EthTxManagerUnitTest,
@@ -1440,7 +1425,7 @@ TEST_F(EthTxManagerUnitTest,
       mojom::TxData::New("0x1", "", "",
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1461,9 +1446,6 @@ TEST_F(EthTxManagerUnitTest,
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                GetMojomGasEstimation()));
 }
 
 TEST_F(EthTxManagerUnitTest,
@@ -1501,7 +1483,7 @@ TEST_F(EthTxManagerUnitTest,
       mojom::TxData::New("0x1", "", gas_limit,
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1520,18 +1502,6 @@ TEST_F(EthTxManagerUnitTest,
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), 0ULL);
   EXPECT_EQ(tx1559->max_fee_per_gas(), 133ULL);  // 0x64 x 1.33
-
-  auto estimation =
-      mojom::GasEstimation1559::New("0x0",    // slow_max_priority_fee_per_gas
-                                    "0x85",   // slow_max_fee_per_gas
-                                    "0x0",    // avg_max_priority_fee_per_gas
-                                    "0x85",   // avg_max_fee_per_gas
-                                    "0x0",    // fast_max_priority_fee_per_gas
-                                    "0x85",   // fast_max_fee_per_gas
-                                    "0x85");  // base_fee_per_gas (0x64 x 1.33)
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                std::move(estimation)));
 }
 
 TEST_F(EthTxManagerUnitTest,
@@ -1575,7 +1545,7 @@ TEST_F(EthTxManagerUnitTest,
       mojom::TxData::New("0x1", "", "",
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1594,18 +1564,6 @@ TEST_F(EthTxManagerUnitTest,
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), 0ULL);
   EXPECT_EQ(tx1559->max_fee_per_gas(), 133ULL);  // 0x64 x 1.33
-
-  auto estimation =
-      mojom::GasEstimation1559::New("0x0",    // slow_max_priority_fee_per_gas
-                                    "0x85",   // slow_max_fee_per_gas
-                                    "0x0",    // avg_max_priority_fee_per_gas
-                                    "0x85",   // avg_max_fee_per_gas
-                                    "0x0",    // fast_max_priority_fee_per_gas
-                                    "0x85",   // fast_max_fee_per_gas
-                                    "0x85");  // base_fee_per_gas (0x64 x 1.33)
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                std::move(estimation)));
 }
 
 TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionFeeHistoryFailed) {
@@ -1632,7 +1590,7 @@ TEST_F(EthTxManagerUnitTest, AddUnapproved1559TransactionFeeHistoryFailed) {
       mojom::TxData::New("0x1", "", "0x9604",
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   AddUnapproved1559Transaction(
@@ -1650,7 +1608,7 @@ TEST_F(EthTxManagerUnitTest,
       mojom::TxData::New(
           "0x1", "", "", "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
           "0x016345785d8a0000", std::vector<uint8_t>(), false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1668,24 +1626,20 @@ TEST_F(EthTxManagerUnitTest,
   // Gas limit obtained by querying eth_estimateGas.
   EXPECT_EQ(tx_meta->tx()->gas_limit(), 38404ULL);
 
-  // Gas fee and estimation should be filled by gas oracle.
+  // Gas fee should be filled by gas oracle.
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                GetMojomGasEstimation()));
 }
 
 TEST_F(EthTxManagerUnitTest,
        AddUnapproved1559TransactionWithGasFeeAndLimitForEthSend) {
   const std::string gas_limit = "0x0974";
-
   auto tx_data = mojom::TxData1559::New(
       mojom::TxData::New(
           "0x1", "", gas_limit, "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
           "0x016345785d8a0000", std::vector<uint8_t>(), false, std::nullopt),
-      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */, nullptr);
+      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */);
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1706,7 +1660,6 @@ TEST_F(EthTxManagerUnitTest,
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(), Eip1559Transaction::GasEstimation());
 }
 
 TEST_F(EthTxManagerUnitTest,
@@ -1715,7 +1668,7 @@ TEST_F(EthTxManagerUnitTest,
       mojom::TxData::New(
           "0x1", "", "", "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
           "0x016345785d8a0000", std::vector<uint8_t>(), false, std::nullopt),
-      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */, nullptr);
+      "0x04", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */);
   bool callback_called = false;
   std::string tx_meta_id;
 
@@ -1735,7 +1688,6 @@ TEST_F(EthTxManagerUnitTest,
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(), Eip1559Transaction::GasEstimation());
 }
 
 TEST_F(EthTxManagerUnitTest,
@@ -1745,7 +1697,7 @@ TEST_F(EthTxManagerUnitTest,
       mojom::TxData::New(
           "0x1", "", gas_limit, "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
           "0x016345785d8a0000", std::vector<uint8_t>(), false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
 
   bool callback_called = false;
   std::string tx_meta_id;
@@ -1768,9 +1720,6 @@ TEST_F(EthTxManagerUnitTest,
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                GetMojomGasEstimation()));
 }
 
 TEST_F(EthTxManagerUnitTest, SetGasFeeAndLimitForUnapprovedTransaction) {
@@ -1778,7 +1727,7 @@ TEST_F(EthTxManagerUnitTest, SetGasFeeAndLimitForUnapprovedTransaction) {
       mojom::TxData::New("0x1", "", "",
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x04", "", "", nullptr);
+      "0x04", "", "");
   bool callback_called = false;
   std::string tx_meta_id;
 
@@ -1801,9 +1750,6 @@ TEST_F(EthTxManagerUnitTest, SetGasFeeAndLimitForUnapprovedTransaction) {
   auto* tx1559 = static_cast<Eip1559Transaction*>(tx_meta->tx());
   EXPECT_EQ(tx1559->max_priority_fee_per_gas(), uint256_t(2) * uint256_t(1e9));
   EXPECT_EQ(tx1559->max_fee_per_gas(), uint256_t(48) * uint256_t(1e9));
-  EXPECT_EQ(tx1559->gas_estimation(),
-            Eip1559Transaction::GasEstimation::FromMojomGasEstimation1559(
-                GetMojomGasEstimation()));
 
   // Fail if transaction is not found.
   callback_called = false;
@@ -2244,7 +2190,7 @@ TEST_F(EthTxManagerUnitTest, RetryTransaction) {
       mojom::TxData::New("0x08", "", "0x0974",
                          "0xbe862ad9abfe6f22bcb087716c7d89a26051f74c",
                          "0x016345785d8a0000", data_, false, std::nullopt),
-      "0x539", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */, nullptr);
+      "0x539", "0x77359400" /* 2 Gwei */, "0xb2d05e000" /* 48 Gwei */);
 
   auto tx1559 = Eip1559Transaction::FromTxData(tx_data1559, false);
   ASSERT_TRUE(tx1559);
