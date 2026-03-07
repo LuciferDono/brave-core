@@ -15,7 +15,8 @@ import { getHtml } from './brave_origin_startup_app.html.js'
 
 const BraveOriginStartupAppElementBase = I18nMixinLit(CrLitElement)
 
-export class BraveOriginStartupAppElement extends BraveOriginStartupAppElementBase {
+export class BraveOriginStartupAppElement
+    extends BraveOriginStartupAppElementBase {
   static get is() {
     return 'brave-origin-startup-app'
   }
