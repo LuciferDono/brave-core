@@ -202,16 +202,18 @@ void PlaylistMediaFileDownloader::OnDownloadCreated(
     download::DownloadItem* item) {
   DVLOG(2) << __func__ << " " << item->GetGuid();
 
-  if (current_download_item_guid_ != item->GetGuid()) {
-    // This can happen when a user canceled it. But we should
-    // observe the item anyway to handle the lifecycle of
-    // download item.
-    ScheduleToCancelDownloadItem(item->GetGuid());
-    return;
-  }
-
-  DCHECK(!download_item_observation_.IsObservingSource(item));
+  // Always observe the item so that its lifecycle is properly managed.
+  // Without this, items with a mismatched GUID would remain in
+  // InProgressDownloadManager unobserved, causing a CHECK failure in
+  // RemoveObservation() when the destructor calls DetachCachedFile().
+  CHECK(!download_item_observation_.IsObservingSource(item));
   download_item_observation_.AddObservation(item);
+
+  if (current_download_item_guid_ != item->GetGuid()) {
+    // This can happen when the current download was canceled and a new one
+    // started before the old download item was created. Cancel the stale item.
+    ScheduleToCancelDownloadItem(item->GetGuid());
+  }
 }
 
 void PlaylistMediaFileDownloader::OnDownloadUpdated(
