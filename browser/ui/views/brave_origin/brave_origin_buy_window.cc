@@ -58,8 +58,7 @@ BraveOriginBuyWindow::BraveOriginBuyWindow(
 
   buy_url_ = GURL(
       base::StrCat({url::kHttpsScheme, url::kStandardSchemeSeparator,
-                    brave_domains::GetServicesDomain(
-                        "account", brave_domains::ServicesEnvironment::STAGING),
+                    brave_domains::GetServicesDomain("account"),
                     "/?intent=checkout&product=origin"}));
 
   SetLayoutManager(std::make_unique<views::FillLayout>());

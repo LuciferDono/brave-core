@@ -128,7 +128,7 @@ class TorPrefObserver : public BooleanPrefMember {
   return [super applicationShouldHandleReopen:theApplication
                             hasVisibleWindows:hasVisibleWindows];
 }
-#endif
+#endif  // BUILDFLAG(IS_BRAVE_ORIGIN_BRANDED)
 
 - (void)mainMenuCreated {
   [super mainMenuCreated];
