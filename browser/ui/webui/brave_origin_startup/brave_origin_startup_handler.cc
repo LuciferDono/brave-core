@@ -23,6 +23,24 @@ namespace {
 constexpr char kRemainingCredentialCount[] = "remaining_credential_count";
 constexpr char kExpiresAt[] = "expires_at";
 
+bool ParseCredentialSummary(const std::string& message) {
+  std::string trimmed;
+  base::TrimWhitespaceASCII(message, base::TrimPositions::TRIM_ALL, &trimmed);
+  if (trimmed.empty()) {
+    return false;
+  }
+
+  std::optional<base::DictValue> records = base::JSONReader::ReadDict(
+      message, base::JSONParserOptions::JSON_PARSE_RFC);
+  if (!records || records->empty()) {
+    return false;
+  }
+
+  int remaining = records->FindInt(kRemainingCredentialCount).value_or(0);
+  const std::string* expires_at = records->FindString(kExpiresAt);
+  return remaining > 0 || (expires_at != nullptr && !expires_at->empty());
+}
+
 }  // namespace
 
 BraveOriginStartupHandler::BraveOriginStartupHandler(
@@ -32,9 +50,7 @@ BraveOriginStartupHandler::BraveOriginStartupHandler(
     CloseDialogCallback close_dialog_callback)
     : open_buy_window_callback_(std::move(open_buy_window_callback)),
       close_dialog_callback_(std::move(close_dialog_callback)),
-      origin_sku_domain_(brave_domains::GetServicesDomain(
-          "origin",
-          brave_domains::ServicesEnvironment::STAGING)),
+      origin_sku_domain_(brave_domains::GetServicesDomain("origin")),
       browser_context_(browser_context),
       local_state_(local_state) {
   CHECK(browser_context_);
@@ -95,8 +111,7 @@ void BraveOriginStartupHandler::VerifyPurchaseId(
 void BraveOriginStartupHandler::GetBuyUrl(GetBuyUrlCallback callback) {
   std::string url =
       base::StrCat({url::kHttpsScheme, url::kStandardSchemeSeparator,
-                    brave_domains::GetServicesDomain(
-                        "account", brave_domains::ServicesEnvironment::STAGING),
+                    brave_domains::GetServicesDomain("account"),
                     "/?intent=checkout&product=origin"});
   std::move(callback).Run(url);
 }
@@ -127,27 +142,10 @@ bool BraveOriginStartupHandler::EnsureSkusConnected() {
   return !!skus_service_;
 }
 
-// Parses credential summary the same way as
-// BraveOriginService::OnCredentialSummary
 void BraveOriginStartupHandler::OnCredentialSummary(
     CheckPurchaseStateCallback callback,
     skus::mojom::SkusResultPtr summary) {
-  bool purchased = false;
-
-  std::string summary_trimmed;
-  base::TrimWhitespaceASCII(summary->message, base::TrimPositions::TRIM_ALL,
-                            &summary_trimmed);
-  if (!summary_trimmed.empty()) {
-    std::optional<base::DictValue> records = base::JSONReader::ReadDict(
-        summary->message, base::JSONParserOptions::JSON_PARSE_RFC);
-
-    if (records && !records->empty()) {
-      int remaining = records->FindInt(kRemainingCredentialCount).value_or(0);
-      const std::string* expires_at = records->FindString(kExpiresAt);
-      purchased =
-          remaining > 0 || (expires_at != nullptr && !expires_at->empty());
-    }
-  }
+  bool purchased = ParseCredentialSummary(summary->message);
 
   if (purchased && local_state_) {
     local_state_->SetBoolean(brave_origin::kOriginPurchaseValidated, true);
@@ -195,22 +193,7 @@ void BraveOriginStartupHandler::OnFetchOrderCredentials(
 void BraveOriginStartupHandler::OnVerifyCredentialSummary(
     VerifyPurchaseIdCallback callback,
     skus::mojom::SkusResultPtr summary) {
-  bool purchased = false;
-
-  std::string summary_trimmed;
-  base::TrimWhitespaceASCII(summary->message, base::TrimPositions::TRIM_ALL,
-                            &summary_trimmed);
-  if (!summary_trimmed.empty()) {
-    std::optional<base::DictValue> records = base::JSONReader::ReadDict(
-        summary->message, base::JSONParserOptions::JSON_PARSE_RFC);
-
-    if (records && !records->empty()) {
-      int remaining = records->FindInt(kRemainingCredentialCount).value_or(0);
-      const std::string* expires_at = records->FindString(kExpiresAt);
-      purchased =
-          remaining > 0 || (expires_at != nullptr && !expires_at->empty());
-    }
-  }
+  bool purchased = ParseCredentialSummary(summary->message);
 
   if (purchased && local_state_) {
     local_state_->SetBoolean(brave_origin::kOriginPurchaseValidated, true);
